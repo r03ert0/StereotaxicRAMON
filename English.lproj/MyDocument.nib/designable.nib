@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MyDocument">
+            <connections>
+                <outlet property="settings" destination="100045" id="100060"/>
+                <outlet property="text" destination="100044" id="100048"/>
+                <outlet property="view" destination="100031" id="100046"/>
+                <outlet property="window" destination="100021" id="100059"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="MainWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="100021">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="89" y="264" width="644" height="574"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="100024">
+                <rect key="frame" x="0.0" y="0.0" width="644" height="574"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="100027">
+                        <rect key="frame" x="483" y="0.0" width="51" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="mini" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="000" id="100040">
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="100045" name="value" keyPath="selection.slice" id="100058">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">MyIntValueTransformer</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </textField>
+                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="100028">
+                        <rect key="frame" x="516" y="15" width="19" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="100039">
+                            <font key="font" metaFont="system"/>
+                        </stepperCell>
+                        <connections>
+                            <action selector="slice:" target="-2" id="100072"/>
+                            <binding destination="100045" name="maxValue" keyPath="selection.maxslice" id="100052"/>
+                            <binding destination="100045" name="minValue" keyPath="selection.minslice" previousBinding="100052" id="100053"/>
+                            <binding destination="100045" name="value" keyPath="selection.slice" previousBinding="100053" id="100054"/>
+                        </connections>
+                    </stepper>
+                    <button id="100029">
+                        <rect key="frame" x="541" y="42" width="82" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="square" title="Commands" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100038">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggle:" target="100023" id="100047"/>
+                        </connections>
+                    </button>
+                    <button id="100167">
+                        <rect key="frame" x="541" y="227" width="82" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" title="Invert" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100168">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="invert:" target="-2" id="100170"/>
+                        </connections>
+                    </button>
+                    <slider verticalHuggingPriority="750" id="100030">
+                        <rect key="frame" x="18" y="15" width="495" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="100037">
+                            <font key="font" size="12" name="Helvetica"/>
+                        </sliderCell>
+                        <connections>
+                            <action selector="slice:" target="-2" id="100057"/>
+                            <binding destination="100045" name="maxValue" keyPath="selection.maxslice" id="100049"/>
+                            <binding destination="100045" name="minValue" keyPath="selection.minslice" previousBinding="100049" id="100050"/>
+                            <binding destination="100045" name="value" keyPath="selection.slice" previousBinding="100050" id="100051"/>
+                        </connections>
+                    </slider>
+                    <customView id="100031" customClass="MyView">
+                        <rect key="frame" x="20" y="42" width="512" height="512"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="view3D" destination="100067" id="100068"/>
+                        </connections>
+                    </customView>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="100032">
+                        <rect key="frame" x="543" y="509" width="78" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="26" height="25"/>
+                        <size key="intercellSpacing" width="0.0" height="2"/>
+                        <buttonCell key="prototype" type="square" title="Radio" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100033">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="square" title="X" bezelStyle="shadowlessSquare" imagePosition="left" alignment="left" state="on" borderStyle="border" tag="1" inset="2" id="100036">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" title="Y" bezelStyle="shadowlessSquare" imagePosition="left" alignment="left" borderStyle="border" tag="2" inset="2" id="100035">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" title="Z" bezelStyle="shadowlessSquare" imagePosition="left" alignment="left" borderStyle="border" tag="3" inset="2" id="100034">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="plane:" target="-2" id="100056"/>
+                            <binding destination="100045" name="selectedIndex" keyPath="selection.plane" id="100062"/>
+                        </connections>
+                    </matrix>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="100154">
+                        <rect key="frame" x="541" y="253" width="82" height="52"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="27" height="25"/>
+                        <buttonCell key="prototype" type="square" title="Radio" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100158">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="square" title="1" bezelStyle="shadowlessSquare" imagePosition="left" alignment="left" state="on" borderStyle="border" tag="1" inset="2" id="100155">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="5" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100165">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" title="2" bezelStyle="shadowlessSquare" imagePosition="left" alignment="left" borderStyle="border" tag="2" inset="2" id="100156">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="10" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100163">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" title="3" bezelStyle="shadowlessSquare" imagePosition="left" alignment="left" borderStyle="border" tag="3" inset="2" id="100157">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="15" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100164">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="penSize:" target="-2" id="100166"/>
+                        </connections>
+                    </matrix>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="100127">
+                        <rect key="frame" x="541" y="337" width="82" height="145"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="82" height="25"/>
+                        <size key="intercellSpacing" width="0.0" height="-1"/>
+                        <buttonCell key="prototype" type="square" title="Radio" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100131">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="square" title="Sample" bezelStyle="shadowlessSquare" alignment="center" state="on" borderStyle="border" tag="1" inset="2" id="100128">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="Paint" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100135">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="Select" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100139">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="CSelect" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100143">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="Polygone" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100147">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="Fill" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100153">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="mouseMode:" target="-2" id="100148"/>
+                        </connections>
+                    </matrix>
+                    <button id="100063">
+                        <rect key="frame" x="541" y="77" width="82" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="square" title="3D View" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="100064">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="orderFront:" target="100065" id="100069"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="100149">
+                        <rect key="frame" x="538" y="538" width="72" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="View Plane" id="100150">
+                            <font key="font" metaFont="systemBold" size="12"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="100151">
+                        <rect key="frame" x="538" y="485" width="86" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cursor Mode" id="100152">
+                            <font key="font" metaFont="systemBold" size="12"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="100161">
+                        <rect key="frame" x="540" y="313" width="86" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pen size" id="100162">
+                            <font key="font" metaFont="systemBold" size="12"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="100061"/>
+            </connections>
+        </window>
+        <customView id="100022">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="100041">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <clipView key="contentView" id="Jn9-nL-47B">
+                        <rect key="frame" x="1" y="1" width="248" height="298"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="100044" customClass="MyCommandView">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="298"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="248" height="298"/>
+                                <size key="maxSize" width="279" height="10000000"/>
+                                <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="248" height="298"/>
+                                <size key="maxSize" width="279" height="10000000"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="YES" id="100042">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="100043">
+                        <rect key="frame" x="238" y="1" width="11" height="298"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+        </customView>
+        <drawer trailingOffset="15" id="100023">
+            <size key="contentSize" width="200" height="100"/>
+            <size key="maxContentSize" width="10000" height="10000"/>
+            <connections>
+                <outlet property="contentView" destination="100022" id="100026"/>
+                <outlet property="parentWindow" destination="100021" id="100025"/>
+            </connections>
+        </drawer>
+        <objectController automaticallyPreparesContent="YES" id="100045" userLabel="Object Controller">
+            <declaredKeys>
+                <string>slice</string>
+                <string>maxslice</string>
+                <string>minslice</string>
+                <string>plane</string>
+            </declaredKeys>
+        </objectController>
+        <window title="3DWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="100065">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="86" width="645" height="602"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="100066">
+                <rect key="frame" x="0.0" y="0.0" width="645" height="602"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="100067" customClass="MyView3D">
+                        <rect key="frame" x="20" y="70" width="512" height="512"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="checkXPlane" destination="0PC-6E-A3w" id="7uF-4T-Vnk"/>
+                            <outlet property="checkYPlane" destination="MJf-Lq-map" id="Q1a-ax-JTa"/>
+                            <outlet property="checkZPlane" destination="tfU-2p-HiP" id="u79-Jf-Uif"/>
+                        </connections>
+                    </customView>
+                    <slider verticalHuggingPriority="750" tag="5" id="100073">
+                        <rect key="frame" x="63" y="43" width="471" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-5" maxValue="5" tickMarkPosition="above" sliderType="linear" id="100074"/>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="100123"/>
+                        </connections>
+                    </slider>
+                    <slider verticalHuggingPriority="750" tag="6" id="PJw-6d-oEr">
+                        <rect key="frame" x="63" y="18" width="471" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="20" doubleValue="20" tickMarkPosition="above" sliderType="linear" id="S3U-SR-fME"/>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="LWv-iF-5NK"/>
+                        </connections>
+                    </slider>
+                    <button verticalHuggingPriority="750" tag="1" id="100117">
+                        <rect key="frame" x="553" y="445" width="60" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="100118">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="1h4-ju-8b7"/>
+                        </connections>
+                    </button>
+                    <button id="0PC-6E-A3w">
+                        <rect key="frame" x="551" y="398" width="68" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="X Plane" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="yO1-1L-o5n">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="2hp-H0-ZUG"/>
+                        </connections>
+                    </button>
+                    <button id="MJf-Lq-map">
+                        <rect key="frame" x="551" y="378" width="68" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Y Plane" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="612-6L-kf2">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="rwF-p1-Dua"/>
+                        </connections>
+                    </button>
+                    <button id="tfU-2p-HiP">
+                        <rect key="frame" x="551" y="358" width="68" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Z Plane" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Ycz-LR-pDd">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="org-Wa-dIu"/>
+                        </connections>
+                    </button>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="eca-Qu-R7Q">
+                        <rect key="frame" x="542" y="502" width="83" height="56"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="20" height="18"/>
+                        <size key="intercellSpacing" width="1" height="1"/>
+                        <buttonCell key="prototype" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="mQ2-rI-Vhg">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="miniSystem"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="square" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" enabled="NO" state="on" transparent="YES" inset="2" id="GqE-DG-RWd">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="F" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" tag="4" inset="2" id="0LR-hk-ndK">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <connections>
+                                        <action selector="setStandardRotation:" target="100067" id="6W2-UJ-eqK"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="square" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" enabled="NO" tag="8" transparent="YES" inset="2" id="rei-m6-u9z">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" title="S" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" tag="1" inset="2" id="fwc-zD-odA">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <connections>
+                                        <action selector="setStandardRotation:" target="100067" id="WyW-rY-use"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="square" title="L" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" tag="5" inset="2" id="2N4-Id-fTc">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <connections>
+                                        <action selector="setStandardRotation:" target="100067" id="g8P-9r-rF4"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="square" title="I" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" tag="9" inset="2" id="TNz-3w-CE4">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <connections>
+                                        <action selector="setStandardRotation:" target="100067" id="LKs-lZ-dgM"/>
+                                    </connections>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" enabled="NO" tag="2" transparent="YES" inset="2" id="vqw-hS-Rzw">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="O" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" tag="6" inset="2" id="krl-nN-1VO">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <connections>
+                                        <action selector="setStandardRotation:" target="100067" id="1kT-HY-vqf"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="square" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" enabled="NO" tag="10" transparent="YES" inset="2" id="FrE-Xm-MLi">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </column>
+                            <column>
+                                <buttonCell type="square" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" enabled="NO" tag="3" transparent="YES" inset="2" id="4EP-cd-CSs">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <buttonCell type="square" title="M" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" tag="7" inset="2" id="ium-V1-dnx">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <connections>
+                                        <action selector="setStandardRotation:" target="100067" id="IOc-pt-eyp"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="square" bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" enabled="NO" tag="11" transparent="YES" inset="2" id="ctj-xb-hiX">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                    </matrix>
+                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="2" id="Pku-zx-74b">
+                        <rect key="frame" x="550" y="473" width="15" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" tag="1" maxValue="1" id="ROV-nu-HDo"/>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="na2-kR-WA0"/>
+                        </connections>
+                    </stepper>
+                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="3" id="svi-G3-4QK">
+                        <rect key="frame" x="580" y="473" width="15" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" tag="2" maxValue="1" id="qrB-eR-aUI"/>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="nJ3-3c-iai"/>
+                        </connections>
+                    </stepper>
+                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="4" id="Yol-Be-9NL">
+                        <rect key="frame" x="611" y="473" width="15" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" tag="3" maxValue="1" id="MCa-DX-3pt"/>
+                        <connections>
+                            <action selector="changeView:" target="100067" id="bj6-T3-fCb"/>
+                        </connections>
+                    </stepper>
+                    <textField verticalHuggingPriority="750" id="dKa-3t-OVR">
+                        <rect key="frame" x="538" y="479" width="11" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="X" id="N9i-Ne-mQG">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="t7I-ik-oc6">
+                        <rect key="frame" x="18" y="46" width="41" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Zoom" id="S8V-WF-03o">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="5Ki-MX-qUI">
+                        <rect key="frame" x="18" y="24" width="41" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Cut" id="FvS-Xs-MaM">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="gin-TD-cIf">
+                        <rect key="frame" x="569" y="479" width="10" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Y" id="lT5-bD-OWM">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="pKc-Fr-9st">
+                        <rect key="frame" x="599" y="479" width="11" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Z" id="vp9-AD-ziu">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="7Yv-gL-P4z">
+                        <rect key="frame" x="538" y="566" width="86" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Orientation" id="0ta-Bz-iQr">
+                            <font key="font" metaFont="systemBold" size="12"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="DmS-f9-9Xm">
+                        <rect key="frame" x="538" y="422" width="86" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cut Planes" id="Pdr-CC-3tI">
+                            <font key="font" metaFont="systemBold" size="12"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+</document>

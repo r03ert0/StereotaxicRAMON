@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		620C9D6112069D06009D9410 /* Nifti.c in Sources */ = {isa = PBXBuildFile; fileRef = 620C9D5F12069D06009D9410 /* Nifti.c */; };
+		6216B953116E26E6008BFF9E /* polygonizer3.c in Sources */ = {isa = PBXBuildFile; fileRef = 6216B951116E26E6008BFF9E /* polygonizer3.c */; };
+		6274E3A50FFB60020088AF5D /* Analyze.c in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3A30FFB60020088AF5D /* Analyze.c */; };
+		6274E3A90FFB600F0088AF5D /* RAMON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3A80FFB600F0088AF5D /* RAMON.m */; };
+		6274E3AF0FFB601E0088AF5D /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3AB0FFB601E0088AF5D /* MyView.m */; };
+		6274E3B00FFB601E0088AF5D /* MyIntValueTransformer.h in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3AC0FFB601E0088AF5D /* MyIntValueTransformer.h */; };
+		6274E3B40FFB602C0088AF5D /* MyCommandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3B30FFB602C0088AF5D /* MyCommandView.m */; };
+		6274E3B80FFB60B20088AF5D /* DocumentRAMON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3B70FFB60B20088AF5D /* DocumentRAMON.m */; };
+		627D28871276CBFD0000080D /* voxtopology.c in Sources */ = {isa = PBXBuildFile; fileRef = 627D28861276CBFD0000080D /* voxtopology.c */; };
+		62816E3A15F0F2950071B851 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E3915F0F2950071B851 /* QTKit.framework */; };
+		62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E4D15F0F4690071B851 /* QuickTime.framework */; };
+		62C0EFE712D5FACD000BACD6 /* StereotaxicRAMON.icns in Resources */ = {isa = PBXBuildFile; fileRef = 62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */; };
+		62CFBC79171EE250004BE88C /* MyAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CFBC78171EE250004BE88C /* MyAppController.m */; };
+		62E083DF119E6C1600C661A3 /* MyView3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E083DE119E6C1600C661A3 /* MyView3D.m */; };
+		62E08433119E7CC900C661A3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E08432119E7CC900C661A3 /* OpenGL.framework */; };
+		62E084D5119E878400C661A3 /* Trackball.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E084D4119E878400C661A3 /* Trackball.m */; };
+		62EF3D5111EEFD8500EB979F /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EF3D5011EEFD8500EB979F /* dot.png */; };
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		8D15AC2E0486D014006FF6A4 /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MyDocument.nib; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF750370BD2300C91783 /* StereotaxicEditorRAMON_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StereotaxicEditorRAMON_Prefix.pch; sourceTree = "<group>"; };
+		6200077E12F6D4B500B3BC88 /* MyDocumentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocumentProtocol.h; sourceTree = "<group>"; };
+		620C9C0F1201B8A6009D9410 /* nifti1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nifti1.h; path = ../nifti1.h; sourceTree = SOURCE_ROOT; };
+		620C9D5F12069D06009D9410 /* Nifti.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Nifti.c; path = ../Nifti.c; sourceTree = SOURCE_ROOT; };
+		620C9D6012069D06009D9410 /* Nifti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Nifti.h; path = ../Nifti.h; sourceTree = SOURCE_ROOT; };
+		6216B951116E26E6008BFF9E /* polygonizer3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = polygonizer3.c; path = ../../../polygonizer/polygonizer3.c; sourceTree = SOURCE_ROOT; };
+		6216B952116E26E6008BFF9E /* polygonizer3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = polygonizer3.h; path = ../../../polygonizer/polygonizer3.h; sourceTree = SOURCE_ROOT; };
+		6274E3A20FFB60020088AF5D /* Analyze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Analyze.h; sourceTree = "<group>"; };
+		6274E3A30FFB60020088AF5D /* Analyze.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Analyze.c; sourceTree = "<group>"; };
+		6274E3A40FFB60020088AF5D /* colourmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colourmap.h; sourceTree = "<group>"; };
+		6274E3A70FFB600F0088AF5D /* RAMON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMON.h; sourceTree = "<group>"; };
+		6274E3A80FFB600F0088AF5D /* RAMON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMON.m; sourceTree = "<group>"; };
+		6274E3AA0FFB601E0088AF5D /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		6274E3AB0FFB601E0088AF5D /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		6274E3AC0FFB601E0088AF5D /* MyIntValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntValueTransformer.h; sourceTree = "<group>"; };
+		6274E3B20FFB602C0088AF5D /* MyCommandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommandView.h; sourceTree = "<group>"; };
+		6274E3B30FFB602C0088AF5D /* MyCommandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommandView.m; sourceTree = "<group>"; };
+		6274E3B60FFB60B20088AF5D /* DocumentRAMON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentRAMON.h; sourceTree = "<group>"; };
+		6274E3B70FFB60B20088AF5D /* DocumentRAMON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentRAMON.m; sourceTree = "<group>"; };
+		627D28861276CBFD0000080D /* voxtopology.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = voxtopology.c; sourceTree = "<group>"; };
+		627D28891276CC2D0000080D /* voxtopology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voxtopology.h; sourceTree = "<group>"; };
+		62816E3915F0F2950071B851 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		62816E4D15F0F4690071B851 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = StereotaxicRAMON.icns; sourceTree = "<group>"; };
+		62CFBC77171EE250004BE88C /* MyAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppController.h; sourceTree = "<group>"; };
+		62CFBC78171EE250004BE88C /* MyAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppController.m; sourceTree = "<group>"; };
+		62E083DD119E6C1600C661A3 /* MyView3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView3D.h; sourceTree = "<group>"; };
+		62E083DE119E6C1600C661A3 /* MyView3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView3D.m; sourceTree = "<group>"; };
+		62E08432119E7CC900C661A3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		62E084D3119E878400C661A3 /* Trackball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trackball.h; path = "../../../../Documents/Mi C/Objective C/Trackball.h"; sourceTree = SOURCE_ROOT; };
+		62E084D4119E878400C661A3 /* Trackball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Trackball.m; path = "../../../../Documents/Mi C/Objective C/Trackball.m"; sourceTree = SOURCE_ROOT; };
+		62EF3D5011EEFD8500EB979F /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* StereotaxicEditorRAMON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StereotaxicEditorRAMON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				62E08433119E7CC900C661A3 /* OpenGL.framework in Frameworks */,
+				62816E3A15F0F2950071B851 /* QTKit.framework in Frameworks */,
+				62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* StereotaxicEditorRAMON.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* StereotaxicEditorRAMON */ = {
+			isa = PBXGroup;
+			children = (
+				6274E3A10FFB60020088AF5D /* Standard C */,
+				6274E3A60FFB600F0088AF5D /* RAMON */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = StereotaxicEditorRAMON;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6200077E12F6D4B500B3BC88 /* MyDocumentProtocol.h */,
+				62CFBC77171EE250004BE88C /* MyAppController.h */,
+				62CFBC78171EE250004BE88C /* MyAppController.m */,
+				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				6274E3B20FFB602C0088AF5D /* MyCommandView.h */,
+				6274E3B30FFB602C0088AF5D /* MyCommandView.m */,
+				6274E3AA0FFB601E0088AF5D /* MyView.h */,
+				6274E3AB0FFB601E0088AF5D /* MyView.m */,
+				62E083DD119E6C1600C661A3 /* MyView3D.h */,
+				62E083DE119E6C1600C661A3 /* MyView3D.m */,
+				62E084D3119E878400C661A3 /* Trackball.h */,
+				62E084D4119E878400C661A3 /* Trackball.m */,
+				6274E3AC0FFB601E0088AF5D /* MyIntValueTransformer.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* StereotaxicEditorRAMON_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */,
+				62EF3D5011EEFD8500EB979F /* dot.png */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */,
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62816E4D15F0F4690071B851 /* QuickTime.framework */,
+				62816E3915F0F2950071B851 /* QTKit.framework */,
+				62E08432119E7CC900C661A3 /* OpenGL.framework */,
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6274E3A10FFB60020088AF5D /* Standard C */ = {
+			isa = PBXGroup;
+			children = (
+				6274E3A20FFB60020088AF5D /* Analyze.h */,
+				6274E3A30FFB60020088AF5D /* Analyze.c */,
+				6274E3A40FFB60020088AF5D /* colourmap.h */,
+				620C9C0F1201B8A6009D9410 /* nifti1.h */,
+				620C9D6012069D06009D9410 /* Nifti.h */,
+				620C9D5F12069D06009D9410 /* Nifti.c */,
+				6216B952116E26E6008BFF9E /* polygonizer3.h */,
+				6216B951116E26E6008BFF9E /* polygonizer3.c */,
+				627D28891276CC2D0000080D /* voxtopology.h */,
+				627D28861276CBFD0000080D /* voxtopology.c */,
+			);
+			name = "Standard C";
+			sourceTree = "<group>";
+		};
+		6274E3A60FFB600F0088AF5D /* RAMON */ = {
+			isa = PBXGroup;
+			children = (
+				6274E3B60FFB60B20088AF5D /* DocumentRAMON.h */,
+				6274E3B70FFB60B20088AF5D /* DocumentRAMON.m */,
+				6274E3A70FFB600F0088AF5D /* RAMON.h */,
+				6274E3A80FFB600F0088AF5D /* RAMON.m */,
+			);
+			name = RAMON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* StereotaxicEditorRAMON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "StereotaxicEditorRAMON" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StereotaxicEditorRAMON;
+			productInstallPath = "$(HOME)/Applications";
+			productName = StereotaxicEditorRAMON;
+			productReference = 8D15AC370486D014006FF6A4 /* StereotaxicEditorRAMON.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "StereotaxicEditorRAMON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* StereotaxicEditorRAMON */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* StereotaxicEditorRAMON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
+				8D15AC2E0486D014006FF6A4 /* MyDocument.nib in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				62EF3D5111EEFD8500EB979F /* dot.png in Resources */,
+				62C0EFE712D5FACD000BACD6 /* StereotaxicRAMON.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				6274E3A50FFB60020088AF5D /* Analyze.c in Sources */,
+				6274E3A90FFB600F0088AF5D /* RAMON.m in Sources */,
+				6274E3AF0FFB601E0088AF5D /* MyView.m in Sources */,
+				6274E3B00FFB601E0088AF5D /* MyIntValueTransformer.h in Sources */,
+				6274E3B40FFB602C0088AF5D /* MyCommandView.m in Sources */,
+				6274E3B80FFB60B20088AF5D /* DocumentRAMON.m in Sources */,
+				6216B953116E26E6008BFF9E /* polygonizer3.c in Sources */,
+				62E083DF119E6C1600C661A3 /* MyView3D.m in Sources */,
+				62E084D5119E878400C661A3 /* Trackball.m in Sources */,
+				620C9D6112069D06009D9410 /* Nifti.c in Sources */,
+				627D28871276CBFD0000080D /* voxtopology.c in Sources */,
+				62CFBC79171EE250004BE88C /* MyAppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = MyDocument.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C05733C808A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = StereotaxicEditorRAMON_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = StereotaxicEditorRAMON;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C05733C908A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = StereotaxicEditorRAMON_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = StereotaxicEditorRAMON;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C05733CC08A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C05733CD08A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "StereotaxicEditorRAMON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733C808A9546B00998B17 /* Debug */,
+				C05733C908A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "StereotaxicEditorRAMON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733CC08A9546B00998B17 /* Debug */,
+				C05733CD08A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

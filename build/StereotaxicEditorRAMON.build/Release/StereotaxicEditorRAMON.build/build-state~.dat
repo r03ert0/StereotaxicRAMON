@@ -1,0 +1,1471 @@
+TStereotaxicEditorRAMON
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist
+cCpResource English.lproj/Credits.rtf build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf
+cStripNIB /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib
+cStripNIB /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib
+cCopyStringsFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCpResource dot.png build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png
+cCpResource StereotaxicRAMON.icns build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns
+cProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o /Users/roberto/Applications/polygonizer/polygonizer3.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o /Users/roberto/Documents/Mi\ C/Objective\ C/Trackball.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o /Users/roberto/Applications/brainbits/RAMONES/Nifti.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON normal i386
+cGenerateDSYMFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON
+cTouch /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c000000005130312F00000000000000AA
+t1362112815
+s170
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000051F5201300000000000001E5
+t1375019027
+s485
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005282156E00000000000000AA
+t1384256878
+s170
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052691997000000000000044C
+t1382619543
+s1100
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000005269199700000000000001DB
+t1382619543
+s475
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+c000000005269199700000000002682C8
+t1382619543
+s2523848
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c00000000526919970000000000007D5C
+t1382619543
+s32092
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+c00000000526919970000000000020D64
+t1382619543
+s134500
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+c0000000052691997000000000001B3B8
+t1382619543
+s111544
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+c00000000526919970000000000034F94
+t1382619543
+s216980
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+c0000000052691997000000000000CB08
+t1382619543
+s51976
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+c0000000052691997000000000002C5F4
+t1382619543
+s181748
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+c0000000052691997000000000002B9A8
+t1382619543
+s178600
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+c00000000526919970000000000011EF8
+t1382619543
+s73464
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000526919970000000000059898
+t1382619543
+s366744
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c0000000052691997000000000000253C
+t1382619543
+s9532
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c0000000052691997000000000004C7C4
+t1382619543
+s313284
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c00000000526919970000000000085C78
+t1382619543
+s547960
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000052691997000000000008B2C4
+t1382619543
+s570052
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+c0000000052691997000000000000979C
+t1382619543
+s38812
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+c000000005269199700000000000223B4
+t1382619543
+s140212
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+c00000000526919970000000000071A98
+t1382619543
+s465560
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+c00000000526919970000000000017E1C
+t1382619543
+s97820
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+c0000000052691997000000000004F094
+t1382619543
+s323732
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+c0000000052691997000000000003AA44
+t1382619543
+s240196
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+c000000005269199700000000000383CC
+t1382619543
+s230348
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+c0000000052691997000000000001B66C
+t1382619543
+s112236
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+c00000000526919970000000000030444
+t1382619543
+s197700
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005269199700000000000C9E68
+t1382619543
+s826984
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+c000000005269199700000000000394F8
+t1382619543
+s234744
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+c0000000052691998000000000000BB7C
+t1382619544
+s47996
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+c000000005269199800000000000211A0
+t1382619544
+s135584
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+c00000000526919980000000000005F00
+t1382619544
+s24320
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QTKit.framework/QTKit
+c0000000052691998000000000007DA10
+t1382619544
+s514576
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuickTime.framework/QuickTime
+c0000000052691998000000000006110C
+t1382619544
+s397580
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+c000000005269199A000000000000681C
+t1382619546
+s26652
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.dylib
+c000000005269199A0000000000014EF8
+t1382619546
+s85752
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+c000000005269199A0000000000004734
+t1382619546
+s18228
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+c000000005269199A000000000000FC6C
+t1382619546
+s64620
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+c000000005269199A000000000000F6A0
+t1382619546
+s63136
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+c000000005269199A0000000000006254
+t1382619546
+s25172
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+c000000005269199A000000000000E0F8
+t1382619546
+s57592
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+c000000005269199A000000000000D6DC
+t1382619546
+s55004
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+c000000005269199A0000000000006308
+t1382619546
+s25352
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+c000000005269199A0000000000004050
+t1382619546
+s16464
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+c000000005269199A0000000000008570
+t1382619546
+s34160
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+c000000005269199A0000000000005EA0
+t1382619546
+s24224
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+c000000005269199A0000000000005FAC
+t1382619546
+s24492
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+c000000005269199A0000000000004440
+t1382619546
+s17472
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+c000000005269199A000000000000AA28
+t1382619546
+s43560
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+c000000005269199A0000000000003E2C
+t1382619546
+s15916
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+c000000005269199A0000000000030A24
+t1382619546
+s199204
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+c000000005269199A0000000000005E54
+t1382619546
+s24148
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+c000000005269199A0000000000006A90
+t1382619546
+s27280
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+c000000005269199A00000000000178AC
+t1382619546
+s96428
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+c000000005269199A000000000001ADC8
+t1382619546
+s110024
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+c000000005269199A000000000001028C
+t1382619546
+s66188
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+c000000005269199A0000000000008800
+t1382619546
+s34816
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+c000000005269199A0000000000011090
+t1382619546
+s69776
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+c000000005269199A000000000000882C
+t1382619546
+s34860
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+c000000005269199A00000000000067AC
+t1382619546
+s26540
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+c000000005269199A0000000000008DEC
+t1382619546
+s36332
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+c000000005269199A0000000000004C08
+t1382619546
+s19464
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+c000000005269199A000000000000439C
+t1382619546
+s17308
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+c000000005269199A0000000000006768
+t1382619546
+s26472
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+c000000005269199A00000000000172F4
+t1382619546
+s94964
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.eprintf.a
+c000000005269199F0000000000000720
+t1382619551
+s1824
+
+N/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+c000000005269199F0000000000001750
+t1382619551
+s5968
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c00000000526777B600000000000066C0
+t1382512566
+s26304
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c00000000526777C1000000000002C960
+t1382512577
+s182624
+
+N/System/Library/Frameworks/QTKit.framework/QTKit
+c0000000052B014A0000000000049D700
+t1387271328
+s4839168
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c0000000052B014A00000000000322B80
+t1387271328
+s3287936
+
+N/Users/roberto/Applications/brainbits/RAMONES/Nifti.c
+c0000000050586CEA0000000000000820
+t1347972330
+s2080
+
+N/Users/roberto/Applications/brainbits/RAMONES/Nifti.h
+c000000004FFD44A700000000000000AA
+t1341998247
+s170
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.h
+c000000004024927500000000000001EF
+t1076138613
+s495
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m
+c000000004BEE4FA7000000000000196A
+t1273909159
+s6506
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.c
+c000000004E106DAB00000000000061F5
+t1309699499
+s25077
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.h
+c000000004E10583400000000000019F2
+t1309694004
+s6642
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.c
+c0000000050586CEA0000000000000820
+t1347972330
+s2080
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.h
+c000000004FFD44A700000000000000AA
+t1341998247
+s170
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../nifti1.h
+c000000004C513AB30000000000010E73
+t1280391859
+s69235
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c
+c000000004E3DA7B500000000000016FE
+t1312663477
+s5886
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.h
+c000000004E19C1260000000000000C9C
+t1310310694
+s3228
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.h
+c000000004A4B2C8000000000000003CD
+t1246440576
+s973
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m
+c000000004C35EE9900000000000016D2
+t1278602905
+s5842
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/Credits.rtf
+c000000004A4B277400000000000001B4
+t1246439284
+s436
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/InfoPlist.strings
+c000000004A4B277400000000000000CC
+t1246439284
+s204
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib
+c00000000516EAB250000000000000088
+t1366207269
+s136
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib
+c00000000521CF68C0000000000000088
+t1377629836
+s136
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist
+c000000004E19F29E0000000000000D51
+t1310323358
+s3409
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.h
+c00000000516EAB1600000000000000D2
+t1366207254
+s210
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m
+c00000000516EABB80000000000000116
+t1366207416
+s278
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.h
+c000000004D469D3A00000000000000D2
+t1296473402
+s210
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m
+c000000004D34156C000000000000080A
+t1295258988
+s2058
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.h
+c00000000516EABC50000000000000680
+t1366207429
+s1664
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m
+c0000000052D6BD4A0000000000005271
+t1389804874
+s21105
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocumentProtocol.h
+c000000004E1C38F2000000000000009A
+t1310472434
+s154
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyIntValueTransformer.h
+c0000000049F5BAD9000000000000024F
+t1240840921
+s591
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.h
+c0000000052D6BD710000000000001071
+t1389804913
+s4209
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m
+c0000000052D6BDA90000000000011D5E
+t1389804969
+s73054
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.h
+c00000000521DB99D00000000000002B3
+t1377679773
+s691
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m
+c00000000521DB99D00000000000014C8
+t1377679773
+s5320
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.h
+c000000004537A6F600000000000003AA
+t1161275126
+s938
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m
+c000000004C3AF6C10000000000000D72
+t1278932673
+s3442
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch
+c000000004A4B277400000000000000AF
+t1246439284
+s175
+i<Cocoa/Cocoa.h>
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicRAMON.icns
+c000000004D25C3070000000000030A5D
+t1294320391
+s199261
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app
+t1389879543
+s102
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM
+t2
+s0
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist
+t1389879543
+s3792
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON
+t1389879545
+s179456
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/PkgInfo
+t1389879543
+s8
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf
+t1389879543
+s436
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1389879543
+s204
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/MainMenu.nib
+t1389879544
+s14722
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/MyDocument.nib
+t1389879544
+s26609
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns
+t1389879543
+s199261
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png
+t1389879543
+s2798
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o
+t1389879544
+s17560
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o
+t1389879544
+s34052
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o
+t1389879544
+s4552
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o
+t1389879544
+s24672
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o
+t1389879545
+s75560
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o
+t1389879545
+s223916
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o
+t1389879544
+s30972
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o
+t1389879544
+s9716
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o
+t1389879544
+s16712
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/StereotaxicEditorRAMON.LinkFileList
+c0000000052D7E0F700000000000008CA
+t1389879543
+s2250
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o
+t1389879544
+s22020
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o
+t1389879544
+s2588
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o
+t1389879544
+s35404
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o
+t1389879544
+s9184
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/colourmap.h
+c000000004C40399800000000000059B1
+t1279277464
+s22961
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/dot.png
+c000000004C3ED7FA0000000000000AEE
+t1279186938
+s2798
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m
+c000000004A4B2774000000000000010A
+t1246439284
+s266
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c
+c000000004E2D5C8D0000000000003A37
+t1311595661
+s14903
+
+N/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.h
+c00000000521DB9760000000000000198
+t1377679734
+s408
+
+N/Users/roberto/Applications/brainbits/RAMONES/nifti1.h
+c000000004C513AB30000000000010E73
+t1280391859
+s69235
+
+N/Users/roberto/Applications/polygonizer/polygonizer3.c
+c000000004E106DAB00000000000061F5
+t1309699499
+s25077
+
+N/Users/roberto/Applications/polygonizer/polygonizer3.h
+c000000004E10583400000000000019F2
+t1309694004
+s6642
+
+N/Users/roberto/Documents/Mi C/Objective C/Trackball.h
+c000000004024927500000000000001EF
+t1076138613
+s495
+
+N/Users/roberto/Documents/Mi C/Objective C/Trackball.m
+c000000004BEE4FA7000000000000196A
+t1273909159
+s6506
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch
+t1382626613
+s109828
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch
+t1382626613
+s14262548
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch
+t1389176880
+s109828
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch
+t1389176881
+s14262548
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.pth
+t1380379765
+s13435256
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.pth
+t1380379913
+s102104
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.pth
+t1379516673
+s102104
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.pth
+t1380379913
+s13438132
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.pth
+t1380379764
+s102104
+
+N/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.pth
+t1379516674
+s13404692
+
+NInfo.plist
+c000000004E19F29E0000000000000D51
+t1310323358
+s3409
+
+CBuild AST from "/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m"
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/Nifti.c
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.c
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.c
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m
+r0
+
+CBuild AST from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c
+r0
+
+CBuild AST from /Users/roberto/Applications/polygonizer/polygonizer3.c
+r0
+
+CBuild AST from /Users/roberto/Documents/Mi\ C/Objective\ C/Trackball.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies60735e771888b841^7dcd6e771888b841^-173"warning: no rule to process file '/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyIntValueTransformer.h' of type sourcecode.c.h for architecture i3861(21%IDEActivityLogMessage2@172"Warning: no rule to process file '/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyIntValueTransformer.h' of type sourcecode.c.h for architecture i386-411572343#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"2F20899B-AD00-44FB-B403-81DEC8B41791-
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.353368
+e411572344.684051
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c178"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o Analyze.c normal i386 c com.apple.compilers.llvm.clang.1_0.compilera1835a781888b841^2a1eaf781888b841^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c0000000000000000^2869"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o Analyze.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.c -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o36"6BA0DE94-2F3E-4CF8-B0F7-56DF98D92464-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.354743
+e411572344.690546
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m200"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o DocumentRAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler88105b781888b841^21c9b0781888b841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m0000000000000000^3118"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o DocumentRAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o36"B0F5B0F3-9168-447E-AEBD-76F6911CC85B-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.691815
+e411572344.725563
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m204"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o MyAppController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1135b1781888b841^d3beb9781888b841^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m0000000000000000^3130"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o MyAppController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyAppController.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o36"593BAFBD-D3F1-4748-A318-B1F0320CC7CB-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.354395
+e411572344.646602
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocumentProtocol.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m200"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o MyCommandView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilera6d35a781888b841^f52ea6781888b841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m0000000000000000^3118"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o MyCommandView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o36"843376AA-86A8-4E84-BB8C-15258F002D59-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.352966
+e411572345.014927
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/DocumentRAMON.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.h
+d/Users/roberto/Documents/Mi C/Objective C/Trackball.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.h
+d/Users/roberto/Applications/brainbits/RAMONES/nifti1.h
+d/Users/roberto/Applications/polygonizer/polygonizer3.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocumentProtocol.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyCommandView.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyIntValueTransformer.h
+d/Users/roberto/Applications/brainbits/RAMONES/Nifti.h
+o/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m:356:14: warning: 'typeFromFileExtension:' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations]
+o        theType=[dc typeFromFileExtension:[filename pathExtension]];
+o                    ^
+oIn file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m:1:
+oIn file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch:6:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h:13:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h:53:
+o/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSDocumentController.h:280:1: note: method 'typeFromFileExtension:' declared here
+o- (NSString *)typeFromFileExtension:(NSString *)fileNameExtensionOrHFSFileType NS_DEPRECATED_MAC(10_0, 10_5);
+o^
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m194"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o MyDocument.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler936f5a781888b841^ddd103791888b841^-1295"/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m:356:14: warning: 'typeFromFileExtension:' is deprecated: first deprecated in OS X 10.5 [-Wdeprecated-declarations]        theType=[dc typeFromFileExtension:[filename pathExtension]];                    ^In file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m:1:In file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch:6:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h:13:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h:53:/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSDocumentController.h:280:1: note: method 'typeFromFileExtension:' declared here- (NSString *)typeFromFileExtension:(NSString *)fileNameExtensionOrHFSFileType NS_DEPRECATED_MAC(10_0, 10_5);^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@69"'typeFromFileExtension:' is deprecated: first deprecated in OS X 10.5-411572345#18446744073709551615#0#1(2@45"Method 'typeFromFileExtension:' declared here-411572345#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@192"file:///Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSDocumentController.h0000000000000000^279#0#279#0#26975#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@88"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m0000000000000000^355#13#355#13#9830#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@88"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m0000000000000000^3100"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o MyDocument.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocument.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o36"F1DCBACC-3E99-43FA-A0E1-45E6B7244804-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.353933
+e411572345.573080
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.h
+d/Users/roberto/Documents/Mi C/Objective C/Trackball.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Analyze.h
+d/Users/roberto/Applications/brainbits/RAMONES/nifti1.h
+d/Users/roberto/Applications/polygonizer/polygonizer3.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyDocumentProtocol.h
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/colourmap.h
+o/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1368:17: warning: 'pi' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+o                        z+=in[n]*cos(pi*(2*n+1)*k/(float)(2*N));
+o                                     ^
+oIn file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1:
+oIn file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch:6:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h:12:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:76:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h:12:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h:23:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers/AE.h:20:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:159:
+o/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/fp.h:1191:23: note: 'pi' declared here
+oextern const double_t pi                                             __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+o                      ^
+o/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1380:53: warning: 'pi' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+o                        z+=((k==0)?1/sqrt(N):sqrt(2/(float)N))*in[k]*cos(pi*(2*n+1)*k/(float)(2*N));
+o                                                                         ^
+oIn file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1:
+oIn file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch:6:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h:12:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:76:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h:12:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h:23:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers/AE.h:20:
+oIn file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:159:
+o/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/fp.h:1191:23: note: 'pi' declared here
+oextern const double_t pi                                             __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+o                      ^
+o2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m186"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o MyView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler53b05a781888b841^07b692791888b841^-4508"/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1368:17: warning: 'pi' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]                        z+=in[n]*cos(pi*(2*n+1)*k/(float)(2*N));                                     ^In file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1:In file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch:6:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h:12:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:76:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h:12:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h:23:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers/AE.h:20:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:159:/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/fp.h:1191:23: note: 'pi' declared hereextern const double_t pi                                             __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);                      ^/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1380:53: warning: 'pi' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]                        z+=((k==0)?1/sqrt(N):sqrt(2/(float)N))*in[k]*cos(pi*(2*n+1)*k/(float)(2*N));                                                                         ^In file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m:1:In file included from /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch:6:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h:12:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:76:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h:12:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h:23:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers/AE.h:20:In file included from /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:159:/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/fp.h:1191:23: note: 'pi' declared hereextern const double_t pi                                             __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);                      ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@49"'pi' is deprecated: first deprecated in OS X 10.8-411572345#18446744073709551615#0#1(2@18"'pi' declared here-411572345#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@212"file:///Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/fp.h0000000000000000^1190#22#1190#22#38965#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@84"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m0000000000000000^1367#16#1367#16#34500#0#12"Deprecations--2@49"'pi' is deprecated: first deprecated in OS X 10.8-411572345#18446744073709551615#0#1(2@18"'pi' declared here-411572345#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@212"file:///Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/fp.h0000000000000000^1190#22#1190#22#38965#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@84"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m0000000000000000^1379#52#1379#52#34746#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@84"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m0000000000000000^3076"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o MyView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o36"DF127D3E-51ED-49B2-8CB0-D027BF126D14-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.615362
+e411572344.755183
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.h
+d/Users/roberto/Documents/Mi C/Objective C/Trackball.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m190"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o MyView3D.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler809f9d781888b841^0054c1781888b841^---0#0#1#-19%DVTDocumentLocation2@86"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m0000000000000000^3088"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o MyView3D.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/MyView3D.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o36"E787F7EE-3190-4CA1-A575-5C25607BEDA6-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o /Users/roberto/Applications/brainbits/RAMONES/Nifti.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.666167
+e411572344.736114
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o
+x/Users/roberto/Applications/brainbits/RAMONES/Nifti.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/Nifti.c
+d/Users/roberto/Applications/brainbits/RAMONES/Nifti.h
+d/Users/roberto/Applications/brainbits/RAMONES/nifti1.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/roberto/Applications/brainbits/RAMONES/Nifti.c220"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o /Users/roberto/Applications/brainbits/RAMONES/Nifti.c normal i386 c com.apple.compilers.llvm.clang.1_0.compilerd3a2aa781888b841^d272bc781888b841^---0#0#1#-19%DVTDocumentLocation2@60"file:///Users/roberto/Applications/brainbits/RAMONES/Nifti.c0000000000000000^2880"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o /Users/roberto/Applications/brainbits/RAMONES/Nifti.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.dia -c /Users/roberto/Applications/brainbits/RAMONES/Nifti.c -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o36"FAEFFB88-3A05-4374-A825-1581EB689912-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s402072759.354937
+e402072759.416225
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.cdff85ab724f7b741^658d6ab724f7b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.c0000000000000000^2989"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o ../Nifti.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../Nifti.c -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o36"7867935D-D61E-40E6-B2CD-FBF90EEA1AD6-
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.353632
+e411572344.664033
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m184"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o RAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerd49e5a781888b841^54fea9781888b841^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m0000000000000000^3070"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o RAMON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/RAMON.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o36"09081CEF-DEE2-4E50-B4E5-FBAF275DC6F5-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o "/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402072759.266607
+e402072759.346252
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m:112:5: warning: instance method '-rotateBy:' not found (return type defaults to 'id') [-Wobjc-method-access]
+o    [sender rotateBy:rot];
+o    ^       ~~~~~~~~
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.mdb6c44b724f7b741^40a358b724f7b741^-298"/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m:112:5: warning: instance method '-rotateBy:' not found (return type defaults to 'id') [-Wobjc-method-access]    [sender rotateBy:rot];    ^       ~~~~~~~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@69"Instance method '-rotateBy:' not found (return type defaults to 'id')-402072759#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@73"file://localhost/Users/roberto/Documents/Mi%20C/Objective%20C/Trackball.m0000000000000000^111#4#111#4#4190#0#14"Semantic Issue1(3@73"file://localhost/Users/roberto/Documents/Mi%20C/Objective%20C/Trackball.m0000000000000000^111#12#111#20#4198#0#-0#0#0#-19%DVTDocumentLocation4@139"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi%20C/Objective%20C/Trackball.m0000000000000000^3272"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o "../../../../Documents/Mi C/Objective C/Trackball.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.dia -c "/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../../Documents/Mi C/Objective C/Trackball.m" -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o36"A633EE37-C499-4EA1-97E3-2B23D06741EE-
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o /Users/roberto/Documents/Mi\ C/Objective\ C/Trackball.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.649206
+e411572344.733659
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o
+x/Users/roberto/Documents/Mi C/Objective C/Trackball.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Documents/Mi C/Objective C/Trackball.m
+d/Users/roberto/Documents/Mi C/Objective C/Trackball.h
+o/Users/roberto/Documents/Mi C/Objective C/Trackball.m:112:13: warning: instance method '-rotateBy:' not found (return type defaults to 'id') [-Wobjc-method-access]
+o    [sender rotateBy:rot];
+o            ^~~~~~~~
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Compile /Users/roberto/Documents/Mi C/Objective C/Trackball.m236"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o /Users/roberto/Documents/Mi\ C/Objective\ C/Trackball.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler664ba6781888b841^f0e0bb781888b841^-233"/Users/roberto/Documents/Mi C/Objective C/Trackball.m:112:13: warning: instance method '-rotateBy:' not found (return type defaults to 'id') [-Wobjc-method-access]    [sender rotateBy:rot];            ^~~~~~~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@69"Instance method '-rotateBy:' not found (return type defaults to 'id')-411572344#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@64"file:///Users/roberto/Documents/Mi%20C/Objective%20C/Trackball.m0000000000000000^111#12#111#12#4198#0#14"Semantic Issue1(3@64"file:///Users/roberto/Documents/Mi%20C/Objective%20C/Trackball.m0000000000000000^111#12#111#20#4198#0#-0#0#1#-19%DVTDocumentLocation4@64"file:///Users/roberto/Documents/Mi%20C/Objective%20C/Trackball.m0000000000000000^3113"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o /Users/roberto/Documents/Mi\ C/Objective\ C/Trackball.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.dia -c /Users/roberto/Documents/Mi\ C/Objective\ C/Trackball.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o36"57E24C4D-4F55-4FE2-807E-A948D5C9786B-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.353145
+e411572344.613869
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m182"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler25755a781888b841^cbbf9e781888b841^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m0000000000000000^3064"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/main.m -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o36"EA9E4530-A0FD-488E-B27A-0AF642131D8A-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s402072759.347558
+e402072759.495084
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.cb11459b724f7b741^b2bd7eb724f7b741^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.c0000000000000000^3067"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o ../../../polygonizer/polygonizer3.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/../../../polygonizer/polygonizer3.c -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o36"3FB052EA-8E89-40B3-82C1-743EF3877D2C-
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o /Users/roberto/Applications/polygonizer/polygonizer3.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.355241
+e411572344.720179
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o
+x/Users/roberto/Applications/polygonizer/polygonizer3.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/polygonizer/polygonizer3.c
+d/Users/roberto/Applications/polygonizer/polygonizer3.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/roberto/Applications/polygonizer/polygonizer3.c228"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o /Users/roberto/Applications/polygonizer/polygonizer3.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler9b045b781888b841^0b5eb8781888b841^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/roberto/Applications/polygonizer/polygonizer3.c0000000000000000^2910"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o /Users/roberto/Applications/polygonizer/polygonizer3.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.dia -c /Users/roberto/Applications/polygonizer/polygonizer3.c -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o36"EB000357-18E4-4B08-94AD-D564DB27A55B-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s411572344.684285
+e411572344.774149
+r1
+xCompileC
+xbuild/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c186"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o voxtopology.c normal i386 c com.apple.compilers.llvm.clang.1_0.compilerb743af781888b841^7f2ec6781888b841^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c0000000000000000^2893"CompileC build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o voxtopology.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -include /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch -MMD -MT dependencies -MF /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.d --serialize-diagnostics /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/voxtopology.c -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o36"2C2C2D65-DBAB-409F-B810-DD44F9DAD288-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCopyStringsFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s411572343.438113
+e411572343.440332
+r1
+xCopyStringsFile
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy English.lproj/InfoPlist.strings139"CopyStringsFile build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.stringsa83670771888b841^f5bb70771888b841^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/InfoPlist.strings0000000000000000^485"CopyStringsFile build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    builtin-copyStrings --validate --inputencoding utf-16 --outputencoding UTF-16 --outdir /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj -- English.lproj/InfoPlist.strings36"7E325FBD-49D6-4CFA-858F-B3229A947598-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCpResource English.lproj/Credits.rtf build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf
+s411572343.437608
+e411572343.440042
+r1
+xCpResource
+xEnglish.lproj/Credits.rtf
+xbuild/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf122"CpResource English.lproj/Credits.rtf build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtfd71470771888b841^efa970771888b841^---0#0#1#-19%DVTDocumentLocation2@161"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf0034f0eaddffdf42^688"CpResource English.lproj/Credits.rtf build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/Credits.rtf    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/Credits.rtf /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj36"4805DE5B-F927-4672-AFD7-EE1591782B8A-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCpResource StereotaxicRAMON.icns build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns
+s411572343.438569
+e411572343.442443
+r1
+xCpResource
+xStereotaxicRAMON.icns
+xbuild/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns114"CpResource StereotaxicRAMON.icns build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns344d70771888b841^ed4471771888b841^---0#0#1#-19%DVTDocumentLocation2@157"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns0034f0eaddffdf42^662"CpResource StereotaxicRAMON.icns build/Release/StereotaxicEditorRAMON.app/Contents/Resources/StereotaxicRAMON.icns    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicRAMON.icns /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources36"1E800975-30FC-471F-B851-AD22549BCA80-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CCpResource dot.png build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png
+s411572343.438266
+e411572343.440162
+r1
+xCpResource
+xdot.png
+xbuild/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png86"CpResource dot.png build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png213a70771888b841^1ea770771888b841^---0#0#1#-19%DVTDocumentLocation2@143"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png0034f0eaddffdf42^620"CpResource dot.png build/Release/StereotaxicEditorRAMON.app/Contents/Resources/dot.png    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/dot.png /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources36"FDE5F124-73DC-457E-9ACD-2755BCC93562-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CGenerateDSYMFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON
+s411572345.791370
+e411572345.821590
+r1
+xGenerateDSYMFile
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Generate /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM141"GenerateDSYMFile build/Release/StereotaxicEditorRAMON.app.dSYM build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMONf19fca791888b841^3f54d2791888b841^---0#0#1#-19%DVTDocumentLocation2@121"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM0034f0eaddffdf42^597"GenerateDSYMFile build/Release/StereotaxicEditorRAMON.app.dSYM build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app.dSYM36"07493222-0543-492C-A130-42AEE8333FBF-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CLd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON normal i386
+s411572345.587517
+e411572345.790672
+r1
+xLd
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON
+xnormal
+xi386
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/StereotaxicEditorRAMON.LinkFileList
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyDocument.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/main.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Analyze.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/RAMON.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyCommandView.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/DocumentRAMON.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/polygonizer3.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyView3D.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Trackball.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/Nifti.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/voxtopology.o
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/MyAppController.o
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QTKit.framework/QTKit
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuickTime.framework/QuickTime
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.eprintf.a
+d/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+d/Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Link /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON93"Ld build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON normal i3864b7496791888b841^a1d7cf791888b841^---0#0#1#--1340"Ld build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON normal i386    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release -filelist /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/StereotaxicEditorRAMON.LinkFileList -mmacosx-version-min=10.8 -fobjc-link-runtime -framework Cocoa -framework OpenGL -framework QTKit -framework QuickTime -Xlinker -dependency_info -Xlinker /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/Objects-normal/i386/StereotaxicEditorRAMON_dependency_info.dat -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/MacOS/StereotaxicEditorRAMON36"7F9D3EC2-2E50-4EAB-9319-1F89665EF721-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CProcessInfoPlistFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist
+s411572343.433572
+e411572343.437277
+r1
+xProcessInfoPlistFile
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Process /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist92"ProcessInfoPlistFile build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist Info.plist2a736f771888b841^f2ef6f771888b841^---0#0#1#-19%DVTDocumentLocation2@86"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist0000000000000000^588"ProcessInfoPlistFile build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist Info.plist    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    builtin-infoPlistUtility /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist -genpkginfo /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist36"3AE725C8-D3A9-4FAA-A71E-F1F93949A197-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CProcessInfoPlistFile /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist Info.plist
+s402072759.240734
+e402072759.243874
+r1
+xProcessInfoPlistFile
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist
+xInfo.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist41b93db724f7b741^59f83eb724f7b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/Info.plist0000000000000000^519"ProcessInfoPlistFile build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist Info.plist    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    builtin-infoPlistUtility Info.plist -genpkginfo /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Info.plist36"77B3C60F-FDAC-4CF2-8D49-9F88044D2C36-
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-avybumaxerahbsgglfibqtkwuxas_ast/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-axwqezrirypelhbsfqzjoudnsfan_ast/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-cofxvnyurmhuypgycswgbbkxlrqi_ast/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-damdcagxkxdoxrapgzpxyjuenwim_ast/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dstltfibwaswuzfpkkufpzaimcik_ast/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-fazhbmfiafvuelenjweckxbgtmtk_ast/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-fzsbgsoumchogndwntoeqymjaqye_ast/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/roberto/Library/Developer/Xcode/DerivedData/StereotaxicEditorRAMON-ahnhwzudovspvtdgbzxgzenzevcj/Index/PrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gpujzmkezrwdgzdfttxwvbfurkwa_ast/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s404319413.398311
+e404319413.414170
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pch317"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler8e0466b56c19b841^92076ab56c19b841^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^2947"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.d -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch36"4F7C9E64-F6B6-4281-AEAC-0033D27ECB28-
+b4A66671C-6E5A-4958-96EF-2E1007EFFBD9
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s404319413.398100
+e404319414.008510
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pch327"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6ef865b56c19b841^0cc802b66c19b841^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3160"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.d -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.1-5A2053/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch36"A4A0EF6B-5881-43FD-9FEC-072E23CE3D2F-
+b4A66671C-6E5A-4958-96EF-2E1007EFFBD9
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s410869680.846215
+e410869680.857403
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pch317"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler58add8b05f7db841^d47edbb05f7db841^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^2947"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.d -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dxnmbbdejmjmtgdnanqzfhdrmuce/StereotaxicEditorRAMON_Prefix.pch.pch36"5B07E8A1-E86E-4CFB-A35E-DB734F45B08B-
+b2FAC2A63-6AC6-4276-8551-6732E1301ACF
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410869680.846007
+e410869681.461994
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pch327"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerb2a0d8b05f7db841^6b4676b15f7db841^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3160"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.d -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-gdnrfflstafpaxbjfpjbjfcnktin/StereotaxicEditorRAMON_Prefix.pch.pch36"871C0D5B-0DA7-4EE9-9F27-E7A81BAFD890-
+b2FAC2A63-6AC6-4276-8551-6732E1301ACF
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402072564.379256
+e402072565.448314
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.pth
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pchcf8161f423f7b741^b0c572f523f7b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3184"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bjdelsctxuasuvcucbkwycizxein/StereotaxicEditorRAMON_Prefix.pch.d36"7295F231-4473-4B7A-ACAC-A6CF193FF88A-
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s402072713.322313
+e402072713.336578
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.pth
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pch5f96528924f7b741^a629568924f7b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3001"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-bwhdnpvoutetrjdafxgytjpzvvax/StereotaxicEditorRAMON_Prefix.pch.d36"66BFB79F-5245-4D07-A9C9-4FAC3197BBFC-
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s401209473.441160
+e401209473.506004
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.pth
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pchd26d7181f8e9b741^c6878181f8e9b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3001"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-csjprrbriaosetcoavxmfinwgjmc/StereotaxicEditorRAMON_Prefix.pch.d36"7C73398C-EE17-41C0-B7BE-BCCCCB1451AD-
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402072713.322319
+e402072713.904098
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.pth
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pch1c96528924f7b741^ef74e78924f7b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3184"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-dzgiyzngicrjcxekrxcmwpivuvaw/StereotaxicEditorRAMON_Prefix.pch.d36"ED9D6840-2D5B-467F-B3DA-C171AD205611-
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s402072564.379260
+e402072564.433845
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.pth
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pchb77f61f423f7b741^e00f6ff423f7b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3001"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.8 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-ezpxewzfnubzkzaodexwnjlexvwz/StereotaxicEditorRAMON_Prefix.pch.d36"6B024DE0-15FD-4FF1-9894-0A58DAC563C7-
+
+CProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s401209473.441170
+e401209474.229869
+r1
+xProcessPCH
+x/var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.pth
+xStereotaxicEditorRAMON_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Precompile StereotaxicEditorRAMON_Prefix.pche3717181f8e9b741^b2d83a82f8e9b741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch0000000000000000^3184"ProcessPCH /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.pth StereotaxicEditorRAMON_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv LANG en_US.US-ASCII    /Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/_Programming/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/StereotaxicEditorRAMON.hmap -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/_Programming/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources/i386 -I/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/StereotaxicEditorRAMON.build/Release/StereotaxicEditorRAMON.build/DerivedSources -F/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release --serialize-diagnostics /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.dia -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/StereotaxicEditorRAMON_Prefix.pch -o /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/w1/qnhkrsc97nddjm3vf00ppx940000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/StereotaxicEditorRAMON_Prefix-hcpqwsmiqfkysphbkxthlnizsrys/StereotaxicEditorRAMON_Prefix.pch.d36"611C22F3-BE07-4A46-8DFB-B2CBB7888D66-
+
+CStripNIB /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib
+s411572343.437742
+e411572344.351423
+r1
+xStripNIB
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Processing /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib35"StripNIB English.lproj/MainMenu.nib931870771888b841^83f759781888b841^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib/0000000000000000^586"StripNIB English.lproj/MainMenu.nib    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv XCODE_DEVELOPER_USR_PATH /Applications/_Programming/Xcode.app/Contents/Developer/usr/bin/..    /Applications/_Programming/Xcode.app/Contents/Developer/usr/bin/ibtool --strip /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/MainMenu.nib --output-format human-readable-text /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MainMenu.nib36"DCF8C2C6-504B-4452-BAE7-E3C04419A461-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CStripNIB /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib
+s411572343.437873
+e411572344.351695
+r1
+xStripNIB
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Processing /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib37"StripNIB English.lproj/MyDocument.nib3e2470771888b841^35095a781888b841^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib/0000000000000000^592"StripNIB English.lproj/MyDocument.nib    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    setenv XCODE_DEVELOPER_USR_PATH /Applications/_Programming/Xcode.app/Contents/Developer/usr/bin/..    /Applications/_Programming/Xcode.app/Contents/Developer/usr/bin/ibtool --strip /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app/Contents/Resources/English.lproj/MyDocument.nib --output-format human-readable-text /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/English.lproj/MyDocument.nib36"D0CEF200-B9CB-47CF-8C35-2250719188DA-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+
+CTouch /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app
+s411572345.822075
+e411572345.826061
+r1
+xTouch
+x/Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Touch /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app46"Touch build/Release/StereotaxicEditorRAMON.app397cd2791888b841^2079d3791888b841^---0#0#1#--255"Touch build/Release/StereotaxicEditorRAMON.app    cd /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON    /usr/bin/touch -c /Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/build/Release/StereotaxicEditorRAMON.app36"F8DAB8CE-1A61-45FC-9921-CC0415CFC8B9-
+b6E7239C7-5156-4CB4-8FCB-BC8A9E5AB8FD
+

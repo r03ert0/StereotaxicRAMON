@@ -206,7 +206,7 @@ void makecubetable(void)
 			if(!done[e] && (pos[corner1[e]] != pos[corner2[e]]))
 			{
 				INTLIST		*ints=0;
-				INTLISTS	*lists=(INTLISTS *)mycalloc(1,sizeof(INTLISTS));
+				INTLISTS	*lists=(INTLISTS *)mycalloc8(1,sizeof(INTLISTS));
 				int			start=e,edge=e;
 				
 				/* get face that is to right of edge from pos to neg corner: */
@@ -218,7 +218,7 @@ void makecubetable(void)
 					if(pos[corner1[edge]] != pos[corner2[edge]])
 					{
 						INTLIST	*tmp=ints;
-						ints=(INTLIST *)mycalloc(1,sizeof(INTLIST));
+						ints=(INTLIST *)mycalloc8(1,sizeof(INTLIST));
 						ints->i=edge;
 						ints->next=tmp;		/* add edge to head of list */
 						if(edge==start)
@@ -659,8 +659,22 @@ char *mycalloc(int nitems,int nbytes)
 {
 	char	*ptr=calloc(nitems, nbytes);
 	
-	if(ptr!=NULL)
+    /*
+    if(ptr!=NULL)
 		return ptr;
+	fprintf(stderr, "can't calloc %d bytes\n", nitems*nbytes);
+	
+	exit(1);
+*/
+	if(ptr!=NULL)
+	{
+		Trash	*tr=(Trash*)calloc(1,sizeof(Trash));
+		trash->ptr=(long)ptr;
+		trash->next=(long)tr;
+		trash=tr;
+		
+		return ptr;
+	}
 	fprintf(stderr, "can't calloc %d bytes\n", nitems*nbytes);
 	
 	exit(1);
@@ -707,6 +721,9 @@ void freeprocess(PROCESS p)
 	//EDGELIST	*edge,*edgenext;
 	INTLISTS	*lists,*listsnext;
 	INTLIST		*ints,*intsnext;
+    Trash       *tr=p.trash;
+    Trash       *tmp;
+    char        *ptr;
 	
 	for(index=0;index<HASHSIZE;index++)
 	{
@@ -747,14 +764,13 @@ void freeprocess(PROCESS p)
 		}
 	}
 	
-	 Trash *tr,*tmp;
-	 char	*ptr;
-	 tr=p.trash;
 	 while(tr)
 	 {
 		 ptr=(char*)tr->ptr;
+         /*
 		 if(ptr)
 			 free(ptr);
+        */
 		 tmp=(Trash*)tr->next;
 		 free((char*)tr);
 		 tr=tmp;

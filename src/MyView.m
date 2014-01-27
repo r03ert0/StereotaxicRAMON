@@ -416,7 +416,7 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		slice=0;
 	[[[app settings] content] setValue:[NSNumber numberWithInt:slice] forKey:@"slice"];
 	
-	switch(plane)
+    switch(plane)
     {
         case 1:// 0=X plane
             [view3D setXSlice:slice];
@@ -519,6 +519,19 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	float			*P,invP[16];
 	float			slice=[[[[app settings] content] valueForKey:@"slice"] floatValue];
 	
+    switch(plane)
+    {
+        case 1:// 0=X plane
+            [view3D setXSlice:slice];
+            break;
+        case 2:// 1=Y plane
+            [view3D setYSlice:slice];
+            break;
+        case 3:// 2=Z plane
+            [view3D setZSlice:slice];
+            break;
+    }
+
 	switch(plane)
 	{
 		case 1: P=X; break;

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "412352550.784841"
+            timestampString = "412524755.749068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2242"
-            endingLineNumber = "2242"
+            startingLineNumber = "2255"
+            endingLineNumber = "2255"
             landmarkName = "-resample::::"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "412352550.784841"
+            timestampString = "412524755.749068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1350"
-            endingLineNumber = "1350"
+            startingLineNumber = "1363"
+            endingLineNumber = "1363"
             landmarkName = "-convertToMovie:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "412352550.784841"
+            timestampString = "412524755.749068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2417"
-            endingLineNumber = "2417"
+            startingLineNumber = "2430"
+            endingLineNumber = "2430"
             landmarkName = "-select:::::"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "412352550.784841"
+            timestampString = "412524755.749068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2140"
-            endingLineNumber = "2140"
+            startingLineNumber = "2153"
+            endingLineNumber = "2153"
             landmarkName = "-polygonize:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "412352550.784841"
+            timestampString = "412524755.749068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1520"
-            endingLineNumber = "1520"
+            startingLineNumber = "1533"
+            endingLineNumber = "1533"
             landmarkName = "-dct"
             landmarkType = "5">
          </BreakpointContent>

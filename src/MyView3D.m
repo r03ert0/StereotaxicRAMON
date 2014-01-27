@@ -41,6 +41,8 @@
 	
 	zoom=80;
     
+    xslice=yslice=zslice=-1;
+    
     return self;
 }
 - (void)drawRect:(NSRect)rect
@@ -211,9 +213,12 @@
     dim[0]=mydim[0];
     dim[1]=mydim[1];
     dim[2]=mydim[2];
-    xslice=dim[0]/2;
-    yslice=dim[1]/2;
-    zslice=dim[2]/2;
+    if(xslice<0)
+        xslice=dim[0]/2;
+    if(yslice<0)
+        yslice=dim[1]/2;
+    if(zslice<0)
+        zslice=dim[2]/2;
 }
 -(void)setOrigin:(float*)origin
 {

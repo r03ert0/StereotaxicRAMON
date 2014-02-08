@@ -69,6 +69,7 @@
 -(void)abs;
 -(void)addConstant:(float)x;
 -(void)addSelection:(char*)path;
+-(void)adjustMinMax;
 -(void)applyRotation;
 -(void)box:(int)a :(int)b :(int)c :(int)d :(int)e :(int)f;
 -(void)boxFilter:(int)r :(int)iter;

@@ -535,7 +535,9 @@
 {
 	NSString	*cmdstr=@"{root=(\
 {cmd=abs;                                                       help=\"Absolute value\";},\
+{cmd=addConstant;		args=(float);							help=\"Add arg[1] to the volume values\";},\
 {cmd=addSelection;		args=(string);							help=\"Add selection from arg[1]=path\";},\
+{cmd=adjustMinMax;		args=();                                help=\"Adjust min and max grey level values to mean ± 2 standard deviations (clipped to the volume's min and max)\";},\
 {cmd=applyRotation;		args=();								help=\"Apply current rotation\";},\
 {cmd=box;				args=(int,int,int,int,int,int);			help=\"Select the region inside the box arg[1-6]=xmn,ymn,zmn,xmx,ymx,zmx\";},\
 {cmd=boxFilter;			args=(int,int);							help=\"Arg[1]=filter size, arg[2]=iterations\";},\
@@ -580,7 +582,6 @@
 {cmd=setSelectionOpacity;args=(float);							help=\"Change selection opacity to arg[1]\";},\
 {cmd=setThresholdWidth;	args=(float);},\
 {cmd=setVolume;			args=(string);},\
-{cmd=addConstant;		args=(float);							help=\"Add arg[1] to the volume values\";},\
 {cmd=smooth;			args=(int,int);},\
 {cmd=stats;},\
 {cmd=stdev;				args=(int, float);},\

@@ -206,7 +206,7 @@ void makecubetable(void)
 			if(!done[e] && (pos[corner1[e]] != pos[corner2[e]]))
 			{
 				INTLIST		*ints=0;
-				INTLISTS	*lists=(INTLISTS *)mycalloc8(1,sizeof(INTLISTS));
+				INTLISTS	*lists=(INTLISTS *)mycalloc(1,sizeof(INTLISTS));
 				int			start=e,edge=e;
 				
 				/* get face that is to right of edge from pos to neg corner: */
@@ -218,7 +218,7 @@ void makecubetable(void)
 					if(pos[corner1[edge]] != pos[corner2[edge]])
 					{
 						INTLIST	*tmp=ints;
-						ints=(INTLIST *)mycalloc8(1,sizeof(INTLIST));
+						ints=(INTLIST *)mycalloc(1,sizeof(INTLIST));
 						ints->i=edge;
 						ints->next=tmp;		/* add edge to head of list */
 						if(edge==start)
@@ -438,7 +438,7 @@ void setedge(EDGELIST *table[], int i1, int j1, int k1, int i2, int j2, int k2, 
 	}
 	
 	index=HASH(i1,j1,k1)+HASH(i2,j2,k2);
-	new=(EDGELIST *)mycalloc6(1,sizeof(EDGELIST));
+	new=(EDGELIST *)mycalloc(1,sizeof(EDGELIST));
 	new->i1=i1;
 	new->j1=j1;
 	new->k1=k1;
@@ -601,7 +601,7 @@ void testface (int i,int j,int k,CUBE *old,int face,int c1,int c2,int c3,int c4,
 CORNER *setcorner (PROCESS *p,int i,int j,int k)
 {
 	/* for speed, do corner value caching here */
-	CORNER		*c=(CORNER *)mycalloc8(1,sizeof(CORNER));
+	CORNER		*c=(CORNER *)mycalloc(1,sizeof(CORNER));
 	int			index=HASH(i, j, k);
 	CORNERLIST	*l=p->corners[index];
 	c->i=i;

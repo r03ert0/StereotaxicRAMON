@@ -154,13 +154,13 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	tmp[1]=((fr.size.height-m.y)/fr.size.height)*dim1[1];
 	tmp[2]=slice;
 	multMatVec(tmpx,invP,tmp);
-	tmpx[0]=tmpx[0]-dim1[0]/2.0;
-	tmpx[1]=tmpx[1]-dim1[1]/2.0;
-	tmpx[2]=tmpx[2]-dim1[2]/2.0;
+	tmpx[0]=tmpx[0]-dim[0]/2.0;
+	tmpx[1]=tmpx[1]-dim[1]/2.0;
+	tmpx[2]=tmpx[2]-dim[2]/2.0;
 	multMatVec(tmp,volRot,tmpx);
-	x1=tmp[0]+dim1[0]/2.0;
-	y1=tmp[1]+dim1[1]/2.0;
-	z1=tmp[2]+dim1[2]/2.0;
+	x1=tmp[0]+dim[0]/2.0;
+	y1=tmp[1]+dim[1]/2.0;
+	z1=tmp[2]+dim[2]/2.0;
 	
 	val=[self getValueAt:x1:y1:z1];
 
@@ -200,13 +200,13 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 				tmp[1]=(int)y1+j;
 				tmp[2]=z1;
 				multMatVec(tmpx,invP,tmp);
-				tmpx[0]=tmpx[0]-dim1[0]/2.0;
-				tmpx[1]=tmpx[1]-dim1[1]/2.0;
-				tmpx[2]=tmpx[2]-dim1[2]/2.0;
+				tmpx[0]=tmpx[0]-dim[0]/2.0;
+				tmpx[1]=tmpx[1]-dim[1]/2.0;
+				tmpx[2]=tmpx[2]-dim[2]/2.0;
 				multMatVec(tmp,volRot,tmpx);
-				tmpx[0]=tmp[0]+dim1[0]/2.0;
-				tmpx[1]=tmp[1]+dim1[1]/2.0;
-				tmpx[2]=tmp[2]+dim1[2]/2.0;
+				tmpx[0]=tmp[0]+dim[0]/2.0;
+				tmpx[1]=tmp[1]+dim[1]/2.0;
+				tmpx[2]=tmp[2]+dim[2]/2.0;
 				if(	tmpx[0]>=0 && tmpx[0]<dim[0] &&
 					tmpx[1]>=0 && tmpx[1]<dim[1] &&
 					tmpx[2]>=0 && tmpx[2]<dim[2])
@@ -334,13 +334,13 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 				tmp[1]=(int)y1+j;
 				tmp[2]=z1;
 				multMatVec(tmpx,invP,tmp);
-				tmpx[0]=tmpx[0]-dim1[0]/2.0;
-				tmpx[1]=tmpx[1]-dim1[1]/2.0;
-				tmpx[2]=tmpx[2]-dim1[2]/2.0;
+				tmpx[0]=tmpx[0]-dim[0]/2.0;
+				tmpx[1]=tmpx[1]-dim[1]/2.0;
+				tmpx[2]=tmpx[2]-dim[2]/2.0;
 				multMatVec(tmp,volRot,tmpx);
-				tmpx[0]=tmp[0]+dim1[0]/2.0;
-				tmpx[1]=tmp[1]+dim1[1]/2.0;
-				tmpx[2]=tmp[2]+dim1[2]/2.0;
+				tmpx[0]=tmp[0]+dim[0]/2.0;
+				tmpx[1]=tmp[1]+dim[1]/2.0;
+				tmpx[2]=tmp[2]+dim[2]/2.0;
 				
 				if(	tmpx[0]>=0 && tmpx[0]<dim[0] &&
 					tmpx[1]>=0 && tmpx[1]<dim[1] &&
@@ -454,9 +454,8 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 -(void)configureMinMax
 {
 	int		i;
-	float	val,s,ss,std;
+	float	val;
 
-	s=ss=0;
     for(i=0;i<dim[0]*dim[1]*dim[2];i++)
 	{
 		if(dataType==RGBFLOAT)
@@ -483,14 +482,8 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 			if(min>val) min=val;
 			if(max<val) max=val;
 		}
-        s+=val;
-        ss+=val*val;
 	}
-    s/=(float)(dim[0]*dim[1]*dim[2]);
-    std=sqrt(ss/(float)(dim[0]*dim[1]*dim[2])-pow(s,2));
-    min=s-2*std;
-    max=s+2*std;
-	printf("[mean,std,min,max]=(%f,%f,%f,%f)\n",s,std,min,max);
+	printf("[min,max]=(%f,%f)\n",min,max);
 }
 -(void)configureSelection
 {
@@ -503,9 +496,9 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	// configure data
 	[self configureData:(char*)theHdr];
 	
-	// configure max/min values
-	[self configureMinMax];
-	
+    // adjust max/min values
+	[self adjustMinMax];
+
 	// configure selection mask
 	[self configureSelection];
 }
@@ -573,13 +566,13 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		tmp[1]=y;
 		tmp[2]=z;
 		multMatVec(tmpx,invP,tmp);
-		tmpx[0]=tmpx[0]-dim1[0]/2.0;
-		tmpx[1]=tmpx[1]-dim1[1]/2.0;
-		tmpx[2]=tmpx[2]-dim1[2]/2.0;
+		tmpx[0]=tmpx[0]-dim[0]/2.0;
+		tmpx[1]=tmpx[1]-dim[1]/2.0;
+		tmpx[2]=tmpx[2]-dim[2]/2.0;
 		multMatVec(tmp,volRot,tmpx);
-		x1=tmp[0]+dim1[0]/2.0;
-		y1=tmp[1]+dim1[1]/2.0;
-		z1=tmp[2]+dim1[2]/2.0;
+		x1=tmp[0]+dim[0]/2.0;
+		y1=tmp[1]+dim[1]/2.0;
+		z1=tmp[2]+dim[2]/2.0;
 		
 		if([self setPixel:px withValueAt:x1:y1:z1])
 		if(selection[(int)z1*dim[1]*dim[0]+(int)y1*dim[0]+(int)x1])
@@ -1043,6 +1036,51 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 			selection[k*dim[1]*dim[0]+j*dim[0]+i]=sindex;
 	sindex++;
 	free(addr);
+}
+-(void)adjustMinMax
+{
+	int		i;
+	float	val,s,ss,std,tmpmin,tmpmax;
+    
+	s=ss=0;
+    for(i=0;i<dim[0]*dim[1]*dim[2];i++)
+	{
+		if(dataType==RGBFLOAT)
+		{
+			val=((float3D*)data)[i].x;
+			if(i==0) min=max=val;
+			if(min>val) min=val;
+			if(max<val) max=val;
+			val=((float3D*)data)[i].y;
+			if(min>val) min=val;
+			if(max<val) max=val;
+			val=((float3D*)data)[i].z;
+			if(min>val) min=val;
+			if(max<val) max=val;
+		}
+		else
+		{
+			switch(dataType){	case UCHAR:	val=((unsigned char*)data)[i];	break;
+				case SHORT:	val=((short*)data)[i];			break;
+				case INT:	val=((int*)data)[i];			break;
+				case FLOAT:	val=((float*)data)[i];			break;
+			}
+            if(isnan(val)||isinf(val))
+                continue;
+			if(i==0) min=max=val;
+			if(min>val) min=val;
+			if(max<val) max=val;
+		}
+        s+=val;
+        ss+=val*val;
+	}
+    s/=(float)(dim[0]*dim[1]*dim[2]);
+    std=sqrt(ss/(float)(dim[0]*dim[1]*dim[2])-pow(s,2));
+    tmpmin=s-2*std;
+    tmpmax=s+2*std;
+    min=(tmpmin<min)?min:tmpmin;
+    max=(tmpmax>max)?max:tmpmax;
+	printf("[mean,std,min,max]=(%f,%f,%f,%f)\n",s,std,min,max);
 }
 -(void)applyRotation
 {

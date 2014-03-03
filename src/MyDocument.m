@@ -239,9 +239,6 @@
 	int		sz;
 	int		swapped;
 	int		endi=0;
-	char	intel[4]={92,1,0,0};
-	if(*(int*)intel==348)	endi=kIntel;
-	else					endi=kMotorola;
 
 	// load data
 	Analyze_load((char*)[thePath UTF8String], &addr,&sz,&swapped);
@@ -255,9 +252,6 @@
 	int		sz;
 	int		swapped;
 	int		endi=0;
-	char	intel[4]={92,1,0,0};
-	if(*(int*)intel==348)	endi=kIntel;
-	else					endi=kMotorola;
 	
 	// load data
 	Nifti_load((char*)[thePath UTF8String], &addr,&sz,&swapped);
@@ -393,15 +387,20 @@
 
 	result=[view saveAs:(char*)[volumePath UTF8String]];
 	if(result==NO)
+    {
+        [dic release];
 		return result;
+    }
 
 	[dic setValue:[NSString stringWithFormat:@"%@.hdr",file] forKey:@"volume"];
 	if([view selection])
 	{
 		result=[view saveSelection:(char*)[selectionPath UTF8String]];
 		if(result==NO)
-			return result;
-
+        {
+            [dic release];
+            return result;
+        }
 		[dic setValue:[NSString stringWithFormat:@"%@.sel.hdr",file] forKey:@"selection"];
 	}
 	result=[[dic description] writeToURL:[NSURL fileURLWithPath:thePath] atomically:YES encoding:NSUTF8StringEncoding error:NULL];

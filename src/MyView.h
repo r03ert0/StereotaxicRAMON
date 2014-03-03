@@ -46,6 +46,8 @@
 	float	selectionColor[3];	// selection colour
 	float	volRotation[3];		// rotation angles for the volume, 0 by default
 	float	thresholdWidth;		// threshold width
+
+    NSTrackingArea  *trackingArea;
 	
 	id<MyDocument>	app;
 }

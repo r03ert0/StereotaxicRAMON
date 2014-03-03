@@ -3,6 +3,7 @@
 
 @implementation MyView
 
+float	Zero[16]={0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0};
 float	X[16]={0,1,0,0, 0,0,1,0, 1,0,0,0, 0,0,0,1};
 float	Y[16]={1,0,0,0, 0,0,1,0, 0,1,0,0, 0,0,0,1};
 float	Z[16]={1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1};
@@ -67,10 +68,55 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		m[i]=tmp[i];
 }
 #pragma mark -
-- (void)resetCursorRects
+- (void)updateCursor
 {
 	// cursor to + symbol inside drawing region
-	[self addCursorRect:[self visibleRect] cursor:[[NSCursor alloc] initWithImage:[NSImage imageNamed:@"dot.png"] hotSpot:(NSPoint){1,1}]];
+    NSRect		fr=[self frame];
+	float		tmp[3],tmpd[3],W,H;
+	int			dim1[3];
+    float		*P,invP[16];
+    int         p=plane;
+	
+    switch(p)
+	{
+		case 1: P=(float*)X; break;
+		case 2: P=(float*)Y; break;
+		case 3: P=(float*)Z; break;
+        default: P=(float*)Zero;
+	}
+	invMat(invP,P);
+	
+    tmp[0]=dim[0];
+	tmp[1]=dim[1];
+	tmp[2]=dim[2];
+	multMatVec(tmpd,P,tmp);
+	dim1[0]=(int)tmpd[0];
+	dim1[1]=(int)tmpd[1];
+	dim1[2]=(int)tmpd[2];
+	
+	W=(int)(pensize*fr.size.width/dim1[0] +0.5);
+	H=(int)(pensize*fr.size.height/dim1[1]+0.5);
+    
+    NSImage *img=[[NSImage alloc] initWithSize:(NSSize){W+2,H+2}];
+    NSBezierPath *bp=[NSBezierPath bezierPathWithRect:(NSRect){1,1,W,H}];
+    [img lockFocus];
+    [[NSColor whiteColor] set];
+    [bp stroke];
+    [img unlockFocus];
+
+    [[[NSCursor alloc] initWithImage:img hotSpot:(NSPoint){W/2+1,H/2+1}] set];
+}
+-(void)cursorUpdate:(NSEvent *)theEvent
+{
+    [self updateCursor];
+}
+- (void)updateTrackingAreas
+{
+    [self removeTrackingArea:trackingArea];
+    trackingArea = [[NSTrackingArea alloc] initWithRect:[self visibleRect]
+                                                options: (NSTrackingCursorUpdate|NSTrackingActiveInKeyWindow)
+                                                  owner:self userInfo:nil];
+    [self addTrackingArea:trackingArea];
 }
 - (id)initWithFrame:(NSRect)frameRect
 {
@@ -95,10 +141,17 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		polyFlag=0;
 		poly=[[NSBezierPath bezierPath] retain];
 		volRotation[0]=volRotation[1]=volRotation[2]=0;
-
+        
 		printf("MyView initialised\n");
+
+        trackingArea = [[NSTrackingArea alloc] initWithRect:[self visibleRect]
+                                                                     options: (NSTrackingCursorUpdate|NSTrackingActiveInKeyWindow)
+                                                                       owner:self userInfo:nil];
+        [self addTrackingArea:trackingArea];
 	}
-	return self;
+
+
+    return self;
 }
 - (void)drawRect:(NSRect)rect
 {
@@ -139,6 +192,7 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		case 1: P=X; break;
 		case 2: P=Y; break;
 		case 3: P=Z; break;
+        default: P=Zero;
 	}
 	invMat(invP,P);
 	

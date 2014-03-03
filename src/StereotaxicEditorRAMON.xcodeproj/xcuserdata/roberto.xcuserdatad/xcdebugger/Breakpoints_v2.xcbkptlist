@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "413279555.592594"
+            timestampString = "415540767.800441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1399"
-            endingLineNumber = "1399"
-            landmarkName = "-convertToMovie:"
+            startingLineNumber = "1450"
+            endingLineNumber = "1450"
+            landmarkName = "-connectedSelection:::"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "413279555.592594"
+            timestampString = "415540767.800441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2466"
-            endingLineNumber = "2466"
-            landmarkName = "-select:::::"
+            startingLineNumber = "2517"
+            endingLineNumber = "2517"
+            landmarkName = "-savePicture:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,13 +42,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "413279555.592594"
+            timestampString = "415540767.800441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2189"
-            endingLineNumber = "2189"
+            startingLineNumber = "2240"
+            endingLineNumber = "2240"
             landmarkName = "-polygonize:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MyView polygonize:]"
+                  moduleName = "StereotaxicEditorRAMON"
+                  urlString = "file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/src/MyView.m"
+                  timestampString = "415542538.91829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2240"
+                  endingLineNumber = "2240"
+                  offsetFromSymbolStart = "193">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MyView polygonize:]"
+                  moduleName = "StereotaxicEditorRAMON"
+                  urlString = "file:///Users/roberto/Applications/brainbits/RAMONES/StereotaxicEditorRAMON/src/MyView.m"
+                  timestampString = "415542538.918525"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2240"
+                  endingLineNumber = "2240"
+                  offsetFromSymbolStart = "209">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "413279555.592594"
+            timestampString = "415540767.800441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1569"
-            endingLineNumber = "1569"
+            startingLineNumber = "1620"
+            endingLineNumber = "1620"
             landmarkName = "-dct"
             landmarkType = "5">
          </BreakpointContent>

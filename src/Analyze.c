@@ -13,7 +13,7 @@ int Analyze_load(char *path, char **addr,int *sz, int *swapped)
 	AnalyzeHeader	hdr;
 	
 	Analyze_load_hdr(path,&hdr,swapped);
-	if(hdr.dim[1]==3 && hdr.dim[4]>1) // detect DTI volume
+	if((hdr.dim[1])==3 && hdr.dim[4]>1) // detect DTI volume
 		*sz=hdr.dim[2]*hdr.dim[3]*hdr.dim[4]*AnalyzeBytesPerVoxel(hdr)+sizeof(hdr);
 	else
 		*sz=hdr.dim[1]*hdr.dim[2]*hdr.dim[3]*AnalyzeBytesPerVoxel(hdr)+sizeof(hdr);
@@ -228,7 +228,7 @@ void swap_rgbfloat(float3D *v)
 #pragma mark -
 float getValue(AnalyzeHeader *hdr, char *addr, int x, int y, int z)
 {
-	float		val;
+	float		val=0;
 	RGBValue	rgb;
 	
 	if(hdr->datatype==RGB)

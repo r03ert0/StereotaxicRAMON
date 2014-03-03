@@ -766,8 +766,8 @@ void freeprocess(PROCESS p)
 	
 	 while(tr)
 	 {
-		 ptr=(char*)tr->ptr;
          /*
+		 ptr=(char*)tr->ptr;
 		 if(ptr)
 			 free(ptr);
         */

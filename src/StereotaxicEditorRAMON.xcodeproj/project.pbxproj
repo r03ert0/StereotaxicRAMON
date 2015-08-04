@@ -18,6 +18,11 @@
 		62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E4D15F0F4690071B851 /* QuickTime.framework */; };
 		62C0EFE712D5FACD000BACD6 /* StereotaxicRAMON.icns in Resources */ = {isa = PBXBuildFile; fileRef = 62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */; };
 		62CFBC79171EE250004BE88C /* MyAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CFBC78171EE250004BE88C /* MyAppController.m */; };
+		62D360BE19F2B23D00C18A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D360BD19F2B23D00C18A93 /* main.m */; };
+		62D360C119F2B23D00C18A93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D360C019F2B23D00C18A93 /* AppDelegate.m */; };
+		62D360C319F2B23D00C18A93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D360C219F2B23D00C18A93 /* Images.xcassets */; };
+		62D360C619F2B23D00C18A93 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D360C419F2B23D00C18A93 /* MainMenu.xib */; };
+		62D360D219F2B23D00C18A93 /* StereotaxicRAMONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D360D119F2B23D00C18A93 /* StereotaxicRAMONTests.m */; };
 		62E083DF119E6C1600C661A3 /* MyView3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E083DE119E6C1600C661A3 /* MyView3D.m */; };
 		62E08433119E7CC900C661A3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E08432119E7CC900C661A3 /* OpenGL.framework */; };
 		62EF3D5111EEFD8500EB979F /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EF3D5011EEFD8500EB979F /* dot.png */; };
@@ -32,6 +37,16 @@
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62D360CC19F2B23D00C18A93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62D360B819F2B23D00C18A93;
+			remoteInfo = StereotaxicRAMON;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -66,6 +81,16 @@
 		62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = StereotaxicRAMON.icns; sourceTree = "<group>"; };
 		62CFBC77171EE250004BE88C /* MyAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppController.h; sourceTree = "<group>"; };
 		62CFBC78171EE250004BE88C /* MyAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppController.m; sourceTree = "<group>"; };
+		62D360B919F2B23D00C18A93 /* StereotaxicRAMON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StereotaxicRAMON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D360BC19F2B23D00C18A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62D360BD19F2B23D00C18A93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62D360BF19F2B23D00C18A93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62D360C019F2B23D00C18A93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62D360C219F2B23D00C18A93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		62D360C519F2B23D00C18A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		62D360CB19F2B23D00C18A93 /* StereotaxicRAMONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StereotaxicRAMONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D360D019F2B23D00C18A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62D360D119F2B23D00C18A93 /* StereotaxicRAMONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StereotaxicRAMONTests.m; sourceTree = "<group>"; };
 		62E083DD119E6C1600C661A3 /* MyView3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView3D.h; sourceTree = "<group>"; };
 		62E083DE119E6C1600C661A3 /* MyView3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView3D.m; sourceTree = "<group>"; };
 		62E08432119E7CC900C661A3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
@@ -82,6 +107,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		62D360B619F2B23D00C18A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D360C819F2B23D00C18A93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC330486D014006FF6A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				8D15AC370486D014006FF6A4 /* StereotaxicEditorRAMON.app */,
+				62D360B919F2B23D00C18A93 /* StereotaxicRAMON.app */,
+				62D360CB19F2B23D00C18A93 /* StereotaxicRAMONTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +171,8 @@
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				62D360BA19F2B23D00C18A93 /* StereotaxicRAMON */,
+				62D360CE19F2B23D00C18A93 /* StereotaxicRAMONTests */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 			);
@@ -220,9 +263,82 @@
 			name = RAMON;
 			sourceTree = "<group>";
 		};
+		62D360BA19F2B23D00C18A93 /* StereotaxicRAMON */ = {
+			isa = PBXGroup;
+			children = (
+				62D360BF19F2B23D00C18A93 /* AppDelegate.h */,
+				62D360C019F2B23D00C18A93 /* AppDelegate.m */,
+				62D360C219F2B23D00C18A93 /* Images.xcassets */,
+				62D360C419F2B23D00C18A93 /* MainMenu.xib */,
+				62D360BB19F2B23D00C18A93 /* Supporting Files */,
+			);
+			path = StereotaxicRAMON;
+			sourceTree = "<group>";
+		};
+		62D360BB19F2B23D00C18A93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62D360BC19F2B23D00C18A93 /* Info.plist */,
+				62D360BD19F2B23D00C18A93 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62D360CE19F2B23D00C18A93 /* StereotaxicRAMONTests */ = {
+			isa = PBXGroup;
+			children = (
+				62D360D119F2B23D00C18A93 /* StereotaxicRAMONTests.m */,
+				62D360CF19F2B23D00C18A93 /* Supporting Files */,
+			);
+			path = StereotaxicRAMONTests;
+			sourceTree = "<group>";
+		};
+		62D360CF19F2B23D00C18A93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62D360D019F2B23D00C18A93 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		62D360B819F2B23D00C18A93 /* StereotaxicRAMON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62D360D719F2B23D00C18A93 /* Build configuration list for PBXNativeTarget "StereotaxicRAMON" */;
+			buildPhases = (
+				62D360B519F2B23D00C18A93 /* Sources */,
+				62D360B619F2B23D00C18A93 /* Frameworks */,
+				62D360B719F2B23D00C18A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StereotaxicRAMON;
+			productName = StereotaxicRAMON;
+			productReference = 62D360B919F2B23D00C18A93 /* StereotaxicRAMON.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62D360CA19F2B23D00C18A93 /* StereotaxicRAMONTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62D360D819F2B23D00C18A93 /* Build configuration list for PBXNativeTarget "StereotaxicRAMONTests" */;
+			buildPhases = (
+				62D360C719F2B23D00C18A93 /* Sources */,
+				62D360C819F2B23D00C18A93 /* Frameworks */,
+				62D360C919F2B23D00C18A93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62D360CD19F2B23D00C18A93 /* PBXTargetDependency */,
+			);
+			name = StereotaxicRAMONTests;
+			productName = StereotaxicRAMONTests;
+			productReference = 62D360CB19F2B23D00C18A93 /* StereotaxicRAMONTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8D15AC270486D014006FF6A4 /* StereotaxicEditorRAMON */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "StereotaxicEditorRAMON" */;
@@ -248,6 +364,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					62D360B819F2B23D00C18A93 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					62D360CA19F2B23D00C18A93 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 62D360B819F2B23D00C18A93;
+					};
+				};
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "StereotaxicEditorRAMON" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -255,17 +380,36 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* StereotaxicEditorRAMON */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* StereotaxicEditorRAMON */,
+				62D360B819F2B23D00C18A93 /* StereotaxicRAMON */,
+				62D360CA19F2B23D00C18A93 /* StereotaxicRAMONTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		62D360B719F2B23D00C18A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D360C319F2B23D00C18A93 /* Images.xcassets in Resources */,
+				62D360C619F2B23D00C18A93 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D360C919F2B23D00C18A93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +426,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		62D360B519F2B23D00C18A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D360C119F2B23D00C18A93 /* AppDelegate.m in Sources */,
+				62D360BE19F2B23D00C18A93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62D360C719F2B23D00C18A93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D360D219F2B23D00C18A93 /* StereotaxicRAMONTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC300486D014006FF6A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +465,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62D360CD19F2B23D00C18A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62D360B819F2B23D00C18A93 /* StereotaxicRAMON */;
+			targetProxy = 62D360CC19F2B23D00C18A93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
@@ -338,9 +507,187 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
+		62D360C419F2B23D00C18A93 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D360C519F2B23D00C18A93 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		62D360D319F2B23D00C18A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = StereotaxicRAMON/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		62D360D419F2B23D00C18A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = StereotaxicRAMON/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		62D360D519F2B23D00C18A93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = StereotaxicRAMONTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StereotaxicRAMON.app/Contents/MacOS/StereotaxicRAMON";
+			};
+			name = Debug;
+		};
+		62D360D619F2B23D00C18A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = StereotaxicRAMONTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StereotaxicRAMON.app/Contents/MacOS/StereotaxicRAMON";
+			};
+			name = Release;
+		};
 		C05733C808A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +750,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		62D360D719F2B23D00C18A93 /* Build configuration list for PBXNativeTarget "StereotaxicRAMON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62D360D319F2B23D00C18A93 /* Debug */,
+				62D360D419F2B23D00C18A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		62D360D819F2B23D00C18A93 /* Build configuration list for PBXNativeTarget "StereotaxicRAMONTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62D360D519F2B23D00C18A93 /* Debug */,
+				62D360D619F2B23D00C18A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "StereotaxicEditorRAMON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

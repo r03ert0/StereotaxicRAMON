@@ -20,6 +20,32 @@
 
 #define STACK 600000
 
+typedef struct
+{
+    float x,y,z;
+} float3D;
+typedef struct
+{
+    int a,b,c;
+} int3D;
+typedef struct
+{
+    short       timeStamp;      // time stamp for the cell creation
+    int         i;              // vertex index
+    long        *next;          // next cell at the same hash
+} HashCell;
+typedef struct
+{
+    int np;
+    int nt;
+    float3D *p;
+    int3D   *t;
+
+    HashCell    *hash;          // collision detection hash table
+    int         nhash;          // number of cells allocated for collision detection
+    float       hashCellSize;   // cell size
+} Mesh;
+
 @interface MyView : NSView
 {
 	IBOutlet MyView3D	*view3D;
@@ -35,6 +61,8 @@
 	NSPoint			oldm;		// old mouse location
 	int				polyFlag;	// polyFlag=0 -> start new polygon with next click
 	NSBezierPath	*poly;		// Bezier path for polygon drawing
+    
+    Mesh        *mesh;
 
 	// GUI variables: variables that can be set and queried from the interface
 	float	max,min;			// minimum and maximum data levels
@@ -73,6 +101,7 @@
 -(void)addSelection:(char*)path;
 -(void)adjustMinMax;
 -(void)applyRotation;
+-(void)boundingBox;
 -(void)box:(int)a :(int)b :(int)c :(int)d :(int)e :(int)f;
 -(void)boxFilter:(int)r :(int)iter;
 -(void)boxFilter1:(int)r;
@@ -81,7 +110,7 @@
 -(void)commands;
 -(void)connectedSelection:(int)x :(int)y :(int)z;
 -(void)convertToMovie:(char*)path;
--(void)crop:(char*)path;
+-(void)crop;
 -(void)getCrop:(char**)crop dim:(int*)cdim;
 -(void)getScaledNearest:(char**)scaled fx:(float)fx fy:(float)fy fz:(float)fz dim:(short*)sdim;
 -(float)getScaledTrilinear1:(float)x :(float)y :(float)z :(int*)error;
@@ -96,7 +125,8 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)dilate:(int)a;
 -(void)erode:(int)a;
 -(void)euler;
--(void)fill:(int)x :(int)y :(int)z :(char)aPlane;
+-(void)fill:(int)x :(int)y :(int)z :(char*)aPlane;
+-(void)flipMesh:(char*)d;
 -(void)grow:(float)Min :(float)Max;
 -(void)help:(char*)cmd;
 -(void)histogram;
@@ -104,19 +134,25 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)info;
 -(void)invert;
 -(BOOL)loadSelection:(char*)path;
+-(BOOL)loadMesh:(char*)path;
 -(void)make26;
 -(void)minMax;
 -(void)mode;
 -(void)multiplyConstant:(float)x;
 -(void)penSize:(int)a;
 -(void)polygonize:(char*)path;
+-(void)pushMesh:(float)d;
+-(void)removeMesh;
 -(void)reorient:(char*)ori;
+-(void)reorientMesh:(char*)ori;
 -(void)resample:(float)pixx :(float)pixy :(float)pixz :(char*)interpolation;
 -(void)resize:(int)x :(int)y :(int)z :(char*)just;
 -(BOOL)save;
 -(BOOL)saveAs:(char*)path;
+-(BOOL)saveMesh:(char*)path;
 -(BOOL)saveSelection:(char*)path;
 -(void)savePicture:(char*)path;
+-(void)scaleMesh:(float)x;
 -(void)select:(int)x :(int)y :(int)z :(float)mn :(float)mx;
 -(void)set:(float)x;
 -(void)setMinMax:(float)x :(float)y;
@@ -135,6 +171,8 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)tpDilate:(int)a;
 -(void)tpDilateOnMask:(int)iter :(char*)path;
 -(void)tpErode:(int)a;
+-(void)translateMesh:(float)x :(float)y :(float)z;
 -(void)undo;
+-(void)voxeliseMesh;
 
 @end

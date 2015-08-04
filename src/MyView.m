@@ -67,6 +67,14 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	for(i=0;i<16;i++)
 		m[i]=tmp[i];
 }
+float determinant(float3D a, float3D b, float3D c)
+{
+    float   D= a.x*(b.y*c.z-c.y*b.z)+
+    a.y*(b.z*c.x-c.z*b.x)+
+    a.z*(b.x*c.y-c.x*b.y);
+    return D;
+}
+
 #pragma mark -
 - (void)updateCursor
 {
@@ -141,6 +149,7 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		polyFlag=0;
 		poly=[[NSBezierPath bezierPath] retain];
 		volRotation[0]=volRotation[1]=volRotation[2]=0;
+        mesh=nil;
         
 		printf("MyView initialised\n");
 
@@ -165,6 +174,9 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 		[[NSColor greenColor] set];
 		[poly stroke];
 	}
+    
+    if(mesh!=nil)
+        [self displayMesh];
 }
 -(BOOL)acceptsFirstResponder
 {
@@ -685,7 +697,12 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	{
 		val=[self getScaledTrilinear1:x:y:z:&error];
 		if(!error)
-			colourmap((val-min)/(max-min),px,cmap);
+        {
+            if(min==max)
+                px[0]=px[1]=px[2]=0;
+            else
+                colourmap((val-min)/(max-min),px,cmap);
+        }
 	}
 	
 	return YES;
@@ -1022,6 +1039,370 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	[view3D depth];
 	[view3D setNeedsDisplay:YES];
 }
+float dot3D(float3D a,float3D b)
+{
+    return a.x*b.x+a.y*b.y+a.z*b.z;
+}
+float3D sub3D(float3D a, float3D b)
+{
+    return (float3D){a.x-b.x,a.y-b.y,a.z-b.z};
+}
+float3D add3D(float3D a, float3D b)
+{
+    return (float3D){a.x+b.x,a.y+b.y,a.z+b.z};
+}
+float3D sca3D(float3D a, float t)
+{
+    return (float3D){a.x*t,a.y*t,a.z*t};
+}
+float3D	cross3D(float3D a, float3D b)
+{
+    return (float3D){a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x};
+}
+float norm3D(float3D a)
+{
+    return sqrt(a.x*a.x+a.y*a.y+a.z*a.z);
+}
+// Akenine-Möller triangle/box intersection, fixed by Nick Pelling
+// Code adapted from from http://www.cs.lth.se/home/Tomas_Akenine_Moller/code/
+#define FINDMINMAX(x0,x1,x2,min,max)min=max=x0;if(x1<min) min=x1;if(x1>max) max=x1;if(x2<min) min=x2;if(x2>max) max=x2;
+int planeBoxOverlap(float *nor,float *vert, float *maxbox)
+{
+    int		q;
+    float	vmin[3],vmax[3];
+    
+    for(q=0;q<3;q++)
+    if(nor[q]>0.0f)
+    {
+        vmin[q]=-maxbox[q]-vert[q];
+        vmax[q]=maxbox[q]-vert[q];
+    }
+    else
+    {
+        vmin[q]=maxbox[q]-vert[q];
+        vmax[q]=-maxbox[q]-vert[q];
+    }
+    if(dot3D(*(float3D*)nor,*(float3D*)vmin)>0.0f) return 0;
+    if(dot3D(*(float3D*)nor,*(float3D*)vmax)>=0.0f)return 1;
+    return 0;
+}
+#define AXISTEST_X01(a,b,fa,fb)	p0= a*v0.y-b*v0.z;p2= a*v2.y-b*v2.z;if(p0<p2){min=p0;max=p2;}else{min=p2;max=p0;}rad=fa*boxhalfsize.y+fb*boxhalfsize.z;if(min>rad||max<-rad)return 0;
+#define AXISTEST_X2(a,b,fa,fb)	p0= a*v0.y-b*v0.z;p1= a*v1.y-b*v1.z;if(p0<p1){min=p0;max=p1;}else{min=p1;max=p0;}rad=fa*boxhalfsize.y+fb*boxhalfsize.z;if(min>rad||max<-rad)return 0;
+#define AXISTEST_Y02(a,b,fa,fb)	p0=-a*v0.x+b*v0.z;p2=-a*v2.x+b*v2.z;if(p0<p2){min=p0;max=p2;}else{min=p2;max=p0;}rad=fa*boxhalfsize.x+fb*boxhalfsize.z;if(min>rad||max<-rad)return 0;
+#define AXISTEST_Y1(a,b,fa,fb)	p0=-a*v0.x+b*v0.z;p1=-a*v1.x+b*v1.z;if(p0<p1){min=p0;max=p1;}else{min=p1;max=p0;}rad=fa*boxhalfsize.x+fb*boxhalfsize.z;if(min>rad||max<-rad)return 0;
+#define AXISTEST_Z12(a,b,fa,fb)	p1= a*v1.x-b*v1.y;p2= a*v2.x-b*v2.y;if(p2<p1){min=p2;max=p1;}else{min=p1;max=p2;}rad=fa*boxhalfsize.x+fb*boxhalfsize.y;if(min>rad||max<-rad)return 0;
+#define AXISTEST_Z0(a,b,fa,fb)	p0= a*v0.x-b*v0.y;p1= a*v1.x-b*v1.y;if(p0<p1){min=p0;max=p1;}else{min=p1;max=p0;}rad=fa*boxhalfsize.x+fb*boxhalfsize.y;if(min>rad||max<-rad)return 0;
+int triBoxOverlap(float3D boxcenter,int	i,Mesh *mesh)
+{
+    float3D *p=mesh->p;
+    int3D *t=mesh->t;
+    float3D	boxhalfsize={0.5,0.5,0.5};
+    float3D	v0,v1,v2;
+    float	min,max,p0,p1,p2,rad,fex,fey,fez;
+    float3D	nor,e0,e1,e2;
+    
+    v0=sub3D(p[t[i].a],boxcenter);
+    v1=sub3D(p[t[i].b],boxcenter);
+    v2=sub3D(p[t[i].c],boxcenter);
+    
+    e0=sub3D(v1,v0);      // tri edge 0
+    e1=sub3D(v2,v1);      // tri edge 1
+    e2=sub3D(v0,v2);      // tri edge 2
+    
+    fex = fabs(e0.x);
+    fey = fabs(e0.y);
+    fez = fabs(e0.z);
+    AXISTEST_X01(e0.z, e0.y, fez, fey);
+    AXISTEST_Y02(e0.z, e0.x, fez, fex);
+    AXISTEST_Z12(e0.y, e0.x, fey, fex);
+    
+    fex = fabs(e1.x);
+    fey = fabs(e1.y);
+    fez = fabs(e1.z);
+    AXISTEST_X01(e1.z, e1.y, fez, fey);
+    AXISTEST_Y02(e1.z, e1.x, fez, fex);
+    AXISTEST_Z0(e1.y, e1.x, fey, fex);
+    
+    fex = fabs(e2.x);
+    fey = fabs(e2.y);
+    fez = fabs(e2.z);
+    AXISTEST_X2(e2.z, e2.y, fez, fey);
+    AXISTEST_Y1(e2.z, e2.x, fez, fex);
+    AXISTEST_Z12(e2.y, e2.x, fey, fex);
+    
+    // test in X-direction
+    FINDMINMAX(v0.x,v1.x,v2.x,min,max);
+    if(min>boxhalfsize.x || max<-boxhalfsize.x) return 0;
+    
+    // test in Y-direction
+    FINDMINMAX(v0.y,v1.y,v2.y,min,max);
+    if(min>boxhalfsize.y || max<-boxhalfsize.y) return 0;
+    
+    // test in Z-direction
+    FINDMINMAX(v0.z,v1.z,v2.z,min,max);
+    if(min>boxhalfsize.z || max<-boxhalfsize.z) return 0;
+    
+    nor=cross3D(e0,e1);
+    if(!planeBoxOverlap((float*)&nor,(float*)&v0,(float*)&boxhalfsize))
+        return 0;
+    
+    return 1;   // box and triangle overlaps
+}
+float Min(float x, float y)
+{
+    return (x<y)?x:y;
+}
+float Max(float x, float y)
+{
+    return (x>y)?x:y;
+}
+-(void)displayMesh
+{
+    int i,j,k;
+    int nt=mesh->nt;
+    float3D *p=mesh->p;
+    int3D   *t=mesh->t;
+    int     *it;
+    float3D a,b;
+    NSBezierPath    *bp=[NSBezierPath bezierPath];
+    float3D v;
+    float  scale;
+    float	s,d,x0,y0,slice=[[[[app settings] content] valueForKey:@"slice"] floatValue];
+
+    float		tmp[3],tmpx[3],dim1[3];
+    float		*P,invP[16];
+    NSRect      fr=[self frame];
+    
+    switch(plane)
+    {
+        case 1: P=X; break;
+        case 2: P=Y; break;
+        case 3: P=Z; break;
+        default: P=Zero;
+    }
+    invMat(invP,P);
+    
+    tmp[0]=dim[0];
+    tmp[1]=dim[1];
+    tmp[2]=dim[2];
+    multMatVec(tmpx,P,tmp);
+    dim1[0]=tmpx[0];
+    dim1[1]=tmpx[1];
+    dim1[2]=tmpx[2];
+    
+    scale=hdr->pixdim[1];
+    slice*=scale;
+    for(i=0;i<nt;i++)
+    {
+        k=0;
+        for(j=0;j<3;j++)
+        {
+            it=(int*)&(t[i]);
+            
+            a=p[it[j]];
+            tmp[0]=a.x;
+            tmp[1]=a.y;
+            tmp[2]=a.z;
+            multMatVec(tmpx, P, tmp);
+            a=*(float3D*)tmpx;
+
+            b=p[it[(j+1)%3]];
+            tmp[0]=b.x;
+            tmp[1]=b.y;
+            tmp[2]=b.z;
+            multMatVec(tmpx, P, tmp);
+            b=*(float3D*)tmpx;
+            
+            if((a.z-slice)*(b.z-slice)<=0)
+            {
+                d=a.z-b.z;
+                if(fabs(d)<0.000001)
+                    continue;
+                s=(slice-b.z)/d;
+                v=add3D(sca3D(a,s),sca3D(b,1-s));
+                x0=(v.x/scale+0.5)*fr.size.width/dim1[0];
+                y0=fr.size.height*(1-(v.y/scale+0.5)/dim1[1]);
+                if(k==0)
+                    [bp moveToPoint:(NSPoint){x0,y0}];
+                else
+                    [bp lineToPoint:(NSPoint){x0,y0}];
+                k++;
+            }
+        }
+    }
+    [[NSColor magentaColor] set];
+    [bp stroke];
+}
+void addToHash(Mesh *m, unsigned int hash, int vertexIndex, int iter)
+{
+    HashCell    *h=&(m->hash[hash]);
+    
+    if(h->timeStamp)
+    {
+        // find a free cell, or add a new one
+        while(h->timeStamp==iter)
+        {
+            if(h->next==NULL)
+                h->next=(long*)calloc(1,sizeof(HashCell));
+            h=(HashCell*)h->next;
+        }
+    }
+    h->timeStamp=iter;
+    h->i=vertexIndex;
+}
+int distanceToTriangle(Mesh *m, int vertexIndex, int triIndex, float3D *penetration)
+{
+    float3D *p=m->p;
+    int3D   *t=m->t;
+    float3D    coords;
+    float3D    a,b,x,n;
+    
+    a=sub3D(p[t[triIndex].b],p[t[triIndex].a]);
+    b=sub3D(p[t[triIndex].c],p[t[triIndex].a]);
+    x=sub3D(p[vertexIndex],p[t[triIndex].a]);
+    
+    float d00 = dot3D(a,a);
+    float d01 = dot3D(a,b);
+    float d11 = dot3D(b,b);
+    float d20 = dot3D(x,a);
+    float d21 = dot3D(x,b);
+    float denom = d00 * d11 - d01 * d01;
+    coords.x = (d11 * d20 - d01 * d21) / denom;
+    coords.y = (d00 * d21 - d01 * d20) / denom;
+    
+    n=cross3D(a,b);
+    n=sca3D(n,1/norm3D(n));
+    coords.z=dot3D(x,n);
+
+    *penetration=coords;
+    
+    if(coords.x>=0 && coords.y>=0 &&
+       coords.x+coords.y<=1 &&
+       coords.z<0)
+        return 1;
+    return 0;
+}
+int detect_collision(Mesh *m,int iter)
+/*
+ Collision detection algorithm
+ */
+{
+    int             i,j,k,x,y,z;
+    unsigned int    hash;
+    float3D         mi,ma,penetration;
+    int             np=m->np;
+    int             nt=m->nt;
+    float3D         *p=m->p;
+    int             *t;
+    HashCell        *h;
+    int             isInTriangle;
+    
+    // 1. assign vertices to hash
+    for(i=0;i<np;i++)
+    {
+        hash=(((unsigned int)floor(p[i].x/m->hashCellSize)*92837111)^((unsigned int)floor(p[i].y/m->hashCellSize)*689287499)^((unsigned int)floor(p[i].z/m->hashCellSize)*283923481))%m->nhash;
+        addToHash(m,hash,i,iter);
+    }
+    
+    // 2. detect collision with triangle bounding box
+    for(i=0;i<nt;i++)
+    {
+        // bounding box for t
+        t=(int*)&(m->t[i]);
+        mi=ma=p[t[0]];
+        for(j=0;j<3;j++)
+        {
+            if(p[t[j]].x<mi.x) mi.x=p[t[j]].x;
+            if(p[t[j]].y<mi.y) mi.y=p[t[j]].y;
+            if(p[t[j]].z<mi.z) mi.z=p[t[j]].z;
+            
+            if(p[t[j]].x>ma.x) ma.x=p[t[j]].x;
+            if(p[t[j]].y>ma.y) ma.y=p[t[j]].y;
+            if(p[t[j]].z>ma.z) ma.z=p[t[j]].z;
+        }
+        
+        // scan bounding box
+        for(x=floor(mi.x/m->hashCellSize);x<=floor(ma.x/m->hashCellSize);x++)
+        for(y=floor(mi.y/m->hashCellSize);y<=floor(ma.y/m->hashCellSize);y++)
+        for(z=floor(mi.z/m->hashCellSize);z<=floor(ma.z/m->hashCellSize);z++)
+        {
+            hash=((unsigned int)(x*92837111)^(unsigned int)(y*689287499)^(unsigned int)(z*283923481))%m->nhash;
+                    
+            // check for collision
+            h=&(m->hash[hash]);
+            while(h->timeStamp)
+            {
+                if(h->timeStamp==iter)
+                {
+                    // check if the vertex is not one of the vertices of the triangle we are testing
+                    isInTriangle=0;
+                    for(k=0;k<3;k++)
+                    if(t[k]==h->i)
+                    {
+                        isInTriangle=1;
+                        break;
+                    }
+                    if(isInTriangle==0)
+                    {
+                        // 3rd pass: check if vertex traverses
+                        if(distanceToTriangle(m,h->i,i,&penetration))
+                        if(fabs(penetration.z)<0.2)
+                        {
+                            printf("MSG: \"Collision detected\"\n");
+                            printf("Vertex_index %i\n",h->i);
+                            printf("Triangle %i (%i,%i,%i)\n",i,t[0],t[1],t[2]);
+                            printf("Penetration %f,%f,%f\n",penetration.x,penetration.y,penetration.z);
+                            if(0)
+                            {
+                                /* if collision response is active, add collision response to external forces */
+                                
+                                /*
+                                float3D    target,force;
+                                 float3D    a,b,c;
+                                 double      k=1000;  // collision elasticity
+                                 m->fext[h->i]=add3D(m->fext[h->i],sca3D(sub3D(prev,m->p[h->i]),k));
+                                 a=sub3D(m->p[m->t[i].p[1]],m->p[m->t[i].p[0]]);
+                                 b=sub3D(m->p[m->t[i].p[2]],m->p[m->t[i].p[0]]);
+                                 c=sub3D(m->p[m->t[i].p[3]],m->p[m->t[i].p[0]]);
+                                 // there are 3 types of tetrahedron:
+                                 switch(i%3)
+                                 {
+                                     case 0: // t[3*i+0]={b1,a1,c0,c1}
+                                     target=m->p[m->t[i].p[3]];
+                                     m->fext[m->t[i].p[0]]=add3D(m->fext[m->t[i].p[0]],sca3D(sub3D(prev,m->p[h->i]),k*(b.x+b.y+b.z)));
+                                     m->fext[m->t[i].p[1]]=add3D(m->fext[m->t[i].p[1]],sca3D(sub3D(prev,m->p[h->i]),-k*b.x));
+                                     m->fext[m->t[i].p[3]]=add3D(m->fext[m->t[i].p[3]],sca3D(sub3D(prev,m->p[h->i]),-k*b.z));
+                                     break;
+                                     case 1: // t[3*i+1]={c0,b1,a0,a1}
+                                     target=m->p[m->t[i].p[3]];
+                                     break;
+                                     case 2: // t[3*i+2]={a0,c0,b0,b1}
+                                     target=m->p[m->t[i].p[3]];
+                                     force=sca3D(sub3D(target,m->p[h->i]),k);
+                                     m->fext[h->i]=add3D(m->fext[h->i],force);
+                                     m->fext[m->t[i].p[3]]=sub3D(m->fext[m->t[i].p[3]],force);
+                                     break;
+                                 }
+                                 */
+                            }
+                            else
+                            {
+                            /* else, just return */
+                                //return 1;
+                            }
+                        }
+                    }
+                }
+                if(h->next)
+                    h=(HashCell*)h->next;
+                else
+                    break;
+            }
+        }
+    }
+    
+    return 0;
+}
 #pragma mark -
 -(void)setApp:(id)theApp
 {
@@ -1099,7 +1480,8 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	s=ss=0;
     for(i=0;i<dim[0]*dim[1]*dim[2];i++)
 	{
-		if(dataType==RGBFLOAT)
+        val=0;
+        if(dataType==RGBFLOAT)
 		{
 			val=((float3D*)data)[i].x;
 			if(i==0) min=max=val;
@@ -1130,10 +1512,12 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	}
     s/=(float)(dim[0]*dim[1]*dim[2]);
     std=sqrt(ss/(float)(dim[0]*dim[1]*dim[2])-pow(s,2));
+    /*
     tmpmin=s-2*std;
     tmpmax=s+2*std;
     min=(tmpmin<min)?min:tmpmin;
     max=(tmpmax>max)?max:tmpmax;
+    */
 	printf("[mean,std,min,max]=(%f,%f,%f,%f)\n",s,std,min,max);
 }
 -(void)applyRotation
@@ -1190,6 +1574,33 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 	// update data in document
 	[app configureInterface];
 }	
+-(void)boundingBox
+{
+    int   mn[3],mx[3];
+    int   i,j,k;
+    
+    mn[0]=dim[0];
+    mn[1]=dim[1];
+    mn[2]=dim[2];
+    mx[0]=mx[1]=mx[2]=0;
+    
+    for(i=0;i<dim[0];i++)
+    for(j=0;j<dim[1];j++)
+    for(k=0;k<dim[2];k++)
+    {
+        if(selection[k*dim[1]*dim[0]+j*dim[0]+i])
+        {
+            if(i<mn[0]) mn[0]=i;
+            if(j<mn[1]) mn[1]=j;
+            if(k<mn[2]) mn[2]=k;
+
+            if(i>mx[0]) mx[0]=i;
+            if(j>mx[1]) mx[1]=j;
+            if(k>mx[2]) mx[2]=k;
+        }
+    }
+    [self box:mn[0]:mn[1]:mn[2]:mx[0]:mx[1]:mx[2]];
+}
 -(void)box:(int)a :(int)b :(int)c :(int)d :(int)e :(int)f
 {
 	int	i,j,k;
@@ -1485,23 +1896,96 @@ void angles2rotation(float angleX, float angleY, float angleZ, float *m)
 
 	[mMovie release];
 }
--(void)crop:(char*)path
+-(void)crop
 {
-	char			*crop;
-	int				newdim[3];
-	AnalyzeHeader	h;
+    int   mn[3],mx[3];
+    int   i,j,k;
+    
+    mn[0]=dim[0];
+    mn[1]=dim[1];
+    mn[2]=dim[2];
+    mx[0]=mx[1]=mx[2]=0;
+    for(i=0;i<dim[0];i++)
+    for(j=0;j<dim[1];j++)
+    for(k=0;k<dim[2];k++)
+    {
+        if(selection[k*dim[1]*dim[0]+j*dim[0]+i])
+        {
+            if(i<mn[0]) mn[0]=i;
+            if(j<mn[1]) mn[1]=j;
+            if(k<mn[2]) mn[2]=k;
+            
+            if(i>mx[0]) mx[0]=i;
+            if(j>mx[1]) mx[1]=j;
+            if(k>mx[2]) mx[2]=k;
+        }
+    }
 
-	[self getCrop:&crop dim:newdim];
-	
-	h=*hdr;
-	h.dim[0]=4;
-	h.dim[1]=newdim[0];
-	h.dim[2]=newdim[1];
-	h.dim[3]=newdim[2];
-	h.dim[4]=1;
-	Analyze_save_hdr(path,h);
-	Analyze_save_img(path,h,crop);
-	free(crop);
+    char			*volResized;
+    short			*selResized;
+    char			*addr;
+    short			newdim[4]={0,0,0,1};
+    int				x,y,z;	// original and target coordinates
+    AnalyzeHeader	h;
+    
+    h=*hdr;
+    x=newdim[0]=mx[0]-mn[0]+1;
+    y=newdim[1]=mx[1]-mn[1]+1;
+    z=newdim[2]=mx[2]-mn[2]+1;
+    
+    volResized=calloc(x*y*z,AnalyzeBytesPerVoxel(h));
+    // resize volume
+    for(i=0;i<x;i++)
+    for(j=0;j<y;j++)
+    for(k=0;k<z;k++)
+    {
+        switch(dataType)
+        {
+            case UCHAR:
+                ((unsigned char*)volResized)[k*y*x+j*x+i]=((unsigned char*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
+            case SHORT:
+                ((short*)volResized)[k*y*x+j*x+i]=((short*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
+            case INT:
+                ((int*)volResized)[k*y*x+j*x+i]=((int*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
+            case FLOAT:
+                ((float*)volResized)[k*y*x+j*x+i]=((float*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
+        }
+    }
+    //	for(i=0;i<x*y*z*AnalyzeBytesPerVoxel(h);i++)
+    //		volResized[i]=data[i];
+    
+    // resize selection
+    selResized=calloc(x*y*z,sizeof(short));
+    for(i=0;i<x;i++)
+    for(j=0;j<y;j++)
+    for(k=0;k<z;k++)
+            selResized[k*y*x+j*x+i]=selection[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+    free(selection);
+    selection=selResized;
+    
+    // make new header
+    h.dim[0]=4;
+    h.dim[1]=x;
+    h.dim[2]=y;
+    h.dim[3]=z;
+    h.dim[4]=1;
+    
+    // put hdr and img in a single ptr
+    addr=(char*)calloc(sizeof(AnalyzeHeader)+x*y*z*AnalyzeBytesPerVoxel(h),1);
+    *(AnalyzeHeader*)addr=h;
+    memcpy(addr+sizeof(AnalyzeHeader),volResized,x*y*z*AnalyzeBytesPerVoxel(h));
+    free(volResized);
+    
+    // update data in view
+    [self configureData:addr];
+    [self configureMinMax];
+    
+    // update data in document
+    [app configureInterface];
 }
 void dct_1d(float *in, float *out, int N)
 {
@@ -1824,6 +2308,33 @@ void idct_xyz(float *vol,float *coeff,int *dim8)
 		selection[z*dim[1]*dim[0]+k]=sindex;
 	sindex++;
 	free(tmp);
+}
+-(void)flipMesh:(char*)d
+{
+    float world_dim[3];
+    int   i;
+    float np=mesh->np;
+    float3D *p=mesh->p;
+    
+    world_dim[0]=dim[0]*hdr->pixdim[1];
+    world_dim[1]=dim[1]*hdr->pixdim[2];
+    world_dim[2]=dim[2]*hdr->pixdim[3];
+    
+    switch((int)d[0])
+    {
+        case (int)'x':
+            for(i=0;i<np;i++)
+                p[i].x=world_dim[0]-p[i].x;
+            break;
+        case (int)'y':
+            for(i=0;i<np;i++)
+                p[i].y=world_dim[1]-p[i].y;
+            break;
+        case (int)'z':
+            for(i=0;i<np;i++)
+                p[i].z=world_dim[2]-p[i].z;
+            break;
+    }
 }
 -(void)getCrop:(char**)crop dim:(int*)cdim
 {
@@ -2184,6 +2695,39 @@ Origin:\t\t%i,%i,%i\n",
 {
 	[self displayMessage:[NSString stringWithFormat:@"min=%f, max=%f",min,max]];
 }
+-(BOOL)loadMesh:(char*)path
+{
+    FILE    *f;
+    char    str[512];
+    int     np;
+    int     nt;
+    float3D *p;
+    int3D   *t;
+    int     i;
+    
+    f=fopen(path,"r");
+    fgets(str,512,f);
+    sscanf(str," %i %i ",&np,&nt);
+    p=(float3D*)calloc(np,sizeof(float3D));
+    t=(int3D*)calloc(nt,sizeof(int3D));
+    for(i=0;i<np;i++)
+    {
+        fgets(str,512,f);
+        sscanf(str," %f %f %f ",&(p[i].x),&(p[i].y),&(p[i].z));
+    }
+    for(i=0;i<nt;i++)
+    {
+        fgets(str,512,f);
+        sscanf(str," %i %i %i ",&(t[i].a),&(t[i].b),&(t[i].c));
+    }
+    mesh=(Mesh*)calloc(1,sizeof(Mesh));
+    mesh->np=np;
+    mesh->nt=nt;
+    mesh->p=p;
+    mesh->t=t;
+    printf("Loaded mesh, %i vertices, %i triangles\n",np,nt);
+    return YES;
+}
 -(BOOL)loadSelection:(char*)path
 {
 	char			*addr;
@@ -2269,6 +2813,87 @@ Origin:\t\t%i,%i,%i\n",
 	
 	[[NSWorkspace sharedWorkspace] openFile:[NSString stringWithUTF8String:path] withApplication:@"EditMesh.app"];
 }
+-(void)pushMesh:(float)d
+{
+    int i,j,np,nt;
+    float3D *p;
+    int3D   *t;
+    float3D *p0; // rest configuration
+    float3D *n; // normal vectors
+    float3D a;
+    
+    if(mesh==nil)
+    {
+        printf("ERROR: no mesh loaded");
+        return;
+    }
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+    
+    p0=(float3D*)calloc(np,sizeof(float3D));
+    n=(float3D*)calloc(np,sizeof(float3D));
+
+    // compute normal vectors
+    for(i=0;i<nt;i++)
+    {
+        a=cross3D(sub3D(p[t[i].b],p[t[i].a]),sub3D(p[t[i].c],p[t[i].a]));
+        a=sca3D(a,1/norm3D(a));
+        n[t[i].a]=add3D(n[t[i].a],a);
+        n[t[i].b]=add3D(n[t[i].b],a);
+        n[t[i].c]=add3D(n[t[i].c],a);
+    }
+    for(i=0;i<np;i++)
+        n[i]=sca3D(n[i],1/norm3D(n[i]));
+    
+    // smooth normals
+    for(j=0;j<2;j++)
+    {
+        for(i=0;i<nt;i++)
+        {
+            a=sca3D(add3D(add3D(n[t[i].a],n[t[i].b]),n[t[i].c]),1/3.0);
+            p0[t[i].a]=add3D(p0[t[i].a],a);
+            p0[t[i].b]=add3D(p0[t[i].b],a);
+            p0[t[i].c]=add3D(p0[t[i].c],a);
+        }
+        for(i=0;i<np;i++)
+            p0[i]=sca3D(p0[i],1/norm3D(p0[i]));
+        for(i=0;i<nt;i++)
+        {
+            a=sca3D(add3D(add3D(p0[t[i].a],p0[t[i].b]),p0[t[i].c]),1/3.0);
+            n[t[i].a]=add3D(n[t[i].a],a);
+            n[t[i].b]=add3D(n[t[i].b],a);
+            n[t[i].c]=add3D(n[t[i].c],a);
+        }
+        for(i=0;i<np;i++)
+            n[i]=sca3D(n[i],1/norm3D(n[i]));
+   }
+    
+    // push mesh in the normal direction
+    for(i=0;i<np;i++)
+        p[i]=add3D(p[i],sca3D(n[i],d));
+
+    // collision detection
+    // compute average edge length
+    float avrgEdgeLength=0;
+    for(i=0;i<nt;i++)
+    {
+        avrgEdgeLength+=norm3D(sub3D(p[t[i].a],p[t[i].b]));
+        avrgEdgeLength+=norm3D(sub3D(p[t[i].b],p[t[i].c]));
+        avrgEdgeLength+=norm3D(sub3D(p[t[i].c],p[t[i].a]));
+    }
+    avrgEdgeLength/=3.0*nt;
+    mesh->nhash=9973; // a prime number close to 10k
+    mesh->hash=(HashCell*)calloc(mesh->nhash,sizeof(HashCell));
+    mesh->hashCellSize=avrgEdgeLength;
+    
+    detect_collision(mesh,1);
+
+    free(p0);
+    free(n);
+    free(mesh->hash);
+}
 -(void)reorient:(char*)o
 {
 	char			*volReoriented;
@@ -2340,6 +2965,28 @@ Origin:\t\t%i,%i,%i\n",
 	
 	// update data in document
 	[app configureInterface];	
+}
+-(void)reorientMesh:(char*)o
+{
+    int i;
+    int np;
+    int nt;
+    float3D *p;
+    int3D *t;
+    
+    if(mesh==nil)
+        printf("ERROR: no mesh loaded");
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+    
+    for(i=0;i<np;i++)
+        p[i]=(float3D){
+            p[i].x*(o[0]=='x')+p[i].y*(o[0]=='y')+p[i].z*(o[0]=='z'),
+            p[i].x*(o[1]=='x')+p[i].y*(o[1]=='y')+p[i].z*(o[1]=='z'),
+            p[i].x*(o[2]=='x')+p[i].y*(o[2]=='y')+p[i].z*(o[2]=='z')
+        };
 }
 -(void)resample:(float)pixx :(float)pixy :(float)pixz :(char*)interpolation
 {
@@ -2493,6 +3140,35 @@ Origin:\t\t%i,%i,%i\n",
 		printf("ERROR: saveAs\n");
 	return result;
 }
+-(BOOL)saveMesh:(char*)path
+{
+    FILE *f;
+    int i;
+    int np;
+    int nt;
+    float3D *p;
+    int3D *t;
+
+    if(mesh==nil)
+    {
+        printf("ERROR: no mesh loaded");
+        return 0;
+    }
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+
+    f=fopen(path,"w");
+    fprintf(f,"%i %i\n",np,nt);
+    for(i=0;i<np;i++)
+        fprintf(f,"%f %f %f\n",p[i].x,p[i].y,p[i].z);
+    for(i=0;i<nt;i++)
+        fprintf(f,"%i %i %i\n",t[i].a,t[i].b,t[i].c);
+    fclose(f);
+    
+    return 1;
+}
 -(BOOL)saveSelection:(char*)path
 {
 	int				result;
@@ -2517,6 +3193,24 @@ Origin:\t\t%i,%i,%i\n",
 	NSString	*filename=[NSString stringWithFormat:@"%s.jpg",path];
 	
 	[bmp writeToFile:filename atomically:YES];    
+}
+-(void)scaleMesh:(float)x
+{
+    int i;
+    int np;
+    int nt;
+    float3D *p;
+    int3D *t;
+    
+    if(mesh==nil)
+        printf("ERROR: no mesh loaded");
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+    
+    for(i=0;i<np;i++)
+        p[i]=sca3D(p[i],x);
 }
 -(void)select:(int)x :(int)y :(int)z :(float)Min :(float)Max
 {
@@ -3168,6 +3862,24 @@ void tpErode_unset(int x, int y, int z, int *Ref, int *dim, short *ne, short *vo
 	free(tmp);
 	free(ne);
 }
+-(void)translateMesh:(float)x :(float)y :(float)z
+{
+    int i;
+    int np;
+    int nt;
+    float3D *p;
+    int3D *t;
+    
+    if(mesh==nil)
+        printf("ERROR: no mesh loaded");
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+    
+    for(i=0;i<np;i++)
+        p[i]=add3D(p[i],(float3D){x,y,z});
+}
 -(void)undo
 {
 	printf("> undo\n");
@@ -3181,5 +3893,57 @@ void tpErode_unset(int x, int y, int z, int *Ref, int *dim, short *ne, short *vo
 		selection[i]=0;
 	sindex--;
 }
+-(void)voxeliseMesh
+{
+    int i,j,k,l;
+    int np,nt;
+    float3D *p;
+    int3D *t;
+    float *pixdim=&(hdr->pixdim[1]);
+    float3D mi,ma;
+    
+    if(mesh==nil)
+        printf("ERROR: no mesh loaded");
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+    
+    // scale mesh to voxel dimensions
+    for(i=0;i<np;i++)
+    {
+        p[i].x/=pixdim[0];
+        p[i].y/=pixdim[1];
+        p[i].z/=pixdim[2];
+    }
+    
+    // scan triangles
+    for(l=0;l<nt;l++)
+    {
+        mi.x=Min(Min(p[t[l].a].x,p[t[l].b].x),p[t[l].c].x);
+        mi.y=Min(Min(p[t[l].a].y,p[t[l].b].y),p[t[l].c].y);
+        mi.z=Min(Min(p[t[l].a].z,p[t[l].b].z),p[t[l].c].z);
+        ma.x=Max(Max(p[t[l].a].x,p[t[l].b].x),p[t[l].c].x)+0.5;
+        ma.y=Max(Max(p[t[l].a].y,p[t[l].b].y),p[t[l].c].y)+0.5;
+        ma.z=Max(Max(p[t[l].a].z,p[t[l].b].z),p[t[l].c].z)+0.5;
+        for(i=mi.x;i<=ma.x;i++)
+        for(j=mi.y;j<=ma.y;j++)
+        for(k=mi.z;k<=ma.z;k++)
+        {
+            if(!triBoxOverlap((float3D){i+0.5,j+0.5,k+0.5},l,mesh))
+                continue;
+            selection[k*dim[1]*dim[0]+j*dim[0]+i]=sindex;
+        }
+    }
+    sindex++;
 
+    // scale mesh back to world dimensions
+    for(i=0;i<np;i++)
+    {
+        p[i].x*=pixdim[0];
+        p[i].y*=pixdim[1];
+        p[i].z*=pixdim[2];
+    }
+
+}
 @end

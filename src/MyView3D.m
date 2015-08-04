@@ -62,7 +62,7 @@
         glLoadIdentity();
         aspectRatio = (float)rect.size.width/(float)rect.size.height;
         //glOrtho(-aspectRatio*zoom, aspectRatio*zoom, -zoom, zoom, -1000.0, 1000.0);
-        glOrtho(-aspectRatio*zoom, aspectRatio*zoom, -zoom, zoom, -crop, 500.0);
+        glOrtho(-aspectRatio*zoom, aspectRatio*zoom, -zoom, zoom, -2*crop, 1000.0);
 
     // prepare drawing
         glMatrixMode(GL_MODELVIEW);

@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>StereotaxicRAMON.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>62D360B819F2B23D00C18A93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62D360CA19F2B23D00C18A93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8D15AC270486D014006FF6A4</key>
 		<dict>
 			<key>primary</key>

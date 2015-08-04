@@ -85,7 +85,7 @@ typedef struct
 typedef struct
 {
 	float	x,y,z;
-}float3D;
+}rgb;
 
 int Analyze_load(char *path, char **addr,int *sz, int *swapped);
 int Analyze_load_hdr(char *path, AnalyzeHeader *hdr, int *swapped);
@@ -99,7 +99,7 @@ void swap_img(char *img, AnalyzeHeader hdr);
 void swap_short(short *v);
 void swap_int(int *v);
 void swap_float(float *v);
-void swap_rgbfloat(float3D *v);
+void swap_rgbfloat(rgb *v);
 
 float getValue(AnalyzeHeader *hdr, char *addr, int x, int y, int z);
 void setValue(AnalyzeHeader *hdr, char *addr, float val, int x, int y, int z);

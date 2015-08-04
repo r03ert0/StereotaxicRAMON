@@ -238,7 +238,6 @@
 	char	*addr;
 	int		sz;
 	int		swapped;
-	int		endi=0;
 
 	// load data
 	Analyze_load((char*)[thePath UTF8String], &addr,&sz,&swapped);
@@ -251,7 +250,6 @@
 	char	*addr;
 	int		sz;
 	int		swapped;
-	int		endi=0;
 	
 	// load data
 	Nifti_load((char*)[thePath UTF8String], &addr,&sz,&swapped);
@@ -538,6 +536,7 @@
 {cmd=addSelection;		args=(string);							help=\"Add selection from arg[1]=path\";},\
 {cmd=adjustMinMax;		args=();                                help=\"Adjust min and max grey level values to mean ± 2 standard deviations (clipped to the volume's min and max)\";},\
 {cmd=applyRotation;		args=();								help=\"Apply current rotation\";},\
+{cmd=boundingBox;		args=();                                help=\"Select the smallest box including all currently selected voxels\";},\
 {cmd=box;				args=(int,int,int,int,int,int);			help=\"Select the region inside the box arg[1-6]=xmn,ymn,zmn,xmx,ymx,zmx\";},\
 {cmd=boxFilter;			args=(int,int);							help=\"Arg[1]=filter size, arg[2]=iterations\";},\
 {cmd=changePixdim;		args=(float,float,float);				help=\"arg[1-3]=Change voxel dimensions in the header\";},\
@@ -545,19 +544,21 @@
 {cmd=commands;													help=\"List all commands\";},\
 {cmd=connectedSelection;args=(int,int,int);						help=\"Keeps only the selection connected to arg[1-3]=x,y,z coordinate\";},\
 {cmd=convertToMovie;	args=(string);							help=\"Convert slices into mp4 movie stored at path arg[1]\";},\
-{cmd=crop;				args=(string);},\
+{cmd=crop;				args=();                                help=\"Crops volume to the bounding box of the selection\";},\
 {cmd=dct;                                                       help=\"Direct cosine transform\";},\
 {cmd=deselect;},\
 {cmd=dilate;			args=(int);								help=\"Dilate selection arg[1]=number of voxels\";},\
 {cmd=erode;				args=(int);								help=\"Erode selection arg[1]=number of voxels\";},\
 {cmd=euler;														help=\"Display Euler's characteristic for the selection\";},\
-{cmd=fill;				args=(int,int,int,char);				help=\"Fills in 2D starting at coordinates arg[1-3]=x,y,z in plane arg[4]=X, Y or Z\";},\
+{cmd=fill;				args=(int,int,int,string);              help=\"Fills in 2D starting at coordinates arg[1-3]=x,y,z in plane arg[4]=X, Y or Z\";},\
+{cmd=flipMesh;			args=(string);            				help=\"Flips the mesh (if loaded) along the dimension argv[1]=x, y or z\";},\
 {cmd=grow;				args=(float,float);						help=\"Add to the actual selection connected voxels with values between arg[1,2]=min,max\";},\
 {cmd=help;				args=(string);							help=\"Help\";},\
 {cmd=histogram;},\
 {cmd=idct;                                                      help=\"Inverse discrete cosine transform\";},\
 {cmd=invert;													help=\"Invert selection\";},\
 {cmd=info;														help=\"Display file information\";},\
+{cmd=loadMesh;          args=(string);							help=\"Load a mesh in text format at arg[1]=path\";},\
 {cmd=loadSelection;		args=(string);							help=\"Load selection at arg[1]=path\";},\
 {cmd=make26;													help=\"Remove edge and corner neighbours so as to make the selection 26 connected.\";},\
 {cmd=minMax;													help=\"Print minimum and maximum values\";},\
@@ -565,13 +566,17 @@
 {cmd=multiplyConstant;	args=(float);							help=\"Multiply the volume values by arg[1]\";},\
 {cmd=penSize;			args=(int);								help=\"Arg[1]=size in pixels\";},\
 {cmd=polygonize;		args=(string);							help=\"Save a mesh of the selection at arg[1]=path\";},\
+{cmd=pushMesh;          args=(float);                           help=\"Push the mesh (if loaded) by arg[1]=distance along the normal\";},\
 {cmd=reorient;			args=(string);							help=\"Change the current 'xyz' orientation of the volume to that of the string in arg[1], for example, zxy\";},\
+{cmd=reorientMesh;			args=(string);							help=\"Change the current 'xyz' orientation of the mesh (if loaded) to that of the string in arg[1], for example, zxy\";},\
 {cmd=resample;			args=(float,float,float,string);		help=\"Resample volume to pixel dimensions arg[1-3], using arg[4]={nearest,trilinear} interpolation\";},\
 {cmd=resize;			args=(int,int,int,string);				help=\"Resize volume to dimension arg[1-3], arg[4]=three characters containing the justification flags s=start, c=center, e=end for the x, y and z dimensions (for example ssc=x start, y start, z center)\";},\
 {cmd=save;														help=\"Overwrite volume\";},\
 {cmd=saveAs;			args=(string);							help=\"Save data volume at arg[1]=path\";},\
+{cmd=saveMesh;			args=(string);							help=\"Save mesh (if loaded) at arg[1]=path\";},\
 {cmd=saveSelection;		args=(string);							help=\"Save selection at arg[1]=path\";},\
 {cmd=savePicture;		args=(string);							help=\"Save current image at arg[1]=path\";},\
+{cmd=scaleMesh;         args=(float);							help=\"Scale mesh (if loaded) with arg[1]=scale factor\";},\
 {cmd=select;			args=(int,int,int,float,float);},\
 {cmd=set;				args=(float);},\
 {cmd=setMinMax;			args=(float,float);						help=\"Change the min,max values used for display to arg[1,2]=min,max\";},\
@@ -589,7 +594,9 @@
 {cmd=tpDilate;			args=(int);								help=\"Topology-preserving dilate selection arg[1]=number of voxels\";},\
 {cmd=tpDilateOnMask;	args=(int,string);						help=\"Topology-preserving dilate selection inside a mask, arg[1]=number of voxels, arg[2]=path a mask with the same dimensions as the current volume\";},\
 {cmd=tpErode;			args=(int);								help=\"Topology-preserving erode selection arg[1]=number of voxels\";},\
-{cmd=undo;}\
+{cmd=translateMesh;		args=(float,float,float);				help=\"Translate mesh (if loaded) by adding arg[1-3]=x, y and z displacements\";},\
+{cmd=undo;},\
+{cmd=voxeliseMesh;                                              help=\"Voxelise mesh (if loaded)\";}\
 );}";
 	NSDictionary	*dic=[cmdstr propertyListFromStringsFileFormat];
 	cmds=[[dic objectForKey:@"root"] retain];

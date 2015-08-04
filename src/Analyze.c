@@ -174,7 +174,7 @@ void swap_img(char *img, AnalyzeHeader hdr)
 		case SHORT:		for(i=0;i<sz;i++) swap_short(&(((short*)img)[i]));		break;
 		case INT:		for(i=0;i<sz;i++) swap_int  (&(((int*)img)[i]));		break;
 		case FLOAT:		for(i=0;i<sz;i++) swap_float(&(((float*)img)[i]));		break;
-		case RGBFLOAT:	for(i=0;i<sz;i++) swap_rgbfloat(&(((float3D*)img)[i]));	break;
+		case RGBFLOAT:	for(i=0;i<sz;i++) swap_rgbfloat(&(((rgb*)img)[i]));	break;
 	}
 }	
 void swap_short(short *v)
@@ -205,7 +205,7 @@ void swap_float(float *v)
 	b[3]=((unsigned char*)v)[0];
 	*v=*(float*)b;
 }
-void swap_rgbfloat(float3D *v)
+void swap_rgbfloat(rgb *v)
 {
 	unsigned char	b[12];
 	
@@ -223,7 +223,7 @@ void swap_rgbfloat(float3D *v)
 	b[9]=((unsigned char*)v)[10];
 	b[10]=((unsigned char*)v)[9];
 	b[11]=((unsigned char*)v)[8];
-	*v=*(float3D*)b;
+	*v=*(rgb*)b;
 }
 #pragma mark -
 float getValue(AnalyzeHeader *hdr, char *addr, int x, int y, int z)

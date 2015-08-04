@@ -1282,7 +1282,7 @@ int distanceToTriangle(Mesh *m, int vertexIndex, int triIndex, float3D *penetrat
         return 1;
     return 0;
 }
-int detect_collision(Mesh *m,int iter)
+int detect_collision(Mesh *m,float3D *p0)
 /*
  Collision detection algorithm
  */
@@ -1295,7 +1295,7 @@ int detect_collision(Mesh *m,int iter)
     float3D         *p=m->p;
     int             *t;
     HashCell        *h;
-    int             isInTriangle;
+    int             isInTriangle,iter=1;
     
     // 1. assign vertices to hash
     for(i=0;i<np;i++)
@@ -1352,8 +1352,9 @@ int detect_collision(Mesh *m,int iter)
                             printf("Vertex_index %i\n",h->i);
                             printf("Triangle %i (%i,%i,%i)\n",i,t[0],t[1],t[2]);
                             printf("Penetration %f,%f,%f\n",penetration.x,penetration.y,penetration.z);
-                            if(0)
+                            if(1)
                             {
+                                p[h->i]=p0[h->i];
                                 /* if collision response is active, add collision response to external forces */
                                 
                                 /*
@@ -2872,7 +2873,10 @@ Origin:\t\t%i,%i,%i\n",
     
     // push mesh in the normal direction
     for(i=0;i<np;i++)
+    {
+        p0[i]=p[i];
         p[i]=add3D(p[i],sca3D(n[i],d));
+    }
 
     // collision detection
     // compute average edge length
@@ -2888,7 +2892,7 @@ Origin:\t\t%i,%i,%i\n",
     mesh->hash=(HashCell*)calloc(mesh->nhash,sizeof(HashCell));
     mesh->hashCellSize=avrgEdgeLength;
     
-    detect_collision(mesh,1);
+    detect_collision(mesh,p0);
 
     free(p0);
     free(n);

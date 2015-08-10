@@ -164,6 +164,8 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)setVolume:(char*)path;
 -(void)smooth:(int)level :(int)iter;
 -(void)smooth1:(char*)mask :(int)level;
+-(void)smoothMeshLaplace:(float)lambda :(int)iterations;
+-(void)smoothMeshTaubin:(float)lambda :(float)mu :(int)iterations;
 -(void)stdev:(int)neigh :(float)maxstd;
 -(void)stats;
 -(void)subtractSelection:(char*)path;

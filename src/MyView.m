@@ -85,6 +85,9 @@ float determinant(float3D a, float3D b, float3D c)
     float		*P,invP[16];
     int         p=plane;
 	
+    if(dim[0]*dim[1]*dim[2]==0)
+        return;
+    
     switch(p)
 	{
 		case 1: P=(float*)X; break;
@@ -1513,12 +1516,11 @@ int detect_collision(Mesh *m,float3D *p0)
 	}
     s/=(float)(dim[0]*dim[1]*dim[2]);
     std=sqrt(ss/(float)(dim[0]*dim[1]*dim[2])-pow(s,2));
-    /*
-    tmpmin=s-2*std;
-    tmpmax=s+2*std;
+
+    tmpmin=s-3*std;
+    tmpmax=s+3*std;
     min=(tmpmin<min)?min:tmpmin;
     max=(tmpmax>max)?max:tmpmax;
-    */
 	printf("[mean,std,min,max]=(%f,%f,%f,%f)\n",s,std,min,max);
 }
 -(void)applyRotation
@@ -3464,6 +3466,65 @@ Origin:\t\t%i,%i,%i\n",
 	}
 	
 	printf("%i voxels modified\n",voxelschanged);
+}
+-(void)smoothMeshLaplace:(float)lambda :(int)iterations
+{
+    int i,j;
+    int np;
+    int nt;
+    float3D *p;
+    int3D *t;
+    float3D *p0;
+    int *n;
+    
+    if(mesh==nil)
+    {
+        printf("ERROR: No mesh to smooth\n");
+        return;
+    }
+    printf("laplace smooth, lambda=%f, iterations:%i\n",lambda,iterations);
+    np=mesh->np;
+    nt=mesh->nt;
+    p=mesh->p;
+    t=mesh->t;
+    
+    p0=(float3D*)calloc(np,sizeof(float3D));
+    n=(int*)calloc(np,sizeof(int));
+    
+    for(i=0;i<nt;i++)
+    {
+        n[t[i].a]+=2;
+        n[t[i].b]+=2;
+        n[t[i].c]+=2;
+    }
+    for(j=0;j<iterations;j++)
+    {
+        for(i=0;i<nt;i++)
+        {
+            p0[t[i].a]=add3D(p0[t[i].a],add3D(p[t[i].b],p[t[i].c]));
+            p0[t[i].b]=add3D(p0[t[i].b],add3D(p[t[i].c],p[t[i].a]));
+            p0[t[i].c]=add3D(p0[t[i].c],add3D(p[t[i].a],p[t[i].b]));
+        }
+        for(i=0;i<np;i++)
+            p0[i]=sca3D(p0[i],1/(float)n[i]);
+        for(i=0;i<np;i++)
+        {
+            p[i]=add3D(sca3D(p[i],1-lambda),sca3D(p0[i],lambda));
+            p0[i]=(float3D){0,0,0};
+        }
+    }
+    free(p0);
+    free(n);
+}
+-(void)smoothMeshTaubin:(float)lambda :(float)mu :(int)iterations
+{
+    int i;
+    
+    for(i=0;i<iterations;i++)
+    {
+        [self smoothMeshLaplace:lambda:1];
+        [self smoothMeshLaplace:mu:1];
+    }
 }
 -(void)stats
 {

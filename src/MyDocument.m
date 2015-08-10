@@ -586,7 +586,9 @@
 {cmd=setSelectionOpacity;args=(float);							help=\"Change selection opacity to arg[1]\";},\
 {cmd=setThresholdWidth;	args=(float);},\
 {cmd=setVolume;			args=(string);},\
-{cmd=smooth;			args=(int,int);},\
+{cmd=smooth;			args=(int,int);                         help=\"Smooth selection by removing all voxels with less than argv[1]=threshold neighbours, typical threshold=13, for arg[2]=iterations\";},\
+{cmd=smoothMeshLaplace;	args=(float,int);                       help=\"Laplace smoothing of the mesh (if loaded) with arg[1]=lambda in (-1,1), arg[2]=iterations\";},\
+{cmd=smoothMeshTaubin;	args=(float,float,int);                 help=\"Taubin smoothing of the mesh (if loaded). Typical arg[1]=lambda=0.5, arg[2]=mu=-0.53, arg[3]=iterations\";},\
 {cmd=stats;},\
 {cmd=stdev;				args=(int, float);},\
 {cmd=subtractSelection;	args=(string);							help=\"Subtract selection from arg[1]=path\";},\

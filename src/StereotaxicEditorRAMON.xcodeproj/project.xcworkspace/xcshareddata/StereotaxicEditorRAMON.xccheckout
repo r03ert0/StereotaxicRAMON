@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>789D2619-C1FC-48B8-B05B-11A31A5EF726</string>
 	<key>IDESourceControlProjectName</key>
-	<string>StereotaxicEditorRAMON</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5F4861D1F25302FC6CA506A699E6D0DAC92B9D2E</key>
 		<string>https://github.com/r03ert0/StereotaxicRAMON.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>src/StereotaxicEditorRAMON.xcodeproj</string>
+	<string>src/StereotaxicEditorRAMON.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5F4861D1F25302FC6CA506A699E6D0DAC92B9D2E</key>

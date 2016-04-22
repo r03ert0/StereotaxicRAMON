@@ -63,6 +63,7 @@ typedef struct
 	NSBezierPath	*poly;		// Bezier path for polygon drawing
     
     Mesh        *mesh;
+    int         flag_showMesh;  // show or hide mesh
 
 	// GUI variables: variables that can be set and queried from the interface
 	float	max,min;			// minimum and maximum data levels
@@ -129,6 +130,7 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)flipMesh:(char*)d;
 -(void)grow:(float)Min :(float)Max;
 -(void)help:(char*)cmd;
+-(void)hideMesh;
 -(void)histogram;
 -(void)idct;
 -(void)info;
@@ -162,6 +164,7 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)setSelectionOpacity:(float)o;
 -(void)setThresholdWidth:(float)w;
 -(void)setVolume:(char*)path;
+-(void)showMesh;
 -(void)smooth:(int)level :(int)iter;
 -(void)smooth1:(char*)mask :(int)level;
 -(void)smoothMeshLaplace:(float)lambda :(int)iterations;

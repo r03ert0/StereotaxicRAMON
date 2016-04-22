@@ -178,7 +178,7 @@ float determinant(float3D a, float3D b, float3D c)
 		[poly stroke];
 	}
     
-    if(mesh!=nil)
+    if(mesh!=nil && flag_showMesh==true)
         [self displayMesh];
 }
 -(BOOL)acceptsFirstResponder
@@ -349,73 +349,78 @@ float determinant(float3D a, float3D b, float3D c)
 		}
 	}
 }
--(void)mouseDragged:(NSEvent*)e
+-(void)lineFromPoint:(float*)tmp0 toPoint:(float*)tmp1 eraseFlag:(int)erase
 {
-	NSPoint		m=[self convertPoint:[e locationInWindow] fromView:nil];
-	
-	if(m.x==oldm.x&&m.y==oldm.y)
-		return;	
-	
-	NSRect		fr=[self frame];
-	float		tmp[3],tmpd[3],tmpx[3];
-	int			dim1[3];
-	float		x1,y1,z1,volRot[16];
-	float		*P,invP[16];
-	float		slice=[[[[app settings] content] valueForKey:@"slice"] floatValue];
-	
-	angles2rotation(volRotation[0],volRotation[1],volRotation[2],volRot);
-	
-	switch(plane)
-	{
-		case 1: P=X; break;
-		case 2: P=Y; break;
-		case 3: P=Z; break;
-	}
-	invMat(invP,P);
-	
-	tmp[0]=dim[0];
-	tmp[1]=dim[1];
-	tmp[2]=dim[2];
-	multMatVec(tmpd,P,tmp);
-	dim1[0]=(int)tmpd[0];
-	dim1[1]=(int)tmpd[1];
-	dim1[2]=(int)tmpd[2];
-	
-	tmp[0]=(m.x/fr.size.width)*dim1[0];
-	tmp[1]=((fr.size.height-m.y)/fr.size.height)*dim1[1];
-	tmp[2]=slice;//(slice/100.0)*(dim1[2]-1);
+    // Bresenham's line algorithm adapted from
+    // http://stackoverflow.com/questions/4672279/bresenham-algorithm-in-javascript
+    
+    int	i,j;
+    int	R=pensize/2;
+    int x1=tmp0[0];
+    int y1=tmp0[1];
+    int x2=tmp1[0];
+    int y2=tmp1[1];
+    int z=tmp0[2];
+    float *P,invP[16],volRot[16],tmp[3],tmpx[3];
+    
+    // Define differences and error check
+    int dx = abs(x2 - x1);
+    int dy = abs(y2 - y1);
+    int sx = (x1 < x2) ? 1 : -1;
+    int sy = (y1 < y2) ? 1 : -1;
+    int err = dx - dy;
+    int e2;
+    
+    // view rotation
+    angles2rotation(volRotation[0],volRotation[1],volRotation[2],volRot);
 
-	switch(mode)
-	{
-		case kPAINT:
-		{
-			int	i,j;
-			int	R=pensize/2;
-			
-			// get the screen equivalent of x1,y1,z1
-			x1=tmp[0];
-			y1=tmp[1];
-			z1=tmp[2];
-			for(i=-R;i<-R+pensize;i++)
-			for(j=-R;j<-R+pensize;j++)
-			{
-				tmp[0]=(int)x1+i;
-				tmp[1]=(int)y1+j;
-				tmp[2]=z1;
-				multMatVec(tmpx,invP,tmp);
-				tmpx[0]=tmpx[0]-dim[0]/2.0;
-				tmpx[1]=tmpx[1]-dim[1]/2.0;
-				tmpx[2]=tmpx[2]-dim[2]/2.0;
-				multMatVec(tmp,volRot,tmpx);
-				tmpx[0]=tmp[0]+dim[0]/2.0;
-				tmpx[1]=tmp[1]+dim[1]/2.0;
-				tmpx[2]=tmp[2]+dim[2]/2.0;
-				
-				if(	tmpx[0]>=0 && tmpx[0]<dim[0] &&
-					tmpx[1]>=0 && tmpx[1]<dim[1] &&
-					tmpx[2]>=0 && tmpx[2]<dim[2])
+    // stereotaxic plane
+    switch(plane)
+    {
+        case 1: P=X; break;
+        case 2: P=Y; break;
+        case 3: P=Z; break;
+    }
+    invMat(invP,P);
+
+    // paint 1st point
+
+    while (!((x1 == x2) && (y1 == y2)))
+    {
+        e2 = err<<1;
+        if (e2 > -dy)
+        {
+            err -= dy;
+            x1 += sx;
+        }
+        if (e2 < dx)
+        {
+            err += dx;
+            y1 += sy;
+        }
+        
+        for(i=-R;i<-R+pensize;i++)
+            for(j=-R;j<-R+pensize;j++)
+            {
+                tmp[0]=(int)x1+i;
+                tmp[1]=(int)y1+j;
+                tmp[2]=z;
+ 
+                // get the screen equivalent of x1,y1,z1
+                multMatVec(tmpx,invP,tmp);
+                tmpx[0]=tmpx[0]-dim[0]/2.0;
+                tmpx[1]=tmpx[1]-dim[1]/2.0;
+                tmpx[2]=tmpx[2]-dim[2]/2.0;
+                multMatVec(tmp,volRot,tmpx);
+                tmpx[0]=tmp[0]+dim[0]/2.0;
+                tmpx[1]=tmp[1]+dim[1]/2.0;
+                tmpx[2]=tmp[2]+dim[2]/2.0;
+                
+                if(	tmpx[0]>=0 && tmpx[0]<dim[0] &&
+                   tmpx[1]>=0 && tmpx[1]<dim[1] &&
+                   tmpx[2]>=0 && tmpx[2]<dim[2])
                 {
-                    if([e modifierFlags]&NSAlternateKeyMask)
+                    if(erase)
                     {
                         if(selection[((int)tmpx[2])*dim[1]*dim[0]+((int)tmpx[1])*dim[0]+((int)tmpx[0])])
                             selection[((int)tmpx[2])*dim[1]*dim[0]+((int)tmpx[1])*dim[0]+((int)tmpx[0])]=0;
@@ -426,7 +431,72 @@ float determinant(float3D a, float3D b, float3D c)
                             selection[((int)tmpx[2])*dim[1]*dim[0]+((int)tmpx[1])*dim[0]+((int)tmpx[0])]=sindex;
                     }
                 }
-			}
+            }
+    }
+
+}
+-(void)mouseDragged:(NSEvent*)e
+{
+	NSPoint		m=[self convertPoint:[e locationInWindow] fromView:nil];
+	
+	if(m.x==oldm.x&&m.y==oldm.y)
+		return;	
+	
+	NSRect		fr=[self frame];
+	float		tmp[3],tmpd[3],tmp0[3],tmp1[3];
+	int			dim1[3];
+	float		x0,y0,x1,y1,volRot[16];
+	float		*P,invP[16];
+	float		slice=[[[[app settings] content] valueForKey:@"slice"] floatValue];
+    int         eraseFlag=[e modifierFlags]&NSAlternateKeyMask;
+	
+	// view rotation
+    angles2rotation(volRotation[0],volRotation[1],volRotation[2],volRot);
+	
+    // stereotaxic plane
+	switch(plane)
+	{
+		case 1: P=X; break;
+		case 2: P=Y; break;
+		case 3: P=Z; break;
+	}
+	invMat(invP,P);
+	
+    // get dimensions in display space
+	tmp[0]=dim[0];
+	tmp[1]=dim[1];
+	tmp[2]=dim[2];
+	multMatVec(tmpd,P,tmp);
+	dim1[0]=(int)tmpd[0];
+	dim1[1]=(int)tmpd[1];
+	dim1[2]=(int)tmpd[2];
+	
+	// transform coordinates to display space
+    x1=(m.x/fr.size.width)*dim1[0];
+    y1=((fr.size.height-m.y)/fr.size.height)*dim1[1];
+
+    if(oldm.x==-1 && oldm.y==-1)
+    {
+        x0=x1;
+        y0=y1;
+    }
+    else
+    {
+        x0=(oldm.x/fr.size.width)*dim1[0];
+        y0=((fr.size.height-oldm.y)/fr.size.height)*dim1[1];
+    }
+
+	switch(mode)
+	{
+		case kPAINT:
+		{
+            tmp0[0]=x0;
+            tmp0[1]=y0;
+            tmp0[2]=slice;
+            tmp1[0]=x1;
+            tmp1[1]=y1;
+            tmp1[2]=slice;
+            [self lineFromPoint:tmp0 toPoint:tmp1 eraseFlag:eraseFlag];
 			[self redraw];
 			[self setNeedsDisplay:YES];
 			oldm=m;
@@ -441,6 +511,8 @@ float determinant(float3D a, float3D b, float3D c)
 		sindex++;
 		id	doc=[[NSDocumentController sharedDocumentController] documentForWindow:[self window]];
 		[doc updateChangeCount:NSChangeDone];
+        oldm.x=-1;
+        oldm.y=-1;
 	}
 	if([[view3D window] isVisible])
 		[self displayPolygonization];
@@ -1169,10 +1241,9 @@ float Max(float x, float y)
     float3D a,b;
     NSBezierPath    *bp=[NSBezierPath bezierPath];
     float3D v;
-    float  scale;
     float	s,d,x0,y0,slice=[[[[app settings] content] valueForKey:@"slice"] floatValue];
 
-    float		tmp[3],tmpx[3],dim1[3];
+    float		tmp[3],tmpx[3],dim1[3],pixdim[3];
     float		*P,invP[16];
     NSRect      fr=[self frame];
     
@@ -1193,8 +1264,12 @@ float Max(float x, float y)
     dim1[1]=tmpx[1];
     dim1[2]=tmpx[2];
     
-    scale=hdr->pixdim[1];
-    slice*=scale;
+    tmp[0]=hdr->pixdim[1];
+    tmp[1]=hdr->pixdim[2];
+    tmp[2]=hdr->pixdim[3];
+    multMatVec(pixdim,P,tmp);
+    
+    slice*=pixdim[2];
     for(i=0;i<nt;i++)
     {
         k=0;
@@ -1223,8 +1298,8 @@ float Max(float x, float y)
                     continue;
                 s=(slice-b.z)/d;
                 v=add3D(sca3D(a,s),sca3D(b,1-s));
-                x0=(v.x/scale+0.5)*fr.size.width/dim1[0];
-                y0=fr.size.height*(1-(v.y/scale+0.5)/dim1[1]);
+                x0=(v.x/pixdim[0]+1.5)*fr.size.width/dim1[0];
+                y0=fr.size.height*(1-(v.y/pixdim[1]+1)/dim1[1]);
                 if(k==0)
                     [bp moveToPoint:(NSPoint){x0,y0}];
                 else
@@ -1233,7 +1308,8 @@ float Max(float x, float y)
             }
         }
     }
-    [[NSColor magentaColor] set];
+    [[NSColor yellowColor] set];
+    [bp setLineWidth:1];
     [bp stroke];
 }
 void addToHash(Mesh *m, unsigned int hash, int vertexIndex, int iter)
@@ -1479,7 +1555,8 @@ int detect_collision(Mesh *m,float3D *p0)
 -(void)adjustMinMax
 {
 	int		i;
-	float	val,s,ss,std,tmpmin,tmpmax;
+    float	val;
+    double  s,ss,std,tmpmin,tmpmax;
     
 	s=ss=0;
     for(i=0;i<dim[0]*dim[1]*dim[2];i++)
@@ -2241,7 +2318,7 @@ void idct_xyz(float *vol,float *coeff,int *dim8)
 {
 	[self displayMessage:[NSString stringWithFormat:@"X=%i",euler(selection,dim)]];
 }
--(void)fill:(int)x :(int)y :(int)z :(char)aPlane
+-(void)fill:(int)x :(int)y :(int)z :(char*)aPlane
 {
 	printf("> fill\n");
 	int		n,k;
@@ -2478,6 +2555,10 @@ void idct_xyz(float *vol,float *coeff,int *dim8)
 	[self displayMessage:str];
 	[str release];
 }
+-(void)hideMesh
+{
+    flag_showMesh=false;
+}
 -(void)histogram
 {
 	NSRect		wframe=NSMakeRect(0,0,200,200);
@@ -2554,6 +2635,7 @@ Origin:\t\t%i,%i,%i\n",
 		 header->descrip,
 		 header->orig[0],header->orig[1],header->orig[2]];
 	[self displayMessage:string];
+    printf("voxel offset: %i\n",(int)nii->vox_offset);
 }
 -(void)invert
 {
@@ -2728,6 +2810,7 @@ Origin:\t\t%i,%i,%i\n",
     mesh->nt=nt;
     mesh->p=p;
     mesh->t=t;
+    flag_showMesh=true;
     printf("Loaded mesh, %i vertices, %i triangles\n",np,nt);
     return YES;
 }
@@ -3352,6 +3435,10 @@ Origin:\t\t%i,%i,%i\n",
 }
 -(void)setVolume:(char*)path
 {
+}
+-(void)showMesh
+{
+    flag_showMesh=true;
 }
 -(void)smooth:(int)level :(int)iter
 {

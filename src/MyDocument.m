@@ -554,6 +554,7 @@
 {cmd=flipMesh;			args=(string);            				help=\"Flips the mesh (if loaded) along the dimension argv[1]=x, y or z\";},\
 {cmd=grow;				args=(float,float);						help=\"Add to the actual selection connected voxels with values between arg[1,2]=min,max\";},\
 {cmd=help;				args=(string);							help=\"Help\";},\
+{cmd=hideMesh;                                                  help=\"Hide mesh\";},\
 {cmd=histogram;},\
 {cmd=idct;                                                      help=\"Inverse discrete cosine transform\";},\
 {cmd=invert;													help=\"Invert selection\";},\
@@ -586,6 +587,7 @@
 {cmd=setSelectionOpacity;args=(float);							help=\"Change selection opacity to arg[1]\";},\
 {cmd=setThresholdWidth;	args=(float);},\
 {cmd=setVolume;			args=(string);},\
+{cmd=showMesh;                                                  help=\"Show mesh\";},\
 {cmd=smooth;			args=(int,int);                         help=\"Smooth selection by removing all voxels with less than argv[1]=threshold neighbours, typical threshold=13, for arg[2]=iterations\";},\
 {cmd=smoothMeshLaplace;	args=(float,int);                       help=\"Laplace smoothing of the mesh (if loaded) with arg[1]=lambda in (-1,1), arg[2]=iterations\";},\
 {cmd=smoothMeshTaubin;	args=(float,float,int);                 help=\"Taubin smoothing of the mesh (if loaded). Typical arg[1]=lambda=0.5, arg[2]=mu=-0.53, arg[3]=iterations\";},\

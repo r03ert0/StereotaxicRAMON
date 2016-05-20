@@ -551,6 +551,7 @@
 {cmd=erode;				args=(int);								help=\"Erode selection arg[1]=number of voxels\";},\
 {cmd=euler;														help=\"Display Euler's characteristic for the selection\";},\
 {cmd=fill;				args=(int,int,int,string);              help=\"Fills in 2D starting at coordinates arg[1-3]=x,y,z in plane arg[4]=X, Y or Z\";},\
+{cmd=flip;              args=(string);            				help=\"Flips the volume along the dimension argv[1]=x, y or z\";},\
 {cmd=flipMesh;			args=(string);            				help=\"Flips the mesh (if loaded) along the dimension argv[1]=x, y or z\";},\
 {cmd=grow;				args=(float,float);						help=\"Add to the actual selection connected voxels with values between arg[1,2]=min,max\";},\
 {cmd=help;				args=(string);							help=\"Help\";},\

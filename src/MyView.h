@@ -127,6 +127,7 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)erode:(int)a;
 -(void)euler;
 -(void)fill:(int)x :(int)y :(int)z :(char*)aPlane;
+-(void)flip:(char*)d;
 -(void)flipMesh:(char*)d;
 -(void)grow:(float)Min :(float)Max;
 -(void)help:(char*)cmd;

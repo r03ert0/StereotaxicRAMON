@@ -2389,6 +2389,59 @@ void idct_xyz(float *vol,float *coeff,int *dim8)
 	sindex++;
 	free(tmp);
 }
+-(void)flip:(char*)d
+{
+    printf("> flip\n");
+    int		i,j,k;
+    float   v;
+    short   s;
+    
+    switch(d[0])
+    {
+        case 'x':
+            for(i=0;i<dim[0]/2;i++)
+            for(j=0;j<dim[1];j++)
+            for(k=0;k<dim[2];k++)
+            {
+                v=[self getValueAt:i:j:k];
+                [self setValue:[self getValueAt:(dim[0]-i-1):j:k] at:i:j:k];
+                [self setValue:v at:(dim[0]-i-1):j:k];
+                
+                s=selection[k*dim[1]*dim[0]+j*dim[0]+i];
+                selection[k*dim[1]*dim[0]+j*dim[0]+i]=selection[k*dim[1]*dim[0]+j*dim[0]+(dim[0]-i-1)];
+                selection[k*dim[1]*dim[0]+j*dim[0]+(dim[0]-i-1)]=s;
+            }
+            break;
+        case 'y':
+            for(i=0;i<dim[0];i++)
+            for(j=0;j<dim[1]/2;j++)
+            for(k=0;k<dim[2];k++)
+            {
+                v=[self getValueAt:i:j:k];
+                [self setValue:[self getValueAt:i:(dim[1]-j-1):k] at:i:j:k];
+                [self setValue:v at:i:(dim[1]-j-1):k];
+
+                s=selection[k*dim[1]*dim[0]+j*dim[0]+i];
+                selection[k*dim[1]*dim[0]+j*dim[0]+i]=selection[k*dim[1]*dim[0]+(dim[1]-j-1)*dim[0]+i];
+                selection[k*dim[1]*dim[0]+(dim[1]-j-1)*dim[0]+i]=s;
+            }
+            break;
+        case 'z':
+            for(i=0;i<dim[0];i++)
+            for(j=0;j<dim[1];j++)
+            for(k=0;k<dim[2]/2;k++)
+            {
+                v=[self getValueAt:i:j:k];
+                [self setValue:[self getValueAt:i:j:(dim[2]-k-1)] at:i:j:k];
+                [self setValue:v at:i:j:(dim[2]-k-1)];
+
+                s=selection[k*dim[1]*dim[0]+j*dim[0]+i];
+                selection[k*dim[1]*dim[0]+j*dim[0]+i]=selection[(dim[2]-k-1)*dim[1]*dim[0]+j*dim[0]+i];
+                selection[(dim[2]-k-1)*dim[1]*dim[0]+j*dim[0]+i]=s;
+            }
+            break;
+    }
+}
 -(void)flipMesh:(char*)d
 {
     float world_dim[3];

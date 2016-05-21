@@ -177,6 +177,7 @@ void idct_xyz(float *vol,float *coeff,int *dim8);
 -(void)tpDilate:(int)a;
 -(void)tpDilateOnMask:(int)iter :(char*)path;
 -(void)tpErode:(int)a;
+-(void)translateSelection:(int)a :(int)b :(int)c;
 -(void)translateMesh:(float)x :(float)y :(float)z;
 -(void)undo;
 -(void)voxeliseMesh;

@@ -600,6 +600,7 @@
 {cmd=tpDilateOnMask;	args=(int,string);						help=\"Topology-preserving dilate selection inside a mask, arg[1]=number of voxels, arg[2]=path a mask with the same dimensions as the current volume\";},\
 {cmd=tpErode;			args=(int);								help=\"Topology-preserving erode selection arg[1]=number of voxels\";},\
 {cmd=translateMesh;		args=(float,float,float);				help=\"Translate mesh (if loaded) by adding arg[1-3]=x, y and z displacements\";},\
+{cmd=translateSelection;args=(int,int,int);                     help=\"Translate the selection by arg[1-3]=a, b and c voxels\";},\
 {cmd=undo;},\
 {cmd=voxeliseMesh;                                              help=\"Voxelise mesh (if loaded)\";}\
 );}";

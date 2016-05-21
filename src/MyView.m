@@ -4085,6 +4085,26 @@ void tpErode_unset(int x, int y, int z, int *Ref, int *dim, short *ne, short *vo
     for(i=0;i<np;i++)
         p[i]=add3D(p[i],(float3D){x,y,z});
 }
+-(void)translateSelection:(int)a :(int)b :(int)c
+{
+    short	*tmp;
+    int		i,j,k;
+    
+    tmp=(short*)calloc(dim[0]*dim[1]*dim[2],sizeof(short));
+
+    for(i=0;i<dim[0]*dim[1]*dim[2];i++)
+        tmp[i]=selection[i];
+
+    for(i=0;i<dim[0];i++)
+    for(j=0;j<dim[1];j++)
+    for(k=0;k<dim[2];k++)
+    if((k-c)>=0&&(k-c)<dim[2]&&(j-b)>=0&&(j-b)<dim[1]&&(i-a)>=0&&(i-a)<dim[0])
+        selection[k*dim[1]*dim[0]+j*dim[0]+i]=tmp[(k-c)*dim[1]*dim[0]+(j-b)*dim[0]+(i-a)];
+    else
+        selection[k*dim[1]*dim[0]+j*dim[0]+i]=0;
+    
+    free(tmp);
+}
 -(void)undo
 {
 	printf("> undo\n");

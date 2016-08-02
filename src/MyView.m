@@ -1801,8 +1801,8 @@ int detect_collision(Mesh *m,float3D *p0)
 -(void)changePixdim:(float)d0 :(float)d1 :(float)d2
 {
     hdr->pixdim[1]=d0;
-    hdr->pixdim[2]=d0;
-    hdr->pixdim[3]=d0;
+    hdr->pixdim[2]=d1;
+    hdr->pixdim[3]=d2;
 }
 -(void)colormap:(char*)str
 {

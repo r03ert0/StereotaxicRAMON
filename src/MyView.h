@@ -6,8 +6,9 @@
 #include "polygonizer3.h"
 #include "voxtopology.h"
 #import "MyDocumentProtocol.h"
-#import <QTKit/QTKit.h>
-#import <QuickTime/QuickTime.h>
+//#import <QTKit/QTKit.h>
+//#import <QuickTime/QuickTime.h>
+#import <AVFoundation/AVFoundation.h>
 
 #define kSELECT		1
 #define kPAINT		2

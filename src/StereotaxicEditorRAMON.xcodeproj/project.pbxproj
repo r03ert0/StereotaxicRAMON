@@ -13,6 +13,7 @@
 		6274E3B00FFB601E0088AF5D /* MyIntValueTransformer.h in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3AC0FFB601E0088AF5D /* MyIntValueTransformer.h */; };
 		6274E3B40FFB602C0088AF5D /* MyCommandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3B30FFB602C0088AF5D /* MyCommandView.m */; };
 		6274E3B80FFB60B20088AF5D /* DocumentRAMON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274E3B70FFB60B20088AF5D /* DocumentRAMON.m */; };
+		627932CF1E07F4CA00B52629 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627932CE1E07F4CA00B52629 /* AVFoundation.framework */; };
 		627D28871276CBFD0000080D /* voxtopology.c in Sources */ = {isa = PBXBuildFile; fileRef = 627D28861276CBFD0000080D /* voxtopology.c */; };
 		62816E3A15F0F2950071B851 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E3915F0F2950071B851 /* QTKit.framework */; };
 		62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E4D15F0F4690071B851 /* QuickTime.framework */; };
@@ -74,6 +75,7 @@
 		6274E3B30FFB602C0088AF5D /* MyCommandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommandView.m; sourceTree = "<group>"; };
 		6274E3B60FFB60B20088AF5D /* DocumentRAMON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentRAMON.h; sourceTree = "<group>"; };
 		6274E3B70FFB60B20088AF5D /* DocumentRAMON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentRAMON.m; sourceTree = "<group>"; };
+		627932CE1E07F4CA00B52629 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = ../../../../../../../System/Library/Frameworks/AVFoundation.framework; sourceTree = "<group>"; };
 		627D28861276CBFD0000080D /* voxtopology.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = voxtopology.c; sourceTree = "<group>"; };
 		627D28891276CC2D0000080D /* voxtopology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voxtopology.h; sourceTree = "<group>"; };
 		62816E3915F0F2950071B851 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
@@ -127,6 +129,7 @@
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				62E08433119E7CC900C661A3 /* OpenGL.framework in Frameworks */,
+				627932CF1E07F4CA00B52629 /* AVFoundation.framework in Frameworks */,
 				62816E3A15F0F2950071B851 /* QTKit.framework in Frameworks */,
 				62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */,
 			);
@@ -226,6 +229,7 @@
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				627932CE1E07F4CA00B52629 /* AVFoundation.framework */,
 				62816E4D15F0F4690071B851 /* QuickTime.framework */,
 				62816E3915F0F2950071B851 /* QTKit.framework */,
 				62E08432119E7CC900C661A3 /* OpenGL.framework */,
@@ -757,6 +761,7 @@
 				62D360D419F2B23D00C18A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		62D360D819F2B23D00C18A93 /* Build configuration list for PBXNativeTarget "StereotaxicRAMONTests" */ = {
 			isa = XCConfigurationList;
@@ -765,6 +770,7 @@
 				62D360D619F2B23D00C18A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "StereotaxicEditorRAMON" */ = {
 			isa = XCConfigurationList;

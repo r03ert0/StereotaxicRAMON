@@ -1942,6 +1942,7 @@ int detect_collision(Mesh *m,float3D *p0)
 }
 -(void)convertToMovie:(char*)path
 {
+    /*
 	NSString	*filePath=[NSString stringWithUTF8String:path];
 	NSError		*error = nil;
 	QTMovie		*mMovie = [[QTMovie alloc] initToWritableData:[NSMutableData data] error:&error];
@@ -1975,6 +1976,7 @@ int detect_collision(Mesh *m,float3D *p0)
 	i=[mMovie writeToFile:filePath withAttributes:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:QTMovieFlatten] error:&error];
 
 	[mMovie release];
+     */
 }
 -(void)crop
 {
@@ -2659,6 +2661,14 @@ Voxel units:\t%i,%i\n\
 Data type:\t\t%s\n\
 Voxel size:\t%g,%g,%g,%g\n\
 Description:\t%s\n\
+qform_code:\t%i\n\
+sform_code:\t%i\n\
+quatern_b:\t%g\n\
+quatern_c:\t%g\n\
+quatern_d:\t%g\n\
+qoffset_x:\t%g\n\
+qoffset_y:\t%g\n\
+qoffset_z:\t%g\n\
 Matrix:\n%g,%g,%g,%g\n%g,%g,%g,%g\n%g,%g,%g,%g",
 		nii->db_name,
 		nii->dim[0],nii->dim[1],nii->dim[2],nii->dim[3],nii->dim[4],
@@ -2666,7 +2676,15 @@ Matrix:\n%g,%g,%g,%g\n%g,%g,%g,%g\n%g,%g,%g,%g",
 		str,
 		nii->pixdim[0],nii->pixdim[1],nii->pixdim[2],nii->pixdim[3],
 		nii->descrip,
-		nii->srow_x[0],nii->srow_x[1],nii->srow_x[2],nii->srow_x[3],
+        nii->qform_code,
+        nii->sform_code,
+        nii->quatern_b,
+        nii->quatern_c,
+        nii->quatern_d,
+        nii->qoffset_x,
+        nii->qoffset_y,
+        nii->qoffset_z,
+        nii->srow_x[0],nii->srow_x[1],nii->srow_x[2],nii->srow_x[3],
 		nii->srow_y[0],nii->srow_y[1],nii->srow_y[2],nii->srow_y[3],
 		nii->srow_z[0],nii->srow_z[1],nii->srow_z[2],nii->srow_z[3]];
 	else

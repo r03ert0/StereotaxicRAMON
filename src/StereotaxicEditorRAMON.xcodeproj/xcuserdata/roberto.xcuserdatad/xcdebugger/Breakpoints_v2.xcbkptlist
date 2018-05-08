@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "503838240.658019"
+            timestampString = "547473833.764949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3353"
-            endingLineNumber = "3353"
+            startingLineNumber = "3510"
+            endingLineNumber = "3510"
             landmarkName = "-savePicture:"
             landmarkType = "7">
          </BreakpointContent>
@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "503838240.658019"
+            timestampString = "547473833.765363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2941"
-            endingLineNumber = "2941"
+            startingLineNumber = "3086"
+            endingLineNumber = "3086"
             landmarkName = "-polygonize:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "503838240.658019"
+            timestampString = "547473833.765636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2186"
-            endingLineNumber = "2186"
+            startingLineNumber = "2249"
+            endingLineNumber = "2249"
             landmarkName = "-dct"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "461074800.651671"
+            timestampString = "547473833.76589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1245"
-            endingLineNumber = "1245"
+            startingLineNumber = "1293"
+            endingLineNumber = "1293"
             landmarkName = "-displayMesh"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,12 +84,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyView.m"
-            timestampString = "461074800.651671"
+            timestampString = "547473833.766219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1297"
-            endingLineNumber = "1297"
+            startingLineNumber = "1345"
+            endingLineNumber = "1345"
             landmarkName = "-displayMesh"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyView.m"
+            timestampString = "547473833.766513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "822"
+            endingLineNumber = "822"
+            landmarkName = "-getValueAt:::"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyView.m"
+            timestampString = "547473833.766754"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "774"
+            endingLineNumber = "774"
+            landmarkName = "-setPixel:withValueAt:::"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -723,7 +723,7 @@ void freeprocess(PROCESS p)
 	INTLIST		*ints,*intsnext;
     Trash       *tr=p.trash;
     Trash       *tmp;
-    char        *ptr;
+    //char        *ptr;
 	
 	for(index=0;index<HASHSIZE;index++)
 	{

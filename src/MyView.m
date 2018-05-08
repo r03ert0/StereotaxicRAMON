@@ -339,9 +339,9 @@ float determinant(float3D a, float3D b, float3D c)
 		{
 			switch(plane)
 			{
-				case 1: [self fill:x1:y1:z1:'X']; break;
-				case 2: [self fill:x1:y1:z1:'Y']; break;
-				case 3:	[self fill:x1:y1:z1:'Z']; break;
+				case 1: [self fill:x1:y1:z1:"X"]; break;
+				case 2: [self fill:x1:y1:z1:"Y"]; break;
+				case 3:	[self fill:x1:y1:z1:"Z"]; break;
 			}
 			[self redraw];
 			[self setNeedsDisplay:YES];
@@ -614,10 +614,28 @@ float determinant(float3D a, float3D b, float3D c)
 		}
 		else
 		{
-			switch(dataType){	case UCHAR:	val=((unsigned char*)data)[i];	break;
-				case SHORT:	val=((short*)data)[i];			break;
-				case INT:	val=((int*)data)[i];			break;
-				case FLOAT:	val=((float*)data)[i];			break;
+			switch(dataType){
+                case UCHAR:
+                    val=((unsigned char*)data)[i];
+                    break;
+                case DT_INT8:
+                    val=((char*)data)[i];
+                    break;
+				case SHORT:
+                    val=((short*)data)[i];
+                    break;
+                case DT_UINT16:
+                    val=((unsigned short*)data)[i];
+                    break;
+				case INT:
+                    val=((int*)data)[i];
+                    break;
+                case DT_UINT32:
+                    val=((unsigned int*)data)[i];
+                    break;
+				case FLOAT:
+                    val=((float*)data)[i];
+                    break;
 			}
 			if(i==0) min=max=val;
 			if(min>val) min=val;
@@ -694,7 +712,7 @@ float determinant(float3D a, float3D b, float3D c)
                                 bytesPerRow:0
                                 bitsPerPixel:0] autorelease];
     unsigned char	*baseaddr=[bmp bitmapData];
-	int				bpr=[bmp bytesPerRow];
+	int				bpr=(int)[bmp bytesPerRow];
 	
 	z=slice;
 	
@@ -795,10 +813,13 @@ float determinant(float3D a, float3D b, float3D c)
 	else
 	{
 		switch(dataType)
-		{	case UCHAR: val=((unsigned char*)data)[z*dim[1]*dim[0]+y*dim[0]+x];	break;
-			case SHORT: val=        ((short*)data)[z*dim[1]*dim[0]+y*dim[0]+x];	break;
-			case INT:	val=          ((int*)data)[z*dim[1]*dim[0]+y*dim[0]+x];	break;
-			case FLOAT:	val=        ((float*)data)[z*dim[1]*dim[0]+y*dim[0]+x];	break;
+        {   case UCHAR:     val=((unsigned char*)data)[z*dim[1]*dim[0]+y*dim[0]+x];         break;
+            case DT_INT8:   val=((char*)data)[z*dim[1]*dim[0]+y*dim[0]+x];                  break;
+            case SHORT:     val=        ((short*)data)[z*dim[1]*dim[0]+y*dim[0]+x];         break;
+            case DT_UINT16: val=        ((unsigned short*)data)[z*dim[1]*dim[0]+y*dim[0]+x];break;
+            case INT:       val=          ((int*)data)[z*dim[1]*dim[0]+y*dim[0]+x];         break;
+            case DT_UINT32: val=          ((unsigned int*)data)[z*dim[1]*dim[0]+y*dim[0]+x];break;
+			case FLOAT:	    val=        ((float*)data)[z*dim[1]*dim[0]+y*dim[0]+x];	        break;
 		}
 	}
 	return val;
@@ -864,9 +885,9 @@ float determinant(float3D a, float3D b, float3D c)
 	for(i=0;i<3;i++)
 		pix[i]=fabs(h.pixdim[i+1]);
 	
-	wX=fabs(dim[0]);
-	wY=fabs(dim[1]);
-	wZ=fabs(dim[2]);
+	wX=abs(dim[0]);
+	wY=abs(dim[1]);
+	wZ=abs(dim[2]);
 	
 	// voxel origin in index space
 	a=(int)x;
@@ -907,27 +928,48 @@ float determinant(float3D a, float3D b, float3D c)
 	
 	switch(dataType)
 	{
-		case UCHAR:
-			*scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(char));
-			for(i=0;i<sdim[0];i++)
-				for(j=0;j<sdim[1];j++)
-					for(k=0;k<sdim[2];k++)
-						((unsigned char*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
-			break;
-		case SHORT:
-			*scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(short));
-			for(i=0;i<sdim[0];i++)
-				for(j=0;j<sdim[1];j++)
-					for(k=0;k<sdim[2];k++)
-						((short*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
-			break;
-		case INT:
-			*scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(int));
-			for(i=0;i<sdim[0];i++)
-				for(j=0;j<sdim[1];j++)
-					for(k=0;k<sdim[2];k++)
-						((int*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
-			break;
+        case UCHAR:
+            *scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(char));
+            for(i=0;i<sdim[0];i++)
+                for(j=0;j<sdim[1];j++)
+                    for(k=0;k<sdim[2];k++)
+                        ((unsigned char*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
+            break;
+        case DT_INT8:
+            *scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(char));
+            for(i=0;i<sdim[0];i++)
+                for(j=0;j<sdim[1];j++)
+                    for(k=0;k<sdim[2];k++)
+                        ((char*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
+            break;
+        case SHORT:
+            *scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(short));
+            for(i=0;i<sdim[0];i++)
+                for(j=0;j<sdim[1];j++)
+                    for(k=0;k<sdim[2];k++)
+                        ((short*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
+            break;
+        case DT_UINT16:
+            *scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(short));
+            for(i=0;i<sdim[0];i++)
+                for(j=0;j<sdim[1];j++)
+                    for(k=0;k<sdim[2];k++)
+                        ((unsigned short*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
+            break;
+        case INT:
+            *scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(int));
+            for(i=0;i<sdim[0];i++)
+                for(j=0;j<sdim[1];j++)
+                    for(k=0;k<sdim[2];k++)
+                        ((int*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
+            break;
+        case DT_UINT32:
+            *scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(int));
+            for(i=0;i<sdim[0];i++)
+                for(j=0;j<sdim[1];j++)
+                    for(k=0;k<sdim[2];k++)
+                        ((unsigned int*)*scaled)[k*sdim[1]*sdim[0]+j*sdim[0]+i]=[self getScaledTrilinear1:i/fx:j/fy:k/fz:&error];
+            break;
 		case FLOAT:
 			*scaled=calloc(sdim[2]*sdim[1]*sdim[0],sizeof(float));
 			for(i=0;i<sdim[0];i++)
@@ -950,9 +992,9 @@ float determinant(float3D a, float3D b, float3D c)
 	for(i=0;i<3;i++)
 		pix[i]=fabs(h.pixdim[i+1]);
 	
-	wX=fabs(dim[0]);
-	wY=fabs(dim[1]);
-	wZ=fabs(dim[2]);
+	wX=abs(dim[0]);
+	wY=abs(dim[1]);
+	wZ=abs(dim[2]);
 	
 	// voxel origin in index space
 	a=(int)x;
@@ -997,7 +1039,8 @@ float determinant(float3D a, float3D b, float3D c)
 -(void)setValue:(float)val at:(int)x :(int)y :(int)z
 {
 	switch(dataType)
-	{	case UCHAR: ((unsigned char*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;			break;
+    {   case UCHAR: ((unsigned char*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;         break;
+        case DT_INT8: ((char*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;                break;
 		case SHORT:
 		{
 			if(val<SHRT_MIN)
@@ -1007,7 +1050,9 @@ float determinant(float3D a, float3D b, float3D c)
 			((short*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;
 			break;
 		}
-		case INT:	((int*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;					break;
+        case DT_UINT16: ((unsigned short*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;             break;
+        case INT: ((int*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;                    break;
+        case DT_UINT32: ((unsigned int*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;                    break;
 		case FLOAT:	((float*)data)[z*dim[1]*dim[0]+y*dim[0]+x]=val;					break;
 	}
 }
@@ -1015,6 +1060,7 @@ float determinant(float3D a, float3D b, float3D c)
 {
 	switch(dataType)
 	{	case UCHAR: ((unsigned char*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;			break;
+        case DT_INT8: ((char*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;            break;
 		case SHORT:
 		{
 			if(val<SHRT_MIN)
@@ -1024,7 +1070,9 @@ float determinant(float3D a, float3D b, float3D c)
 			((short*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;
 			break;
 		}
-		case INT:	((int*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;					break;
+        case DT_UINT16: ((unsigned short*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;break;
+        case INT:    ((int*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;                    break;
+        case DT_UINT32:    ((unsigned int*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;                    break;
 		case FLOAT:	((float*)voldata)[z*dim[1]*dim[0]+y*dim[0]+x]=val;					break;
 	}
 }
@@ -1540,15 +1588,17 @@ int detect_collision(Mesh *m,float3D *p0)
 	
 	if(newhdr->dim[1]!=dim[0] || newhdr->dim[2]!=dim[1] || newhdr->dim[3]!=dim[2])
 	{
-		printf("ERROR: Cannot load selection - dimensions do not match.\n");
-		return;
+		printf("WARNING: Dimensions do not match.\n");
 	}
 	
 	for(i=0;i<dim[0];i++)
 	for(j=0;j<dim[1];j++)
 	for(k=0;k<dim[2];k++)
+    if(i<newhdr->dim[1] && j<newhdr->dim[2] && k<newhdr->dim[3])
+    {
 		if(getValue(newhdr,img,i,j,k) && (selection[k*dim[1]*dim[0]+j*dim[0]+i]==0))
 			selection[k*dim[1]*dim[0]+j*dim[0]+i]=sindex;
+    }
 	sindex++;
 	free(addr);
 }
@@ -1577,9 +1627,13 @@ int detect_collision(Mesh *m,float3D *p0)
 		}
 		else
 		{
-			switch(dataType){	case UCHAR:	val=((unsigned char*)data)[i];	break;
-				case SHORT:	val=((short*)data)[i];			break;
-				case INT:	val=((int*)data)[i];			break;
+			switch(dataType){
+                case UCHAR:    val=((unsigned char*)data)[i];    break;
+                case DT_INT8:    val=((char*)data)[i];    break;
+                case SHORT:    val=((short*)data)[i];            break;
+                case DT_UINT16:    val=((unsigned short*)data)[i];            break;
+                case INT:    val=((int*)data)[i];            break;
+                case DT_UINT32:    val=((unsigned int*)data)[i];            break;
 				case FLOAT:	val=((float*)data)[i];			break;
 			}
             if(isnan(val)||isinf(val))
@@ -2026,11 +2080,20 @@ int detect_collision(Mesh *m,float3D *p0)
             case UCHAR:
                 ((unsigned char*)volResized)[k*y*x+j*x+i]=((unsigned char*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
                 break;
+            case DT_INT8:
+                ((char*)volResized)[k*y*x+j*x+i]=((char*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
             case SHORT:
                 ((short*)volResized)[k*y*x+j*x+i]=((short*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
                 break;
+            case DT_UINT16:
+                ((unsigned short*)volResized)[k*y*x+j*x+i]=((unsigned short*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
             case INT:
                 ((int*)volResized)[k*y*x+j*x+i]=((int*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
+                break;
+            case DT_UINT32:
+                ((unsigned int*)volResized)[k*y*x+j*x+i]=((unsigned int*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
                 break;
             case FLOAT:
                 ((float*)volResized)[k*y*x+j*x+i]=((float*)data)[(k+mn[2])*dim[1]*dim[0]+(j+mn[1])*dim[0]+(i+mn[0])];
@@ -2645,10 +2708,13 @@ void idct_xyz(float *vol,float *coeff,int *dim8)
 	if(strcmp((*(nifti_1_header*)header).magic,"n+1")==0||strcmp((*(nifti_1_header*)header).magic,"ni1")==0)
 		isNii=1;
 	switch(header->datatype)
-	{	case UCHAR:		sprintf(str,"uchar"); break;
-		case SHORT:		sprintf(str,"short"); break;
+    {   case UCHAR:     sprintf(str,"uchar"); break;
+        case DT_INT8:   sprintf(str,"char"); break;
+        case SHORT:     sprintf(str,"short"); break;
+        case DT_UINT16: sprintf(str,"ushort"); break;
 		case FLOAT:		sprintf(str,"float"); break;
-		case INT:		sprintf(str,"int"); break;
+        case INT:       sprintf(str,"int"); break;
+        case DT_UINT32: sprintf(str,"uint"); break;
 		case RGB:		sprintf(str,"rgb"); break;
 		case RGBFLOAT:	sprintf(str,"rgbfloat"); break;
 	}
@@ -2851,7 +2917,7 @@ Origin:\t\t%i,%i,%i\n",
 {
 	[self displayMessage:[NSString stringWithFormat:@"min=%f, max=%f",min,max]];
 }
--(BOOL)loadMesh:(char*)path
+-(BOOL)loadMeshTextFormat:(char*)path
 {
     FILE    *f;
     char    str[512];
@@ -2885,6 +2951,76 @@ Origin:\t\t%i,%i,%i\n",
     printf("Loaded mesh, %i vertices, %i triangles\n",np,nt);
     return YES;
 }
+-(BOOL)loadMeshPLYFormat:(char*)path
+{
+    FILE    *f;
+    int     np;
+    int     nt;
+    float3D *p;
+    int3D   *t;
+    int     i,x;
+    char    str[512],str1[256],str2[256];
+    
+    f=fopen(path,"r");
+    if(f==NULL){printf("ERROR: Cannot open file\n");return 1;}
+    
+    // READ HEADER
+    np=nt=0;
+    do
+    {
+        fgets(str,511,f);
+        sscanf(str," %s %s %i ",str1,str2,&x);
+        if(strcmp(str1,"element")==0&&strcmp(str2,"vertex")==0)
+            np=x;
+        else
+            if(strcmp(str1,"element")==0&&strcmp(str2,"face")==0)
+                nt=x;
+    }
+    while(strcmp(str1,"end_header")!=0 && !feof(f));
+    if(np*nt==0)
+    {
+        printf("ERROR: Bad Ply file header format\n");
+        return NO;
+    }
+    // READ VERTICES
+    p=(float3D*)calloc(np,sizeof(float3D));
+    if(p==NULL){printf("ERROR: Not enough memory for mesh vertices\n");return NO;}
+    for(i=0;i<np;i++)
+        fscanf(f," %f %f %f ",&(p[i].x),&(p[i].y),&(p[i].z));
+    
+    // READ TRIANGLES
+    t=(int3D*)calloc(nt,sizeof(int3D));
+    if(t==NULL){printf("ERROR: Not enough memory for mesh triangles\n"); return NO;}
+    for(i=0;i<nt;i++)
+        fscanf(f," 3 %i %i %i ",&(t[i].a),&(t[i].b),&(t[i].c));
+
+    fclose(f);
+
+    mesh=(Mesh*)calloc(1,sizeof(Mesh));
+    mesh->np=np;
+    mesh->nt=nt;
+    mesh->p=p;
+    mesh->t=t;
+    flag_showMesh=true;
+    printf("Loaded mesh, %i vertices, %i triangles\n",np,nt);
+    
+    return YES;
+}
+-(BOOL)loadMesh:(char*)path
+{
+    NSString *ex = [[NSString stringWithUTF8String:path] pathExtension];
+    if([ex isEqualToString:@"txt"])
+        [self loadMeshTextFormat:path];
+    else
+    if([ex isEqualToString:@"ply"])
+        [self loadMeshPLYFormat:path];
+    else
+    {
+        printf("ERROR: Unknown mesh format\n");
+        return NO;
+    }
+    return YES;
+}
 -(BOOL)loadSelection:(char*)path
 {
 	char			*addr;
@@ -2892,23 +3028,32 @@ Origin:\t\t%i,%i,%i\n",
 	AnalyzeHeader	*newhdr;
 	char			*img;
 	int				swapped;
+    int             i,j,k;
 
 	Analyze_load((char*)path, &addr,&sz,&swapped);
 	newhdr=(AnalyzeHeader*)addr;
 	img=addr+sizeof(AnalyzeHeader);
 	
-	if(newhdr->dim[1]!=dim[0] || newhdr->dim[2]!=dim[1] || newhdr->dim[3]!=dim[2])
+    if(newhdr->datatype!=SHORT)
+    {
+        [self displayMessage:[NSString stringWithFormat:@"ERROR: data type must be SHORT\n"]];
+        printf("ERROR: Cannot load selection - data type different from SHORT.\n");
+        return NO;
+    }
+
+    if(newhdr->dim[1]==dim[0] && newhdr->dim[2]==dim[1] && newhdr->dim[3]==dim[2])
+        memcpy(selection,img,dim[0]*dim[1]*dim[2]*sizeof(short));
+    else
 	{
-		printf("ERROR: Cannot load selection - dimensions do not match.\n");
-		return NO;
+        [self displayMessage:[NSString stringWithFormat:@"WARNING: dimensions do not match\n"]];
+		printf("WARNING: dimensions do not match.\n");
+        
+        for(i=0;i<dim[0];i++)
+        for(j=0;j<dim[1];j++)
+        for(k=0;k<dim[2];k++)
+        if(i<newhdr->dim[1] && j<newhdr->dim[2] && k<newhdr->dim[3])
+            selection[k*dim[1]*dim[0]+j*dim[0]+i]=((short*)img)[k*newhdr->dim[2]*newhdr->dim[1]+j*newhdr->dim[1]+i]>0;
 	}
-	if(newhdr->datatype!=SHORT)
-	{
-		printf("ERROR: Cannot load selection - data type different from SHORT.\n");
-		return NO;
-	}
-	
-	memcpy(selection,img,dim[0]*dim[1]*dim[2]*sizeof(short));
 	free(addr);
 	
 	return YES;
@@ -3090,9 +3235,12 @@ Origin:\t\t%i,%i,%i\n",
 
 		switch(dataType)
 		{
-			case UCHAR:	((unsigned char*)volReoriented)[n1]=((unsigned char*)data)[n];	break;
-			case SHORT:	((short*)volReoriented)[n1]=((short*)data)[n];					break;
-			case INT:	((int*)volReoriented)[n1]=((int*)data)[n];						break;
+            case UCHAR:    ((unsigned char*)volReoriented)[n1]=((unsigned char*)data)[n];    break;
+            case DT_INT8:    ((char*)volReoriented)[n1]=((char*)data)[n];    break;
+            case SHORT:    ((short*)volReoriented)[n1]=((short*)data)[n];                    break;
+            case DT_UINT16:    ((unsigned short*)volReoriented)[n1]=((unsigned short*)data)[n];                    break;
+            case INT:    ((int*)volReoriented)[n1]=((int*)data)[n];                        break;
+            case DT_UINT32:    ((unsigned int*)volReoriented)[n1]=((unsigned int*)data)[n];                        break;
 			case FLOAT:	((float*)volReoriented)[n1]=((float*)data)[n];					break;
 		}
 	}
@@ -3229,15 +3377,24 @@ Origin:\t\t%i,%i,%i\n",
 	{
 		switch(dataType)
 		{
-			case UCHAR:
-				((unsigned char*)volResized)[k*y*x+j*x+i]=((unsigned char*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
-				break;
-			case SHORT:
-				((short*)volResized)[k*y*x+j*x+i]=((short*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
-				break;
-			case INT:
-				((int*)volResized)[k*y*x+j*x+i]=((int*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
-				break;
+            case UCHAR:
+                ((unsigned char*)volResized)[k*y*x+j*x+i]=((unsigned char*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
+                break;
+            case DT_INT8:
+                ((char*)volResized)[k*y*x+j*x+i]=((char*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
+                break;
+            case SHORT:
+                ((short*)volResized)[k*y*x+j*x+i]=((short*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
+                break;
+            case DT_UINT16:
+                ((unsigned short*)volResized)[k*y*x+j*x+i]=((unsigned short*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
+                break;
+            case INT:
+                ((int*)volResized)[k*y*x+j*x+i]=((int*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
+                break;
+            case DT_UINT32:
+                ((unsigned int*)volResized)[k*y*x+j*x+i]=((unsigned int*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
+                break;
 			case FLOAT:
 				((float*)volResized)[k*y*x+j*x+i]=((float*)data)[(k+o[2])*dim[1]*dim[0]+(j+o[1])*dim[0]+(i+o[0])];
 				break;

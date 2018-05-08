@@ -291,8 +291,24 @@
 	cmd=[NSString stringWithFormat:@"mkdir /tmp/TmpRAMON;unzip -joq %@ -d /tmp/TmpRAMON/",thePath];
 	system([cmd UTF8String]);
 	
-	// load
-	NSDictionary	*dic=[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/tmp/TmpRAMON/%@.vramon",name]];
+	// find .vramon file
+    NSString *item;
+    NSString *vramon=nil;
+    NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:@"/tmp/TmpRAMON/" error:nil];
+    for (item in contents)
+        if ([[item pathExtension] isEqualToString:@"vramon"])
+        {
+            vramon=item;
+            break;
+        }
+    if(!vramon)
+    {
+        printf("ERROR: No .vramon file found");
+        return false;
+    }
+    
+    // load
+	NSDictionary	*dic=[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/tmp/TmpRAMON/%@",vramon]];
 	NSString		*volPath=[dic objectForKey:@"volume"];
 	NSString		*selPath=[dic objectForKey:@"selection"];
 	

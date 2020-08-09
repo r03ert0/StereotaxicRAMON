@@ -16,7 +16,6 @@
 		627932CF1E07F4CA00B52629 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627932CE1E07F4CA00B52629 /* AVFoundation.framework */; };
 		627D28871276CBFD0000080D /* voxtopology.c in Sources */ = {isa = PBXBuildFile; fileRef = 627D28861276CBFD0000080D /* voxtopology.c */; };
 		62816E3A15F0F2950071B851 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E3915F0F2950071B851 /* QTKit.framework */; };
-		62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62816E4D15F0F4690071B851 /* QuickTime.framework */; };
 		62C0EFE712D5FACD000BACD6 /* StereotaxicRAMON.icns in Resources */ = {isa = PBXBuildFile; fileRef = 62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */; };
 		62CFBC79171EE250004BE88C /* MyAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CFBC78171EE250004BE88C /* MyAppController.m */; };
 		62D360BE19F2B23D00C18A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D360BD19F2B23D00C18A93 /* main.m */; };
@@ -79,7 +78,6 @@
 		627D28861276CBFD0000080D /* voxtopology.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = voxtopology.c; sourceTree = "<group>"; };
 		627D28891276CC2D0000080D /* voxtopology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voxtopology.h; sourceTree = "<group>"; };
 		62816E3915F0F2950071B851 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
-		62816E4D15F0F4690071B851 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		62C0EFE612D5FACD000BACD6 /* StereotaxicRAMON.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = StereotaxicRAMON.icns; sourceTree = "<group>"; };
 		62CFBC77171EE250004BE88C /* MyAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppController.h; sourceTree = "<group>"; };
 		62CFBC78171EE250004BE88C /* MyAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppController.m; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				62E08433119E7CC900C661A3 /* OpenGL.framework in Frameworks */,
 				627932CF1E07F4CA00B52629 /* AVFoundation.framework in Frameworks */,
 				62816E3A15F0F2950071B851 /* QTKit.framework in Frameworks */,
-				62816E4E15F0F4690071B851 /* QuickTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				627932CE1E07F4CA00B52629 /* AVFoundation.framework */,
-				62816E4D15F0F4690071B851 /* QuickTime.framework */,
 				62816E3915F0F2950071B851 /* QTKit.framework */,
 				62E08432119E7CC900C661A3 /* OpenGL.framework */,
 				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
@@ -383,6 +379,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

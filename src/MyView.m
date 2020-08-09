@@ -655,8 +655,8 @@ float determinant(float3D a, float3D b, float3D c)
 	// configure data
 	[self configureData:(char*)theHdr];
 	
-    // adjust max/min values
-	[self adjustMinMax];
+  // adjust max/min values
+  [self adjustMinMax];
 
 	// configure selection mask
 	[self configureSelection];
@@ -1605,14 +1605,14 @@ int detect_collision(Mesh *m,float3D *p0)
 -(void)adjustMinMax
 {
 	int		i;
-    float	val;
-    double  s,ss,std,tmpmin,tmpmax;
+  float	val;
+  double  s,ss,std,tmpmin,tmpmax;
     
 	s=ss=0;
-    for(i=0;i<dim[0]*dim[1]*dim[2];i++)
+  for(i=0;i<dim[0]*dim[1]*dim[2];i++)
 	{
-        val=0;
-        if(dataType==RGBFLOAT)
+    val=0;
+    if(dataType==RGBFLOAT)
 		{
 			val=((float3D*)data)[i].x;
 			if(i==0) min=max=val;
@@ -1628,31 +1628,32 @@ int detect_collision(Mesh *m,float3D *p0)
 		else
 		{
 			switch(dataType){
-                case UCHAR:    val=((unsigned char*)data)[i];    break;
-                case DT_INT8:    val=((char*)data)[i];    break;
-                case SHORT:    val=((short*)data)[i];            break;
-                case DT_UINT16:    val=((unsigned short*)data)[i];            break;
-                case INT:    val=((int*)data)[i];            break;
-                case DT_UINT32:    val=((unsigned int*)data)[i];            break;
-				case FLOAT:	val=((float*)data)[i];			break;
+        case UCHAR:     val=((unsigned char*)data)[i];  break;
+        case DT_INT8:   val=((char*)data)[i];           break;
+        case SHORT:     val=((short*)data)[i];          break;
+        case DT_UINT16: val=((unsigned short*)data)[i]; break;
+        case INT:       val=((int*)data)[i];            break;
+        case DT_UINT32: val=((unsigned int*)data)[i];   break;
+				case FLOAT:	    val=((float*)data)[i];			    break;
 			}
-            if(isnan(val)||isinf(val))
-                continue;
+      if(isnan(val)||isinf(val))
+          continue;
 			if(i==0) min=max=val;
 			if(min>val) min=val;
 			if(max<val) max=val;
 		}
-        s+=val;
-        ss+=val*val;
+    s+=val;
+    ss+=val*val;
 	}
-    s/=(float)(dim[0]*dim[1]*dim[2]);
-    std=sqrt(ss/(float)(dim[0]*dim[1]*dim[2])-pow(s,2));
+  s/=(float)(dim[0]*dim[1]*dim[2]);
+  std=sqrt(ss/(float)(dim[0]*dim[1]*dim[2])-pow(s,2));
 
-    tmpmin=s-3*std;
-    tmpmax=s+3*std;
-    min=(tmpmin<min)?min:tmpmin;
-    max=(tmpmax>max)?max:tmpmax;
-	printf("[mean,std,min,max]=(%f,%f,%f,%f)\n",s,std,min,max);
+  //  tmpmin=s-3*std;
+  //  tmpmax=s+3*std;
+  //  min=(tmpmin<min)?min:tmpmin;
+  //  max=(tmpmax>max)?max:tmpmax;
+
+  printf("[mean,std,min,max]=(%f,%f,%f,%f)\n",s,std,min,max);
 }
 -(void)applyRotation
 {
